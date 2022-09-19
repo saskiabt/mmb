@@ -21,6 +21,9 @@
   align-self: flex-start;
   font-size: 1em;
 }
+.post .date {
+  font-size: 0.8em;
+}
 .post p {
   font-size: 2em;
   font-weight: 100;

@@ -8,11 +8,14 @@ form {
 form button {
   transition: ease-in-out 0.4s;
   padding: 1vmin 2vmin;
-  background-color: rgba(226, 214, 230, 0.2784313725);
+  background-color: rgba(0, 0, 0, 0.28);
   color: white;
+  box-shadow: 3px 3px 4px 0 #ffafe3;
+  border: 1px solid white;
 }
 form button:hover {
   color: white;
+  background-color: #332d34;
   opacity: 80%;
 }
 
@@ -40,6 +43,16 @@ textarea {
   background-color: rgba(206, 154, 221, 0.2588235294);
   color: white;
 }
+input ::-moz-placeholder, textarea ::-moz-placeholder {
+  color: white;
+}
+input :-ms-input-placeholder, textarea :-ms-input-placeholder {
+  color: white;
+}
+input ::placeholder,
+textarea ::placeholder {
+  color: white;
+}
 input:focus-visible,
 textarea:focus-visible {
   transform: scale(1.01);
@@ -57,4 +70,5 @@ textarea:focus:not(:focus-visible) {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  padding-right: 0.2em;
 }/*# sourceMappingURL=form.css.map */

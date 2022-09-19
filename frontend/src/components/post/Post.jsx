@@ -11,7 +11,7 @@ function Post({ post, i }) {
 
     const time = arr[1].split(":");
 
-    const newTime = `${time[0]}:${time[1]}`;
+    const newTime = `${time[0]}:${time[1]} CST`;
     console.log(newTime);
     const formatted = `${newDate} - ${newTime}`;
 
@@ -21,7 +21,7 @@ function Post({ post, i }) {
     <div className="post" key={post._id} id={"post" + i}>
       <div className="post-top">
         <h2>{post.username}</h2>
-        <div>{formatDate(post.createdAt)}</div>
+        <div className="date">{formatDate(post.createdAt)}</div>
       </div>
       <p>{post.comment}</p>
     </div>

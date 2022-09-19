@@ -1,6 +1,4 @@
-import { json } from "body-parser";
 import React, { useEffect, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import Post from "../post/Post";
 import "./Comments.css";
 
