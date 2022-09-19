@@ -3,12 +3,7 @@ import TextInput from "../text/TextInput";
 import TextArea from "../text/TextArea";
 import "../form/styles/form.css";
 
-function Form() {
-  const [data, setData] = useState({
-    username: "",
-    comment: "",
-  });
-
+function Form({ data, setData }) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setData({
@@ -17,8 +12,32 @@ function Form() {
     });
   };
 
+  const addPost = async (event) => {
+    if (!data.comment || !data.username) {
+      event.preventDefault();
+      console.log("Add username and/or comment");
+    }
+    try {
+      const response = await fetch("/api/posts", {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      console.log(result);
+      return result;
+    } catch (err) {
+      if (err) throw new Error();
+      process.abort();
+    }
+  };
+
   return (
-    <form className="form">
+    <form className="form" onSubmit={addPost}>
       <TextInput
         type="text"
         values={data.username}
@@ -34,7 +53,7 @@ function Form() {
         handleChange={handleChange}
       ></TextArea>
       <div className="button-container">
-        <button type="button">Submit</button>
+        <button type="submit">Submit</button>
       </div>
     </form>
   );
