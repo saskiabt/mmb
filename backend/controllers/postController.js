@@ -1,53 +1,49 @@
 // const Post = require("../schemas/Post");
+const asyncHandler = require("express-async-handler");
+const Post = require("../schemas/Post");
 
-const getPost = async (req, res) => {
+const getPost = asyncHandler(async (req, res) => {
   try {
-    res.status(200).json({ message: "get posts" });
+    const posts = await Post.find();
+    res.status(200).json({ posts });
   } catch (err) {
-    if (err) console.log("Error with getPost");
+    if (err) console.log(err.message);
   }
-};
+});
 
-const createPost = async (req, res) => {
-  try {
-    console.log(req.body.comment);
-    if (!req.body.comment || !req.body.userName) {
-      res.status(400);
-      throw new Error("Please add a comment");
-    }
-    res.status(200).json({ message: "added posts" });
-  } catch (err) {
-    if (err) console.log("Error in CreatePost");
+const createPost = asyncHandler(async (req, res) => {
+  console.log(req.body);
+  if (!req.body.comment || !req.body.username) {
+    res.status(400);
+    throw new Error(`Please add a comment`);
   }
 
-  // ASYNC
-  // const newPost = await Post.create({
-  //   username: "User 1",
-  //   date: {
-  //     rawDate: new Date(),
-  //     postDate: new Date().toLocaleString,
-  //   },
-  //   comment: "Hello, I'm user 1",
-  // });
-  // console.log(newPost);
-};
+  const newPost = await Post.create({
+    username: req.body.username,
+    comment: req.body.comment,
+  });
 
-const updatePost = async (req, res) => {
+  console.log({ newPost });
+
+  res.status(200).json({ message: `added post: ${newPost} ` });
+});
+
+const updatePost = asyncHandler(async (req, res) => {
   try {
     res.status(200).json({ message: `updated post: ${req.params.id}` });
   } catch (err) {
-    if (err) console.log("Error in updatePost");
+    if (err) console.log(`Error in updatePost: ${err}`);
   }
-};
+});
 
-const deletePost = async (req, res) => {
+const deletePost = asyncHandler(async (req, res) => {
   try {
     res.status(200).json({ message: `updated post: ${req.params.id}` });
   } catch (err) {
     if (err) console.log("Error in updatePost");
   }
   res.status(200).json({ message: `deletex post: ${req.params.id}` });
-};
+});
 
 module.exports = {
   getPost,
