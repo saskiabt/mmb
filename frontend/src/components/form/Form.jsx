@@ -3,7 +3,7 @@ import TextInput from "../text/TextInput";
 import TextArea from "../text/TextArea";
 import "../form/styles/form.css";
 
-function Form({ data, setData }) {
+function Form({ data, setData, isHidden, setIsHidden }) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setData({
@@ -36,27 +36,28 @@ function Form({ data, setData }) {
     }
   };
 
-  return (
-    <form className="form" onSubmit={addPost}>
-      <TextInput
-        type="text"
-        values={data.username}
-        placeholder="Your name here:"
-        name="username"
-        handleChange={handleChange}
-      ></TextInput>
-      <TextArea
-        type="text"
-        values={data.comment}
-        placeholder="Leave a comment..."
-        name="comment"
-        handleChange={handleChange}
-      ></TextArea>
-      <div className="button-container">
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-  );
+  if (!isHidden)
+    return (
+      <form className="form" onSubmit={addPost}>
+        <TextInput
+          type="text"
+          values={data.username}
+          placeholder="Your name here:"
+          name="username"
+          handleChange={handleChange}
+        ></TextInput>
+        <TextArea
+          type="text"
+          values={data.comment}
+          placeholder="Leave a comment..."
+          name="comment"
+          handleChange={handleChange}
+        ></TextArea>
+        <div className="button-container">
+          <button type="submit">Add Message</button>
+        </div>
+      </form>
+    );
 }
 
 export default Form;

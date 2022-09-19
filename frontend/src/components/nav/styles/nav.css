@@ -1,0 +1,19 @@
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100vw;
+}
+
+.nav-button {
+  width: 15%;
+  border: none;
+  background-color: #e2d6e6;
+  padding: 10px 20px;
+  transition: ease-in-out 0.5s;
+  font-size: 1.5em;
+}
+.nav-button:hover {
+  font-size: 2em;
+  opacity: 80%;
+}/*# sourceMappingURL=nav.css.map */

@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import Post from "../post/Post";
 import "./Comments.css";
 
-function Comments({ data, setData }) {
+function Comments({ data }) {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     const fetchPosts = async () => {
