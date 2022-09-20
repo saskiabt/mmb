@@ -10,7 +10,6 @@ const fetchPost = async () => {
 
 const addPost = async (postData) => {
   try {
-    alert(postData);
     const response = await fetch("/api/posts", {
       method: "POST",
       mode: "cors",

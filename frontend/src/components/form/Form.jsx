@@ -19,7 +19,6 @@ function Form({ data, setData, isHidden, setIsHidden }) {
       alert("Event prevented");
     }
     addPost(data);
-    alert("Data added");
   };
 
   if (!isHidden)
