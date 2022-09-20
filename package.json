@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "mini message board using react for frontend, express node and mongoDB for backend",
   "main": "server.js",
+  "engines": {
+    "node": "v16.14.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
