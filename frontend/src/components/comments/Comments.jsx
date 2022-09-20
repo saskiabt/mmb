@@ -1,56 +1,25 @@
 import React, { useEffect, useState } from "react";
+import { fetchPost } from "../../api/posts";
 import Post from "../post/Post";
 import "./Comments.css";
 
-function Comments({ data }) {
+function Comments() {
   const [posts, setPosts] = useState([]);
+
   useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await fetch("/api/posts");
-        const result = await response.json();
-        console.log(result);
-        setPosts(result);
-        return result;
-      } catch (err) {
-        console.log(err);
-        return null;
-      }
+    const callApi = async () => {
+      const result = await fetchPost();
+      setPosts(result.posts);
     };
 
-    fetchPosts();
-    console.log(posts);
+    callApi();
   }, []);
-
-  const addPost = async (event) => {
-    if (!data.comment || !data.username) {
-      event.preventDefault();
-    }
-    try {
-      const response = await fetch("/api/posts", {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-      console.log(result);
-      return result;
-    } catch (err) {
-      if (err) throw new Error();
-      process.abort();
-    }
-  };
 
   return (
     <ul className="comments">
-      {posts.posts &&
-        posts.posts.map((post, i) => {
-          return <Post key={post._id} post={post} i={i}></Post>;
-        })}
+      {posts.map((post, i) => {
+        return <Post key={post._id} post={post} i={i}></Post>;
+      })}
     </ul>
   );
 }

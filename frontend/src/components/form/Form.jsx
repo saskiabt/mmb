@@ -2,6 +2,7 @@ import React from "react";
 import TextInput from "../text/TextInput";
 import TextArea from "../text/TextArea";
 import "../form/styles/form.css";
+import { addPost } from "../../api/posts";
 
 function Form({ data, setData, isHidden, setIsHidden }) {
   const handleChange = (event) => {
@@ -12,33 +13,18 @@ function Form({ data, setData, isHidden, setIsHidden }) {
     });
   };
 
-  const addPost = async (event) => {
-    if (!data.comment || !data.username) {
+  const handleSubmit = async (event) => {
+    if (event && (!data.comment || !data.username)) {
       event.preventDefault();
-      console.log("Add username and/or comment");
+      alert("Event prevented");
     }
-    try {
-      const response = await fetch("/api/posts", {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-      console.log(result);
-      return result;
-    } catch (err) {
-      if (err) throw new Error();
-      process.abort();
-    }
+    addPost(data);
+    alert("Data added");
   };
 
   if (!isHidden)
     return (
-      <form className="form" onSubmit={addPost}>
+      <form className="form" onSubmit={handleSubmit}>
         <TextInput
           type="text"
           values={data.username}

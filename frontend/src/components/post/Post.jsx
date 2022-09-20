@@ -7,18 +7,16 @@ function Post({ post, i }) {
 
     const date = arr[0].split("-");
     const newDate = `${date[1]}/${date[2]}/${date[0]}`;
-    console.log(newDate);
 
     const time = arr[1].split(":");
 
     const newTime = `${time[0]}:${time[1]} CST`;
-    console.log(newTime);
     const formatted = `${newDate} - ${newTime}`;
 
     return formatted;
   };
   return (
-    <div className="post" key={post._id} id={"post" + i}>
+    <div className="post" id={"post" + i}>
       <div className="post-top">
         <h2>{post.username}</h2>
         <div className="date">{formatDate(post.createdAt)}</div>
