@@ -8,6 +8,9 @@ function Comments() {
 
   const handleDelete = async (id) => {
     await deletePost(id);
+    const newPosts = await fetchPost();
+    console.log(newPosts.posts);
+    setPosts(newPosts.posts);
   };
 
   useEffect(() => {
