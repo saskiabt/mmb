@@ -18,7 +18,7 @@ function Comments() {
   return (
     <ul className="comments">
       {posts.map((post, i) => {
-        return <Post key={post._id} post={post} i={i}></Post>;
+        return <Post key={post._id} post={post} i={i} postID={post._id}></Post>;
       })}
     </ul>
   );

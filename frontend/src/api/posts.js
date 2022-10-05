@@ -30,4 +30,16 @@ const addPost = async (postData) => {
   }
 };
 
-export { fetchPost, addPost };
+const deletePost = async (id) => {
+  try {
+    const response = await fetch(`/api/posts/${id}`, {
+      method: "DELETE",
+    });
+    const result = await response.json;
+    return result;
+  } catch (err) {
+    if (err) console.log(err);
+  }
+};
+
+export { fetchPost, addPost, deletePost };

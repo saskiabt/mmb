@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/nav.css";
 import "../../icons/menu-icon.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
 function Nav({ isHidden, setIsHidden }) {
   const toggleForm = () => {
@@ -11,8 +13,12 @@ function Nav({ isHidden, setIsHidden }) {
   return (
     <div className="nav-wrapper">
       <button className="nav-button" onClick={toggleForm}>
-        {isHidden && <i className="fa-solid fa-bars"></i>}
-        {!isHidden && <i className="fa-solid fa-x"></i>}
+        {isHidden && (
+          <FontAwesomeIcon icon={faBars} className="fa-bars"></FontAwesomeIcon>
+        )}
+        {!isHidden && (
+          <FontAwesomeIcon icon={faX} className="fa-x"></FontAwesomeIcon>
+        )}
       </button>
     </div>
   );

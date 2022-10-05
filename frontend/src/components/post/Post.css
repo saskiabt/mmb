@@ -28,4 +28,20 @@
   font-size: 2em;
   font-weight: 100;
   font-family: sans-serif;
+}
+.post .delete-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#delete {
+  background-color: #453a51;
+  color: white;
+  font-size: larger;
+  transition: ease-in-out 0.3s;
+  opacity: 40%;
+}
+#delete:hover {
+  opacity: 100%;
 }/*# sourceMappingURL=Post.css.map */

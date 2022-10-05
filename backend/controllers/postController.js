@@ -64,7 +64,7 @@ const deletePost = asyncHandler(async (req, res) => {
       .status(200)
       .json({ message: `successfully deleted post: ${deletedPost}` });
   } catch (err) {
-    if (err) console.log(`Error in updatePost: ${err}`);
+    if (err) console.log(`Error in deletePost: ${err}`);
     process.exit();
   }
 });
