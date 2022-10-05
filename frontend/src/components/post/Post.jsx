@@ -1,8 +1,8 @@
 import React from "react";
 import "./Post.css";
-import { deletePost } from "../../api/posts";
+import { Link, useNavigate } from "react-router-dom";
 
-function Post({ post, i, postID }) {
+function Post({ post, i, postID, handleDelete }) {
   const formatDate = () => {
     const arr = post.createdAt.split("T");
 
@@ -17,16 +17,17 @@ function Post({ post, i, postID }) {
     return formatted;
   };
 
-  const handleDelete = async (id) => {
-    deletePost(id);
-  };
-
   return (
     <div className="post" id={"post" + i}>
       <div className="delete-container">
-        <button id="delete" type="button" onClick={() => handleDelete(postID)}>
+        <Link
+          to={"/"}
+          id="delete"
+          type="button"
+          onClick={() => handleDelete(postID)}
+        >
           X
-        </button>
+        </Link>
       </div>
       <div className="post-top">
         <h2>{post.username}</h2>

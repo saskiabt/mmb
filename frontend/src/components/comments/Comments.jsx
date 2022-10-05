@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { fetchPost } from "../../api/posts";
+import { fetchPost, deletePost } from "../../api/posts";
 import Post from "../post/Post";
 import "./Comments.css";
 
 function Comments() {
   const [posts, setPosts] = useState([]);
+
+  const handleDelete = async (id) => {
+    await deletePost(id);
+  };
 
   useEffect(() => {
     const callApi = async () => {
@@ -18,7 +22,16 @@ function Comments() {
   return (
     <ul className="comments">
       {posts.map((post, i) => {
-        return <Post key={post._id} post={post} i={i} postID={post._id}></Post>;
+        return (
+          <Post
+            key={post._id}
+            post={post}
+            i={i}
+            postID={post._id}
+            setPosts={setPosts}
+            handleDelete={handleDelete}
+          ></Post>
+        );
       })}
     </ul>
   );

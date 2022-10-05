@@ -3,8 +3,9 @@ import TextInput from "../text/TextInput";
 import TextArea from "../text/TextArea";
 import "../form/styles/form.css";
 import { addPost } from "../../api/posts";
+import { useNavigate, Form, Link } from "react-router-dom";
 
-function Form({ data, setData, isHidden, setIsHidden }) {
+function DataForm({ data, setData, isHidden, setIsHidden }) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setData({
@@ -39,10 +40,13 @@ function Form({ data, setData, isHidden, setIsHidden }) {
           handleChange={handleChange}
         ></TextArea>
         <div className="button-container">
-          <button type="submit">Add Message</button>
+          <button type="submit">
+            {" "}
+            <Link to={"/"}></Link>Add Message
+          </button>
         </div>
       </form>
     );
 }
 
-export default Form;
+export default DataForm;
