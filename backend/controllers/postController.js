@@ -1,6 +1,7 @@
 // const Post = require("../schemas/Post");
 const asyncHandler = require("express-async-handler");
 const Post = require("../schemas/Post");
+const User = require("../schemas/UserSchema");
 
 const getPost = asyncHandler(async (req, res) => {
   try {
@@ -12,15 +13,21 @@ const getPost = asyncHandler(async (req, res) => {
   }
 });
 
+const getUserPosts = asyncHandler(async (req, res) => {
+  const userPosts = await Post.find({ user: req.user.id });
+  res.status(200).json(userPosts);
+});
+
 const createPost = asyncHandler(async (req, res) => {
-  console.log(req.body);
-  if (!req.body.comment || !req.body.username) {
+  console.log(req.body.comment);
+  if (!req.body.comment) {
     res.status(400);
     throw new Error(`Please add a comment`);
   }
 
   const newPost = await Post.create({
-    username: req.body.username,
+    user: req.user.id,
+    username: req.user.name,
     comment: req.body.comment,
   });
 
@@ -30,12 +37,26 @@ const createPost = asyncHandler(async (req, res) => {
 });
 
 const updatePost = asyncHandler(async (req, res) => {
+  console.log(req);
   try {
     const post = await Post.findById(req.params.id);
 
     if (!post) {
       res.status(400);
       throw new Error("Post not found");
+    }
+
+    const user = await User.findById(req.user.id);
+
+    // check to see if user exists
+    if (!user) {
+      res.status(401);
+      throw new Error("User not found");
+    }
+    // Make sure post's user ID is equal to the userID of the logged in user,
+    if (post.user.toString() !== user.id) {
+      res.status(401);
+      throw new Error("User not authorized");
     }
 
     const updatedPost = await Post.findByIdAndUpdate(req.params.id, req.body, {
@@ -58,6 +79,19 @@ const deletePost = asyncHandler(async (req, res) => {
       throw new Error("Post not found");
     }
 
+    const user = await User.findById(req.user.id);
+
+    // check to see if user exists
+    if (!user) {
+      res.status(401);
+      throw new Error("User not found");
+    }
+    // Make sure post's user ID is equal to the userID of the logged in user,
+    if (post.user.toString() !== user.id) {
+      res.status(401);
+      throw new Error("User not authorized");
+    }
+
     const deletedPost = await Post.findByIdAndDelete(req.params.id);
 
     res
@@ -74,4 +108,5 @@ module.exports = {
   createPost,
   updatePost,
   deletePost,
+  getUserPosts,
 };

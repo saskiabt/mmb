@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const User = require("../schemas/UserSchema");
 
-// GENERATE JSON WEB TOKEN
+// GENERATE JSON WEB TOKEN, (which stays )
 const generateJWT = (id) => {
   const token = jsonwt.sign({ id }, `${process.env.JWT_SECRET}`, {
     expiresIn: "30d",
@@ -85,7 +85,12 @@ const loginUser = asyncHandler(async (req, res) => {
 // @route GET api/users/me
 // @access PRIVATE
 const getMe = asyncHandler(async (req, res) => {
-  res.json({ message: "Display user data" });
+  const { _id, name, email } = req.user;
+  res.status(200).json({
+    id: _id,
+    name,
+    email,
+  });
 });
 
 module.exports = {
