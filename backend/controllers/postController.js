@@ -1,4 +1,3 @@
-// const Post = require("../schemas/Post");
 const asyncHandler = require("express-async-handler");
 const Post = require("../schemas/Post");
 const User = require("../schemas/UserSchema");
