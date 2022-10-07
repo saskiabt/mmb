@@ -5,6 +5,7 @@ require("dotenv").config();
 
 const User = require("../schemas/UserSchema");
 
+// GENERATE JSON WEB TOKEN
 const generateJWT = (id) => {
   const token = jsonwt.sign({ id }, `${process.env.JWT_SECRET}`, {
     expiresIn: "30d",
