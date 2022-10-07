@@ -3,6 +3,10 @@
   flex-direction: row;
   justify-content: flex-start;
   width: 100vw;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
 }
 
 .nav-button {
@@ -16,4 +20,25 @@
 .nav-button:hover {
   font-size: 2em;
   opacity: 80%;
+}
+
+.login-link {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.login-link button {
+  width: 100%;
+  text-align: end;
+  font-size: 2em;
+  padding-right: 0.8em;
+}
+.login-link button:active {
+  text-decoration: none;
+  border-bottom: 0px;
+}
+
+.filler {
+  width: 100%;
+  background-color: #201922;
 }/*# sourceMappingURL=nav.css.map */

@@ -5,7 +5,6 @@
   border: 1px solid lavender;
   border-radius: 2em;
   padding: 1.8em;
-  gap: 1em;
   background-color: rgb(68 59 81);
   transition: ease-in-out 0.5s;
 
@@ -15,19 +14,29 @@
     justify-content: space-between;
   }
 
+  .post-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   &:hover {
     transform: scale(1.075);
   }
 
-  h2 {
+  .username {
     align-self: flex-start;
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   .date {
     font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-end;
   }
-  p {
+  .comment {
     font-size: 2em;
     font-weight: 100;
     font-family: sans-serif;
@@ -50,4 +59,10 @@
   &:hover {
     opacity: 100%;
   }
+}
+
+.post-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }

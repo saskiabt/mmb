@@ -3,6 +3,8 @@ import "./styles/App.css";
 import DataForm from "../components/form/Form";
 import Comments from "../components/comments/Comments";
 import Nav from "../components/nav/Nav";
+import Login from "../components/login/Login";
+import LandingPage from "../components/landingPage/LandingPage";
 
 function App() {
   const [data, setData] = useState({
@@ -14,14 +16,12 @@ function App() {
 
   return (
     <div className="App">
-      <Nav isHidden={isHidden} setIsHidden={setIsHidden}></Nav>
-      <DataForm
+      <LandingPage
         data={data}
         setData={setData}
         isHidden={isHidden}
         setIsHidden={setIsHidden}
-      ></DataForm>
-      <Comments data={data} setData={setData}></Comments>
+      ></LandingPage>
     </div>
   );
 }

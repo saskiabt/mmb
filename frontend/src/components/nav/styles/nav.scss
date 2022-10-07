@@ -1,8 +1,13 @@
+$dark-purple-background: #201922;
+
 .nav-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100vw;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
 }
 
 .nav-button {
@@ -17,4 +22,27 @@
     font-size: 2em;
     opacity: 80%;
   }
+}
+
+.login-link {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+
+  button {
+    width: 100%;
+    text-align: end;
+    font-size: 2em;
+    padding-right: 0.8em;
+
+    &:active {
+      text-decoration: none;
+      border-bottom: 0px;
+    }
+  }
+}
+
+.filler {
+  width: 100%;
+  background-color: $dark-purple-background;
 }

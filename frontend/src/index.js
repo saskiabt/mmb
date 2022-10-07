@@ -6,29 +6,42 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Form from "./components/form/Form";
 import ErrorPage from "./routes/error-page/ErrorPage";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
+import Register from "./components/register/Register";
+import Login from "./components/login/Login";
+import Dashboard from "./components/user-dashboard/Dashboard";
+import LandingPage from "./components/landingPage/LandingPage";
+// import * as serviceWorker from "../serviceworker";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <App></App>,
-      },
-      {
-        path: "/create",
-        element: <Form></Form>,
-      },
-    ],
+    children: [{ index: true, element: <LandingPage></LandingPage> }],
   },
+  {
+    path: "/register",
+    element: <Register></Register>,
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+  },
+  {},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
