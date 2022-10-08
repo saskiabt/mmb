@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   font-size: 1.2em;
+  font-family: "Apparat-light", sans-serif;
 
   .register-form {
     width: 60%;
@@ -22,14 +23,14 @@
     flex-direction: row;
     gap: 10px;
   }
+}
 
-  .heading {
-    display: flex;
-    justify-content: center;
-    font-size: 2em;
-    gap: 2.5%;
-    width: 100%;
-    padding-top: 10%;
-    padding-bottom: 2%;
-  }
+.heading {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  gap: 2.5%;
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 2%;
 }

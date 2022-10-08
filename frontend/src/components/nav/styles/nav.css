@@ -42,11 +42,10 @@
   width: -moz-fit-content;
   width: fit-content;
   justify-content: flex-end;
-  font-family: "Minipax-Bold", sans-serif;
   text-decoration: none;
 }
 .nav-links button {
-  font-size: 1.6em;
+  font-size: 1.7em;
   padding: 0px;
   background-color: #eae9e2;
   color: #204d8c;
@@ -54,6 +53,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-family: "Apparat-light", sans-serif;
 }
 .nav-links button:active {
   text-decoration: none;
@@ -64,12 +64,12 @@
   width: 100%;
 }
 
-.app__dark-mode-btn {
+.nav-icon {
   font-size: x-large;
   background-color: #eae9e2;
   padding: 2%;
   color: #122d52;
 }
-.app__dark-mode-btn:hover {
+.nav-icon:hover {
   cursor: pointer;
 }/*# sourceMappingURL=nav.css.map */

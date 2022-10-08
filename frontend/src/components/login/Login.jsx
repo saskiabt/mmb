@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Link } from "react-router-dom";
 import "./login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPerson, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -19,6 +19,12 @@ function Login() {
   };
   return (
     <div className="Login">
+      <div className="heading">
+        <h1>
+          <FontAwesomeIcon icon={faArrowRightToBracket}></FontAwesomeIcon>
+          Login
+        </h1>
+      </div>
       <Form method="post" className="login-form">
         <label className="username">
           <input
@@ -43,10 +49,6 @@ function Login() {
           <p>No Account? </p>
           <Link to="/register">Sign Up</Link>
         </div>
-
-        <Link to="/">
-          <FontAwesomeIcon icon={faHome}>Home</FontAwesomeIcon>
-        </Link>
       </div>
     </div>
   );

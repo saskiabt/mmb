@@ -6,6 +6,7 @@ import Nav from "../components/nav/Nav";
 import Login from "../components/login/Login";
 import LandingPage from "../components/landingPage/LandingPage";
 import Footer from "../components/footer/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState({
@@ -18,12 +19,13 @@ function App() {
   return (
     <div className="App">
       <Nav></Nav>
-      <LandingPage
+      {/* <LandingPage
         data={data}
         setData={setData}
         isHidden={isHidden}
         setIsHidden={setIsHidden}
-      ></LandingPage>
+      ></LandingPage> */}
+      <Outlet></Outlet>
       <Footer></Footer>
     </div>
   );

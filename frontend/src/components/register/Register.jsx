@@ -31,9 +31,9 @@ function Register() {
   return (
     <div className="Register">
       <div className="heading">
-        <h1>
+        {/* <h1>
           <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
-        </h1>
+        </h1> */}
         <p>Create Account</p>
       </div>
       <Form method="post" className="register-form">
@@ -82,9 +82,6 @@ function Register() {
             <FontAwesomeIcon icon={faRightToBracket}></FontAwesomeIcon> Login
           </Link>
         </div>
-        <Link to="/">
-          <FontAwesomeIcon icon={faHome}>Home</FontAwesomeIcon>
-        </Link>
       </div>
     </div>
   );

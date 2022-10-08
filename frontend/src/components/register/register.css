@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   font-size: 1.2em;
+  font-family: "Apparat-light", sans-serif;
 }
 .Register .register-form {
   width: 60%;
@@ -19,7 +20,8 @@
   flex-direction: row;
   gap: 10px;
 }
-.Register .heading {
+
+.heading {
   display: flex;
   justify-content: center;
   font-size: 2em;

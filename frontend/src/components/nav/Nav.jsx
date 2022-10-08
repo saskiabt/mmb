@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./styles/nav.css";
 import "../../icons/menu-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faX, faHome } from "@fortawesome/free-solid-svg-icons";
 import DarkModeButton from "../dark-mode-button/DarkModeButton";
 
 function Nav() {
@@ -16,15 +16,10 @@ function Nav() {
   };
   return (
     <div className="Nav">
-      {/* <button className="nav-button" onClick={toggleLoginButton}>
-        {isHidden && (
-          <FontAwesomeIcon icon={faBars} className="fa-bars"></FontAwesomeIcon>
-        )}
-        {!isHidden && (
-          <FontAwesomeIcon icon={faX} className="fa-x"></FontAwesomeIcon>
-        )}
-      </button> */}
-      <DarkModeButton></DarkModeButton>
+      <Link to="/" className="nav-icon">
+        <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+      </Link>
+
       {!isHidden ? (
         <div className="nav-right">
           {" "}
@@ -38,6 +33,7 @@ function Nav() {
               Sign Up
             </button>
           </Link>
+          <DarkModeButton></DarkModeButton>
         </div>
       ) : (
         <div className="filler"></div>

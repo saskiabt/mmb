@@ -43,18 +43,18 @@ $light-yellow-background: #eae9e2;
   display: flex;
   width: fit-content;
   justify-content: flex-end;
-  font-family: "Minipax-Bold", sans-serif;
   text-decoration: none;
 
   button {
     // width: 100%;
     // text-align: end;
-    font-size: 1.6em;
+    font-size: 1.7em;
     padding: 0px;
     background-color: $light-yellow-background;
     color: #204d8c;
     cursor: pointer;
     width: fit-content;
+    font-family: "Apparat-light", sans-serif;
 
     &:active {
       text-decoration: none;
@@ -68,7 +68,7 @@ $light-yellow-background: #eae9e2;
   // background-color: $dark-purple-background;
 }
 
-.app__dark-mode-btn {
+.nav-icon {
   font-size: x-large;
   background-color: $light-yellow-background;
   padding: 2%;
