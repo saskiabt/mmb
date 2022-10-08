@@ -35,6 +35,7 @@ $light-yellow-background: #eae9e2;
   width: 100%;
   justify-content: flex-end;
   background-color: #eae9e2;
+  gap: 5%;
 
   .app__dark-mode-btn {
     font-size: x-large;
@@ -47,17 +48,17 @@ $light-yellow-background: #eae9e2;
   }
 }
 
-.login-link {
+.nav-links {
   display: flex;
-  width: 100%;
+  // width: 100%;
   justify-content: flex-end;
   font-family: "Minipax-Bold", sans-serif;
 
   button {
-    width: 100%;
-    text-align: end;
-    font-size: 2em;
-    padding-right: 0.8em;
+    // width: 100%;
+    // text-align: end;
+    font-size: 1.75em;
+    padding: 0px;
     background-color: $light-yellow-background;
     color: #204d8c;
     cursor: pointer;

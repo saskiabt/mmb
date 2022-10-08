@@ -1,40 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App/App";
+import router from "./routes/router";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Form from "./components/form/Form";
-import ErrorPage from "./routes/error-page/ErrorPage";
+import { RouterProvider } from "react-router-dom";
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
-import Register from "./components/register/Register";
-import Login from "./components/login/Login";
-import Dashboard from "./components/user-dashboard/Dashboard";
-import LandingPage from "./components/landingPage/LandingPage";
-// import * as serviceWorker from "../serviceworker";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children: [{ index: true, element: <LandingPage></LandingPage> }],
-  },
-  {
-    path: "/register",
-    element: <Register></Register>,
-  },
-  {
-    path: "/login",
-    element: <Login></Login>,
-  },
-  {
-    path: "/dashboard",
-    element: <Dashboard></Dashboard>,
-  },
-  {},
-]);
+// import * as serviceWorker from "../serviceworker";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

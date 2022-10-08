@@ -50,7 +50,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #eae9e2;
-  color: white;
+  color: black;
 }
 
 html,
@@ -203,4 +203,5 @@ table {
 
 button {
   border: none;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

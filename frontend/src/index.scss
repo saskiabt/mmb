@@ -86,7 +86,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $light-yellow-background;
-  color: white;
+  color: black;
 }
 
 html,
@@ -235,5 +235,6 @@ table {
 
 button {
   border: none;
+  cursor: pointer;
   // background-color: $;
 }

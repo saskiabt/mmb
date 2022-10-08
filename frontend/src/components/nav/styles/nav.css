@@ -32,6 +32,7 @@
   width: 100%;
   justify-content: flex-end;
   background-color: #eae9e2;
+  gap: 5%;
 }
 .nav-right .app__dark-mode-btn {
   font-size: x-large;
@@ -43,22 +44,19 @@
   cursor: pointer;
 }
 
-.login-link {
+.nav-links {
   display: flex;
-  width: 100%;
   justify-content: flex-end;
   font-family: "Minipax-Bold", sans-serif;
 }
-.login-link button {
-  width: 100%;
-  text-align: end;
-  font-size: 2em;
-  padding-right: 0.8em;
+.nav-links button {
+  font-size: 1.75em;
+  padding: 0px;
   background-color: #eae9e2;
   color: #204d8c;
   cursor: pointer;
 }
-.login-link button:active {
+.nav-links button:active {
   text-decoration: none;
   border-bottom: 0px;
 }
