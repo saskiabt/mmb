@@ -1,79 +1,34 @@
-$dark-purple-background: #201922;
+// $dark-purple-background: #201922;
 $light-yellow-background: #eae9e2;
+$medium-blue: #334b92;
 
 .Nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100vw;
   position: sticky;
   top: 0px;
-  z-index: 100;
-  background-color: $light-yellow-background;
-}
-
-.nav-button {
-  width: 15%;
-  border: none;
-  background-color: $light-yellow-background;
-  padding: 10px 20px;
   padding-top: 15px;
-  transition: ease-in-out 0.5s;
-  font-size: 1.5em;
-  color: #204d8c;
-  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 100;
+  font-size: 30px;
+  color: $medium-blue;
 
-  &:hover {
-    font-size: 2em;
-    opacity: 80%;
+  .nav-icon {
+    font-size: 30px;
+    background: none;
+    color: #334b92;
   }
-}
 
-.nav-right {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: flex-end;
-  background-color: #eae9e2;
-  gap: 3%;
-  padding-right: 2%;
-}
-
-.nav-links {
-  display: flex;
-  width: fit-content;
-  justify-content: flex-end;
-  text-decoration: none;
-
-  button {
-    // width: 100%;
-    // text-align: end;
-    font-size: 1.7em;
-    padding: 0px;
-    background-color: $light-yellow-background;
-    color: #204d8c;
-    cursor: pointer;
-    width: fit-content;
-    font-family: "Apparat-light", sans-serif;
-
-    &:active {
-      text-decoration: none;
-      border-bottom: 0px;
+  .nav-links {
+    button {
+      font-size: 0.8em;
+      background: none;
+      font-family: "Apparat-light", sans-serif;
+      font-weight: 400;
+      color: $medium-blue;
     }
-  }
-}
-
-.filler {
-  width: 100%;
-  // background-color: $dark-purple-background;
-}
-
-.nav-icon {
-  font-size: x-large;
-  background-color: $light-yellow-background;
-  padding: 2%;
-  color: #122d52;
-  &:hover {
-    cursor: pointer;
   }
 }

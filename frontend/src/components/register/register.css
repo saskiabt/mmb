@@ -23,10 +23,14 @@
 
 .heading {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-size: 2em;
   gap: 2.5%;
   width: 100%;
   padding-top: 10%;
   padding-bottom: 2%;
+  row-gap: 2%;
+  color: #334b92;
 }/*# sourceMappingURL=register.css.map */

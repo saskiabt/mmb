@@ -1,75 +1,27 @@
 .Nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100vw;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  z-index: 100;
-  background-color: #eae9e2;
-}
-
-.nav-button {
-  width: 15%;
-  border: none;
-  background-color: #eae9e2;
-  padding: 10px 20px;
   padding-top: 15px;
-  transition: ease-in-out 0.5s;
-  font-size: 1.5em;
-  color: #204d8c;
-  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 100;
+  font-size: 30px;
+  color: #334b92;
 }
-.nav-button:hover {
-  font-size: 2em;
-  opacity: 80%;
+.Nav .nav-icon {
+  font-size: 30px;
+  background: none;
+  color: #334b92;
 }
-
-.nav-right {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: flex-end;
-  background-color: #eae9e2;
-  gap: 3%;
-  padding-right: 2%;
-}
-
-.nav-links {
-  display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  justify-content: flex-end;
-  text-decoration: none;
-}
-.nav-links button {
-  font-size: 1.7em;
-  padding: 0px;
-  background-color: #eae9e2;
-  color: #204d8c;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.Nav .nav-links button {
+  font-size: 0.8em;
+  background: none;
   font-family: "Apparat-light", sans-serif;
-}
-.nav-links button:active {
-  text-decoration: none;
-  border-bottom: 0px;
-}
-
-.filler {
-  width: 100%;
-}
-
-.nav-icon {
-  font-size: x-large;
-  background-color: #eae9e2;
-  padding: 2%;
-  color: #122d52;
-}
-.nav-icon:hover {
-  cursor: pointer;
+  font-weight: 400;
+  color: #334b92;
 }/*# sourceMappingURL=nav.css.map */

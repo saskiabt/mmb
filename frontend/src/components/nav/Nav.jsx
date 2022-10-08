@@ -16,28 +16,27 @@ function Nav() {
   };
   return (
     <div className="Nav">
-      <Link to="/" className="nav-icon">
-        <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
-      </Link>
-
-      {!isHidden ? (
-        <div className="nav-right">
-          {" "}
-          <Link to="/login" className="nav-links">
-            <button type="button" className="login-button">
-              Login
-            </button>
-          </Link>
-          <Link to="/register" className="nav-links">
-            <button type="button" className="register-button">
-              Sign Up
-            </button>
-          </Link>
-          <DarkModeButton></DarkModeButton>
-        </div>
-      ) : (
-        <div className="filler"></div>
-      )}
+      <div className="nav-left">
+        <Link to="/" className="nav-icon nav-icon-home">
+          <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+        </Link>{" "}
+        |
+        <DarkModeButton className="nav-icon nav-icon-dark-mode"></DarkModeButton>
+      </div>
+      <div className="nav-right">
+        {" "}
+        <Link to="/login" className="nav-links">
+          <button type="button" className="login-button">
+            Login
+          </button>
+        </Link>{" "}
+        /
+        <Link to="/register" className="nav-links">
+          <button type="button" className="register-button">
+            Sign Up
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }

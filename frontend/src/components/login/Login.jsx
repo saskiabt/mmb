@@ -20,10 +20,10 @@ function Login() {
   return (
     <div className="Login">
       <div className="heading">
-        <h1>
-          <FontAwesomeIcon icon={faArrowRightToBracket}></FontAwesomeIcon>
-          Login
-        </h1>
+        <h1>Login</h1>
+        <p>
+          <i>login to post comments</i>
+        </p>
       </div>
       <Form method="post" className="login-form">
         <label className="username">
@@ -42,7 +42,9 @@ function Login() {
             placeholder="Password"
           ></input>
         </label>
-        <button type="submit">Login</button>
+        <button type="submit">
+          Login <FontAwesomeIcon icon={faArrowRightToBracket}></FontAwesomeIcon>
+        </button>
       </Form>
       <div className="form-bottom">
         <div className="sign-up-container">
