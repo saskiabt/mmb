@@ -7,7 +7,7 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import DarkModeButton from "../dark-mode-button/DarkModeButton";
 
 function Nav() {
-  const [isHidden, setIsHidden] = useState(true);
+  const [isHidden, setIsHidden] = useState(false);
 
   const toggleLoginButton = () => {
     if (!isHidden) {

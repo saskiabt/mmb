@@ -1,0 +1,22 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+}
+.Login .login-form {
+  width: 60%;
+  margin-top: 25%;
+}
+.Login .form-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2em;
+  gap: 10px;
+}
+.Login .sign-up-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}/*# sourceMappingURL=login.css.map */
