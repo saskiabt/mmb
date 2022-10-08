@@ -21,33 +21,32 @@ function Login() {
     <div className="Login">
       <div className="heading">
         <h1>Login</h1>
-        <p>
-          <i>login to post comments</i>
-        </p>
+        <p>Please sign in to post comments</p>
       </div>
-      <Form method="post" className="login-form">
-        <label className="username">
-          <input
-            type="text"
-            name="email"
-            aria-label="email"
-            placeholder="Email Address"
-          ></input>
-        </label>
-        <label className="password">
-          <input
-            type="text"
-            name="password"
-            aria-label="password"
-            placeholder="Password"
-          ></input>
-        </label>
-        <button type="submit">
-          Login <FontAwesomeIcon icon={faArrowRightToBracket}></FontAwesomeIcon>
-        </button>
-      </Form>
-      <div className="form-bottom">
-        <div className="sign-up-container">
+      <div className="form">
+        <Form method="post">
+          <label className="username">
+            <input
+              type="text"
+              name="email"
+              aria-label="email"
+              placeholder="Email Address"
+            ></input>
+          </label>
+          <label className="password">
+            <input
+              type="text"
+              name="password"
+              aria-label="password"
+              placeholder="Password"
+            ></input>
+          </label>
+          <button type="submit">
+            Login{" "}
+            <FontAwesomeIcon icon={faArrowRightToBracket}></FontAwesomeIcon>
+          </button>
+        </Form>
+        <div className="form-bottom">
           <p>No Account? </p>
           <Link to="/register">Sign Up</Link>
         </div>

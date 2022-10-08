@@ -1,23 +1,37 @@
-.Login {
+.Login,
+.Register {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.2em;
+  font-size: 20px;
   font-family: "Apparat-light", sans-serif;
+  text-align: center;
+  gap: 10px;
+  color: #334b92;
+  justify-content: center;
+  margin-top: auto;
 }
-.Login .login-form {
+.Login .login-form,
+.Register .login-form {
   width: 60%;
-  margin-top: 25%;
 }
-.Login .form-bottom {
+.Login .form-bottom,
+.Register .form-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 2em;
   gap: 10px;
+  font-size: larger;
 }
-.Login .sign-up-container {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+.Login button,
+.Register button {
+  font-size: large;
+}
+
+.heading h1 {
+  padding-bottom: 30px;
+}
+.heading p {
+  font-size: 1em;
 }/*# sourceMappingURL=login.css.map */
