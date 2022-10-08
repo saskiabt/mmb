@@ -17,8 +17,11 @@ $light-yellow-background: #eae9e2;
   border: none;
   background-color: $light-yellow-background;
   padding: 10px 20px;
+  padding-top: 15px;
   transition: ease-in-out 0.5s;
   font-size: 1.5em;
+  color: #204d8c;
+  cursor: pointer;
 
   &:hover {
     font-size: 2em;
@@ -37,6 +40,10 @@ $light-yellow-background: #eae9e2;
     font-size: x-large;
     background-color: $light-yellow-background;
     padding: 2%;
+    color: #122d52;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -52,6 +59,8 @@ $light-yellow-background: #eae9e2;
     font-size: 2em;
     padding-right: 0.8em;
     background-color: $light-yellow-background;
+    color: #204d8c;
+    cursor: pointer;
 
     &:active {
       text-decoration: none;

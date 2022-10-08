@@ -3,13 +3,13 @@ $light-blue-post-color: rgb(149 180 224);
   display: flex;
   flex-direction: column;
   width: 100%;
-  border: 1px solid lavender;
   border-radius: 2em;
   padding: 1.8em;
   background-color: rgb(68 59 81);
   background-color: $light-blue-post-color;
   transition: ease-in-out 0.5s;
   gap: 1em;
+  // box-shadow: 0px 0px 5px 0px rgb(48 83 132);
 
   .post-top {
     display: flex;
@@ -18,7 +18,7 @@ $light-blue-post-color: rgb(149 180 224);
     align-items: flex-start;
   }
 
-  .post-bottom {
+  .post-body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,7 +31,11 @@ $light-blue-post-color: rgb(149 180 224);
   .username {
     align-self: flex-start;
     font-size: 1.3em;
-    font-family: "Compagnon-Medium", sans-serif;
+    font-family: "Terminal-Grotesque", sans-serif;
+    color: #355889;
+    // font-family: apparat, sans-serif;
+    // font-weight: 600;
+    // font-style: normal;
   }
 
   .date {
@@ -44,7 +48,7 @@ $light-blue-post-color: rgb(149 180 224);
   .comment {
     font-size: 1.5em;
     font-weight: 100;
-    font-family: "Compagnon-Italic", sans-serif;
+    font-family: apparat-light, sans-serif;
   }
 
   .delete-container {

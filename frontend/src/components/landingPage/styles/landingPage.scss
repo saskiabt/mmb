@@ -1,4 +1,5 @@
 $dark-purple-background: #201922;
+$light-yellow-background: #eae9e2;
 
 .landing-page {
   display: flex;
@@ -6,7 +7,7 @@ $dark-purple-background: #201922;
   flex-direction: column;
   gap: 2em;
   width: 100%;
-  background-color: $dark-purple-background;
+  background-color: $light-yellow-background;
   padding-bottom: 2em;
   overflow: scroll;
 }

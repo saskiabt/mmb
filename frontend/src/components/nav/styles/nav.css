@@ -15,8 +15,11 @@
   border: none;
   background-color: #eae9e2;
   padding: 10px 20px;
+  padding-top: 15px;
   transition: ease-in-out 0.5s;
   font-size: 1.5em;
+  color: #204d8c;
+  cursor: pointer;
 }
 .nav-button:hover {
   font-size: 2em;
@@ -34,6 +37,10 @@
   font-size: x-large;
   background-color: #eae9e2;
   padding: 2%;
+  color: #122d52;
+}
+.nav-right .app__dark-mode-btn:hover {
+  cursor: pointer;
 }
 
 .login-link {
@@ -48,6 +55,8 @@
   font-size: 2em;
   padding-right: 0.8em;
   background-color: #eae9e2;
+  color: #204d8c;
+  cursor: pointer;
 }
 .login-link button:active {
   text-decoration: none;

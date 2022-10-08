@@ -40,6 +40,10 @@
   src: url("./fonts/Compagnon/Compagnon-Italic.eot");
   src: url("./fonts/Compagnon/Compagnon-Italic.woff") format("woff"), url("./fonts/Compagnon/Compagnon-Italic.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Terminal-Grotesque";
+  src: url("./fonts/terminal-grotesque/terminal-grotesque-webfont.ttf") format("truetype"), url("./fonts/terminal-grotesque/terminal-grotesque-webfont.woff") format("woff"), url("./fonts/terminal-grotesque/terminal-grotesque-webfont.woff2") format("woff2");
+}
 body {
   margin: 0;
   font-family: "Minipax-Regular", Helvetica, sans-serif;

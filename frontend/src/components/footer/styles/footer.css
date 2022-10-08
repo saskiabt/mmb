@@ -13,11 +13,13 @@
   padding-left: 5%;
   padding-right: 2.5%;
   z-index: 100;
-  font-family: "Minipax-Regular", sans-serif;
+  font-family: apparat-light, sans-serif;
 }
 .footer button {
   padding: 5px;
   background: none;
+  font-size: 1em;
+  color: #4e70a0;
 }
 .footer button:hover {
   color: blue;

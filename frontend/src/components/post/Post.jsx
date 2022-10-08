@@ -25,12 +25,10 @@ function Post({ post, i, postID, handleDelete }) {
       </div>
 
       <div className="post-body">
-        <div className="post-bottom">
-          <p className="comment">{post.comment}</p>
-          <div className="date">
-            <p>{formatTime(post.createdAt)}</p>
-            <p>{formatDate(post.createdAt)}</p>
-          </div>
+        <p className="comment">{post.comment}</p>
+        <div className="date">
+          <p>{formatTime(post.createdAt)}</p>
+          <p>{formatDate(post.createdAt)}</p>
         </div>
       </div>
     </div>
