@@ -6,7 +6,6 @@
 }
 .Register .register-form {
   width: 60%;
-  margin-top: 25%;
 }
 .Register .form-bottom {
   display: flex;
@@ -19,4 +18,13 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+.Register .heading {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  gap: 2.5%;
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 2%;
 }/*# sourceMappingURL=register.css.map */

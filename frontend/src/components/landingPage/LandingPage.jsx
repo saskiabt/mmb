@@ -7,7 +7,7 @@ import Footer from "../footer/Footer";
 function LandingPage({ data, setData }) {
   return (
     <div className="landing-page">
-      <Nav></Nav>
+      {/* <Nav></Nav> */}
       <Comments data={data} setData={setData}></Comments>
     </div>
   );

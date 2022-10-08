@@ -16,14 +16,15 @@ function Nav() {
   };
   return (
     <div className="Nav">
-      <button className="nav-button" onClick={toggleLoginButton}>
+      {/* <button className="nav-button" onClick={toggleLoginButton}>
         {isHidden && (
           <FontAwesomeIcon icon={faBars} className="fa-bars"></FontAwesomeIcon>
         )}
         {!isHidden && (
           <FontAwesomeIcon icon={faX} className="fa-x"></FontAwesomeIcon>
         )}
-      </button>
+      </button> */}
+      <DarkModeButton></DarkModeButton>
       {!isHidden ? (
         <div className="nav-right">
           {" "}
@@ -32,12 +33,11 @@ function Nav() {
               Login
             </button>
           </Link>
-          {/* <Link to="/register" className="nav-links">
+          <Link to="/register" className="nav-links">
             <button type="button" className="register-button">
               Sign Up
             </button>
-          </Link> */}
-          <DarkModeButton></DarkModeButton>
+          </Link>
         </div>
       ) : (
         <div className="filler"></div>

@@ -35,33 +35,26 @@ $light-yellow-background: #eae9e2;
   width: 100%;
   justify-content: flex-end;
   background-color: #eae9e2;
-  gap: 5%;
-
-  .app__dark-mode-btn {
-    font-size: x-large;
-    background-color: $light-yellow-background;
-    padding: 2%;
-    color: #122d52;
-    &:hover {
-      cursor: pointer;
-    }
-  }
+  gap: 3%;
+  padding-right: 2%;
 }
 
 .nav-links {
   display: flex;
-  // width: 100%;
+  width: fit-content;
   justify-content: flex-end;
   font-family: "Minipax-Bold", sans-serif;
+  text-decoration: none;
 
   button {
     // width: 100%;
     // text-align: end;
-    font-size: 1.75em;
+    font-size: 1.6em;
     padding: 0px;
     background-color: $light-yellow-background;
     color: #204d8c;
     cursor: pointer;
+    width: fit-content;
 
     &:active {
       text-decoration: none;
@@ -73,4 +66,14 @@ $light-yellow-background: #eae9e2;
 .filler {
   width: 100%;
   // background-color: $dark-purple-background;
+}
+
+.app__dark-mode-btn {
+  font-size: x-large;
+  background-color: $light-yellow-background;
+  padding: 2%;
+  color: #122d52;
+  &:hover {
+    cursor: pointer;
+  }
 }

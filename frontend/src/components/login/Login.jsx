@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Link } from "react-router-dom";
 import "./login.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPerson, faHome } from "@fortawesome/free-solid-svg-icons";
 
 function Login() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
   return (
     <div className="Login">
       <Form method="post" className="login-form">
@@ -30,7 +44,9 @@ function Login() {
           <Link to="/register">Sign Up</Link>
         </div>
 
-        <Link to="/">Back</Link>
+        <Link to="/">
+          <FontAwesomeIcon icon={faHome}>Home</FontAwesomeIcon>
+        </Link>
       </div>
     </div>
   );
