@@ -1,4 +1,4 @@
-.nav-wrapper {
+.Nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -7,12 +7,13 @@
   position: sticky;
   top: 0px;
   z-index: 100;
+  background-color: #eae9e2;
 }
 
 .nav-button {
   width: 15%;
   border: none;
-  background-color: #e2d6e6;
+  background-color: #eae9e2;
   padding: 10px 20px;
   transition: ease-in-out 0.5s;
   font-size: 1.5em;
@@ -22,16 +23,31 @@
   opacity: 80%;
 }
 
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  background-color: #eae9e2;
+}
+.nav-right .app__dark-mode-btn {
+  font-size: x-large;
+  background-color: #eae9e2;
+  padding: 2%;
+}
+
 .login-link {
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  font-family: "Minipax-Bold", sans-serif;
 }
 .login-link button {
   width: 100%;
   text-align: end;
   font-size: 2em;
   padding-right: 0.8em;
+  background-color: #eae9e2;
 }
 .login-link button:active {
   text-decoration: none;
@@ -40,5 +56,4 @@
 
 .filler {
   width: 100%;
-  background-color: #201922;
 }/*# sourceMappingURL=nav.css.map */

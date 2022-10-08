@@ -1,10 +1,57 @@
+@font-face {
+  font-family: "Minipax-Regular";
+  src: url("./fonts/MiniPax/Minipax-Regular.woff2") format("woff2"), url("./fonts/MiniPax/Minipax-Regular.woff") format("woff"), url("./fonts/MiniPax/ttf/Minipax-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Minipax-Bold";
+  src: url("./fonts/MiniPax/Minipax-Bold.woff2") format("woff2"), url("./fonts/MiniPax/Minipax-Bold.woff") format("woff"), url("./fonts/MiniPax/ttf/Minipax-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Minipax-Medium";
+  src: url("./fonts/MiniPax/Minipax-Medium.woff2") format("woff2"), url("./fonts/MiniPax/Minipax-Medium.woff") format("woff"), url("./fonts/MiniPax/ttf/Minipax-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chaumont";
+  src: url("./fonts/Chaumont/chaumont.eot");
+  src: url("./fonts/Chaumont/chaumont.ttf") format("truetype"), url("./fonts/Chaumont/chaumont.woff") format("woff");
+}
+@font-face {
+  font-family: "Compagnon-Light";
+  src: url("./fonts/Compagnon/Compagnon-Light.eot");
+  src: url("./fonts/Compagnon/Compagnon-Light.woff") format("woff"), url("./fonts/Compagnon/Compagnon-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Compagnon-Medium";
+  src: url("./fonts/Compagnon/Compagnon-Medium.eot");
+  src: url("./fonts/Compagnon/Compagnon-Medium.woff") format("woff"), url("./fonts/Compagnon/Compagnon-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Compagnon-Bold";
+  src: url("./fonts/Compagnon/Compagnon-Bold.eot");
+  src: url("./fonts/Compagnon/Compagnon-Bold.woff") format("woff"), url("./fonts/Compagnon/Compagnon-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Compagnon-Roman";
+  src: url("./fonts/Compagnon/Compagnon-Roman.eot");
+  src: url("./fonts/Compagnon/Compagnon-Roman.woff") format("woff"), url("./fonts/Compagnon/Compagnon-Roman.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Compagnon-Italic";
+  src: url("./fonts/Compagnon/Compagnon-Italic.eot");
+  src: url("./fonts/Compagnon/Compagnon-Italic.woff") format("woff"), url("./fonts/Compagnon/Compagnon-Italic.woff2") format("woff2");
+}
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Minipax-Regular", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e2d5e6;
+  background-color: #eae9e2;
   color: white;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 code {
@@ -152,5 +199,4 @@ table {
 
 button {
   border: none;
-  background-color: #e2d6e6;
 }/*# sourceMappingURL=index.css.map */

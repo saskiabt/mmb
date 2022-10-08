@@ -1,3 +1,4 @@
+$light-blue-post-color: rgb(149 180 224);
 .post {
   display: flex;
   flex-direction: column;
@@ -6,12 +7,15 @@
   border-radius: 2em;
   padding: 1.8em;
   background-color: rgb(68 59 81);
+  background-color: $light-blue-post-color;
   transition: ease-in-out 0.5s;
+  gap: 1em;
 
   .post-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .post-bottom {
@@ -27,6 +31,7 @@
   .username {
     align-self: flex-start;
     font-size: 1.3em;
+    font-family: "Compagnon-Medium", sans-serif;
   }
 
   .date {
@@ -37,9 +42,9 @@
     align-items: flex-end;
   }
   .comment {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 100;
-    font-family: sans-serif;
+    font-family: "Compagnon-Italic", sans-serif;
   }
 
   .delete-container {
@@ -50,14 +55,15 @@
 }
 
 #delete {
-  background-color: #453a51;
+  background-color: $light-blue-post-color;
   color: white;
   font-size: larger;
   transition: ease-in-out 0.3s;
-  opacity: 40%;
+  opacity: 50%;
 
   &:hover {
-    opacity: 100%;
+    opacity: 90%;
+    cursor: pointer;
   }
 }
 

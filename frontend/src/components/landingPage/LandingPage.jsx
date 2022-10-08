@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../nav/Nav";
 import Comments from "../comments/Comments";
 import "./styles/landingPage.css";
+import Footer from "../footer/Footer";
 
 function LandingPage({ data, setData }) {
   return (

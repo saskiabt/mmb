@@ -4,6 +4,7 @@ import "./styles/nav.css";
 import "../../icons/menu-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import DarkModeButton from "../dark-mode-button/DarkModeButton";
 
 function Nav() {
   const [isHidden, setIsHidden] = useState(true);
@@ -14,7 +15,7 @@ function Nav() {
     } else setIsHidden(false);
   };
   return (
-    <div className="nav-wrapper">
+    <div className="Nav">
       <button className="nav-button" onClick={toggleLoginButton}>
         {isHidden && (
           <FontAwesomeIcon icon={faBars} className="fa-bars"></FontAwesomeIcon>
@@ -24,11 +25,15 @@ function Nav() {
         )}
       </button>
       {!isHidden ? (
-        <Link to="/login" className="login-link">
-          <button type="button" className="login-button">
-            Login
-          </button>
-        </Link>
+        <div className="nav-right">
+          {" "}
+          <Link to="/login" className="login-link">
+            <button type="button" className="login-button">
+              Login
+            </button>
+          </Link>
+          <DarkModeButton></DarkModeButton>
+        </div>
       ) : (
         <div className="filler"></div>
       )}

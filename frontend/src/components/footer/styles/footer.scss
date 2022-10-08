@@ -1,0 +1,27 @@
+$light-yellow-background: #eae9e2;
+
+.footer {
+  position: sticky;
+  margin-top: auto;
+  padding-bottom: 1em;
+  padding-top: 0.8em;
+  font-size: 1em;
+  color: #4e70a0;
+  // background-color: $light-yellow-background;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 2.5%;
+  z-index: 100;
+  font-family: "Minipax-Regular", sans-serif;
+  button {
+    padding: 5px;
+    background: none;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}

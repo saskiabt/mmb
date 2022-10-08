@@ -6,12 +6,15 @@
   border-radius: 2em;
   padding: 1.8em;
   background-color: rgb(68, 59, 81);
+  background-color: rgb(149, 180, 224);
   transition: ease-in-out 0.5s;
+  gap: 1em;
 }
 .post .post-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .post .post-bottom {
   display: flex;
@@ -24,6 +27,7 @@
 .post .username {
   align-self: flex-start;
   font-size: 1.3em;
+  font-family: "Compagnon-Medium", sans-serif;
 }
 .post .date {
   font-size: 0.8em;
@@ -33,9 +37,9 @@
   align-items: flex-end;
 }
 .post .comment {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 100;
-  font-family: sans-serif;
+  font-family: "Compagnon-Italic", sans-serif;
 }
 .post .delete-container {
   display: flex;
@@ -44,14 +48,15 @@
 }
 
 #delete {
-  background-color: #453a51;
+  background-color: rgb(149, 180, 224);
   color: white;
   font-size: larger;
   transition: ease-in-out 0.3s;
-  opacity: 40%;
+  opacity: 50%;
 }
 #delete:hover {
-  opacity: 100%;
+  opacity: 90%;
+  cursor: pointer;
 }
 
 .post-body {
