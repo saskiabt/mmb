@@ -17,9 +17,9 @@ const generateJWT = (id) => {
 // @route POST api/users
 // @access PUBLIC
 const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, password } = req.body;
-  if (!name) {
-    console.error(new Error("Please add name"));
+  const { username, email, password } = req.body;
+  if (!username) {
+    console.error(new Error("Please add username"));
   } else if (!email) {
     console.error(new Error("Please add email"));
   } else if (!password) {
@@ -39,7 +39,7 @@ const registerUser = asyncHandler(async (req, res) => {
   console.log(hashedPassword);
 
   const user = await User.create({
-    name,
+    username,
     email,
     password: hashedPassword,
   });
@@ -49,7 +49,7 @@ const registerUser = asyncHandler(async (req, res) => {
     res.status(201);
     res.json({
       _id: user.id,
-      name: user.name,
+      username: user.username,
       email: user.email,
       // eslint-disable-next-line no-underscore-dangle
       token: generateJWT(user._id),
@@ -70,7 +70,7 @@ const loginUser = asyncHandler(async (req, res) => {
   if (user && (await bcrypt.compare(password, user.password))) {
     res.json({
       _id: user.id,
-      name: user.name,
+      username: user.username,
       email: user.email,
       // eslint-disable-next-line no-underscore-dangle
       token: generateJWT(user._id),
@@ -85,10 +85,10 @@ const loginUser = asyncHandler(async (req, res) => {
 // @route GET api/users/me
 // @access PRIVATE
 const getMe = asyncHandler(async (req, res) => {
-  const { _id, name, email } = req.user;
+  const { _id, username, email } = req.user;
   res.status(200).json({
     id: _id,
-    name,
+    username,
     email,
   });
 });

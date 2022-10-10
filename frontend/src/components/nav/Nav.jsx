@@ -25,15 +25,15 @@ function Nav() {
       </div>
       <div className="nav-right">
         {" "}
-        <Link to="/login" className="nav-links">
-          <button type="button" className="login-button">
-            Login
-          </button>
-        </Link>{" "}
-        /
         <Link to="/register" className="nav-links">
           <button type="button" className="register-button">
             Sign Up
+          </button>
+        </Link>{" "}
+        /
+        <Link to="/login" className="nav-links">
+          <button type="button" className="login-button">
+            Login
           </button>
         </Link>
       </div>

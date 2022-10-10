@@ -7,26 +7,23 @@ import Login from "../components/login/Login";
 import LandingPage from "../components/landingPage/LandingPage";
 import Footer from "../components/footer/Footer";
 import { Outlet } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const [data, setData] = useState({
-    username: "",
-    comment: "",
-  });
+  // const [data, setData] = useState({
+  //   username: "",
+  //   comment: "",
+  // });
 
-  const [isHidden, setIsHidden] = useState(true);
+  // const [isHidden, setIsHidden] = useState(true);
 
   return (
     <div className="App">
       <Nav></Nav>
-      {/* <LandingPage
-        data={data}
-        setData={setData}
-        isHidden={isHidden}
-        setIsHidden={setIsHidden}
-      ></LandingPage> */}
       <Outlet></Outlet>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
