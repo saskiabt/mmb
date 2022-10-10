@@ -32,9 +32,7 @@ function Register() {
       navigate("/dashboard");
     }
 
-    // if (isLoading) {
-    //   return <Spinner></Spinner>;
-    // }
+    dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch, isLoading]);
 
   const handleChange = (event) => {
@@ -66,6 +64,8 @@ function Register() {
       dispatch(register(formData));
     }
   };
+
+  if (isLoading) return <Spinner />;
 
   return (
     <div className="Register login-register">

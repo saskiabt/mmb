@@ -20,4 +20,13 @@ const addUser = async (userData) => {
   }
 };
 
-export { addUser };
+const logoutUser = async () => {
+  try {
+    // more advanced way to do this would be to use server and set http cookie
+    localStorage.removeItem("user");
+  } catch (err) {
+    if (err) console.log(err);
+  }
+};
+
+export { addUser, logoutUser };
