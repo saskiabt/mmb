@@ -13,12 +13,6 @@ function Nav() {
   const { user } = useSelector((state) => state.auth);
   const [isHidden, setIsHidden] = useState(false);
 
-  // const toggleLoginButton = () => {
-  //   if (!isHidden) {
-  //     setIsHidden(true);
-  //   } else setIsHidden(false);
-  // };
-
   const onLogout = () => {
     dispatch(logout());
     dispatch(reset());
@@ -49,6 +43,7 @@ function Nav() {
                 Sign Up
               </button>
             </Link>
+            {" / "}
             <Link to="/login" className="nav-links">
               <button type="button" className="login-button">
                 Login

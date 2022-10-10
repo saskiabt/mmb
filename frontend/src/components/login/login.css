@@ -11,10 +11,6 @@
   justify-content: center;
   margin-top: auto;
 }
-.Login .login-form,
-.Register .login-form {
-  width: 60%;
-}
 .Login .form-bottom,
 .Register .form-bottom {
   display: flex;
