@@ -2,16 +2,10 @@ Full stack message board app with authentication and authorization. Created usin
 
 Features:
 
-Frontend routing using react-router-dom, index route to login page. Login page and sign up page to create user credentials which can then be used to access private routes, such as create-posts, edit posts, and delete posts.
+Frontend routing using react-router-dom, index route to Feed page. Nav links to login page and sign up page to create user credentials which can then be used to access private routes, such as create-posts, edit posts, and delete posts.
 
 Backend routing using express and Node.js.
 
 Backend authentication using JSON Web Tokens and Bcrypt. Frontend authentication and global state management using redux and redux-toolkit.
 
 Dashboard that shows current user's posts and displays form to enter new post.
-
-Font Credits:
-
--Compagnon from Velvetyne Type Foundry. Credits to Juliette Duhé + Léa Pradine + Valentin Papon + Chloé Lozano + Sébastien Riollier.
-
--MiniPax by Raphaël Ronot
