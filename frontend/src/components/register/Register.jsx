@@ -53,13 +53,6 @@ function Register() {
     } else if (username.includes(" ")) {
       toast.error("No spaces in Username");
     } else {
-      // const userData = {
-      //   username,
-      //   email,
-      //   password,
-      //   confirmPassword,
-      // };
-
       console.log(formData);
       dispatch(register(formData));
     }
@@ -73,7 +66,7 @@ function Register() {
         <h1>Create Account</h1>
       </div>
       <div className="form">
-        <form className="register-form" onSubmit={handleSubmit}>
+        <form className="login-form" onSubmit={handleSubmit}>
           <label className="form-control">
             <input
               type="text"
@@ -110,7 +103,12 @@ function Register() {
               onChange={handleChange}
             />
           </label>
-          <button type="submit">Sign Up</button>
+          <div className="form-button-container">
+            <button type="submit" className="nav-links">
+              {" "}
+              Sign Up
+            </button>
+          </div>
         </form>
         <div className="form-bottom">
           <p>Already have an account?</p>

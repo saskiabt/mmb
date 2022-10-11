@@ -1,52 +1,24 @@
 import React from "react";
-import TextInput from "../text/TextInput";
-import TextArea from "../text/TextArea";
 import "../form/styles/form.css";
-import { addPost } from "../../api/posts";
-import { useNavigate, Form, Link } from "react-router-dom";
 
-function DataForm({ data, setData, isHidden, setIsHidden }) {
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setData({
-      ...data,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (event) => {
-    if (event && (!data.comment || !data.username)) {
-      event.preventDefault();
-      alert("Event prevented");
-    }
-    addPost(data);
-  };
-
-  if (!isHidden)
-    return (
-      <form className="form" onSubmit={handleSubmit}>
-        <TextInput
-          type="text"
-          values={data.username}
-          placeholder="Your name here:"
-          name="username"
-          handleChange={handleChange}
-        ></TextInput>
-        <TextArea
-          type="text"
-          values={data.comment}
-          placeholder="Leave a comment..."
-          name="comment"
-          handleChange={handleChange}
-        ></TextArea>
-        <div className="button-container">
-          <button type="submit">
-            {" "}
-            <Link to={"/"}></Link>Add Message
-          </button>
-        </div>
+function Form({ handleSubmit, handleChange }) {
+  return (
+    <div className="Post-Form">
+      <form onSubmit={handleSubmit} className="post-form">
+        <label className="comments">
+          <input
+            type="text"
+            placeholder="Enter comment"
+            onChange={handleChange}
+            name="comment"
+            id="comment-input"
+          ></input>
+        </label>
+        <div className="button-container"></div>
+        <button type="submit">Add Comment</button>
       </form>
-    );
+    </div>
+  );
 }
 
-export default DataForm;
+export default Form;

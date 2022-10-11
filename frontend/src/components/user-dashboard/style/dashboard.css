@@ -1,0 +1,14 @@
+.Dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+.Dashboard h1 {
+  color: #85a1c8;
+  font-size: 3em;
+}
+.Dashboard .heading {
+  padding-top: 10%;
+  padding-bottom: 5%;
+}/*# sourceMappingURL=dashboard.css.map */

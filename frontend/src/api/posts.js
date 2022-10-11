@@ -13,7 +13,6 @@ const fetchAllPosts = async () => {
 };
 
 const fetchPosts = async (token) => {
-  console.log(token);
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,

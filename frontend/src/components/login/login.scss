@@ -13,9 +13,9 @@ $medium-blue: #334b92;
   justify-content: center;
   margin-top: auto;
 
-  // .login-form {
-  //   width: 60%;
-  // }
+  .login-form {
+    width: 60%;
+  }
 
   .form-bottom {
     display: flex;
@@ -34,9 +34,24 @@ $medium-blue: #334b92;
 .heading {
   h1 {
     padding-bottom: 30px;
+    font-family: "Apperat-light", sans-serif;
+    font-weight: 700;
   }
 
   p {
     font-size: 1em;
   }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 }

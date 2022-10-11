@@ -53,6 +53,7 @@ const AMorPM = (hour) => {
 };
 
 const formatTime = (data) => {
+  console.log(data);
   const arr = data.split("T");
   const time = arr[1].split(":");
   let hour = parseInt(time[0]);

@@ -11,6 +11,10 @@
   justify-content: center;
   margin-top: auto;
 }
+.Login .login-form,
+.Register .login-form {
+  width: 60%;
+}
 .Login .form-bottom,
 .Register .form-bottom {
   display: flex;
@@ -27,7 +31,22 @@
 
 .heading h1 {
   padding-bottom: 30px;
+  font-family: "Apperat-light", sans-serif;
+  font-weight: 700;
 }
 .heading p {
   font-size: 1em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 }/*# sourceMappingURL=login.css.map */

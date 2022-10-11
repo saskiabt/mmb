@@ -13,7 +13,7 @@ function Post({ post, i, postID, handleDelete }) {
     <div className="post" id={"post" + i}>
       <div className="post-top">
         <h2 className="username">{post.username}</h2>
-        <div className="delete-container">
+        {/* <div className="delete-container">
           <button
             id="delete"
             type="button"
@@ -21,14 +21,14 @@ function Post({ post, i, postID, handleDelete }) {
           >
             <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="post-body">
         <p className="comment">{post.comment}</p>
         <div className="date">
-          <p>{formatTime(post.createdAt)}</p>
-          <p>{formatDate(post.createdAt)}</p>
+          <p>{new Date(post.createdAt).toLocaleDateString("en-US")}</p>
+          <p>{new Date(post.createdAt).toLocaleTimeString("en-US")}</p>
         </div>
       </div>
     </div>

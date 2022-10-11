@@ -8,6 +8,9 @@ import {
   reset,
 } from "../../features/userPosts/postSlice";
 import Spinner from "../spinner/Spinner";
+import Form from "../form/Form";
+import "../user-dashboard/style/dashboard.css";
+import _ from "lodash";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -19,9 +22,11 @@ function Dashboard() {
   );
 
   const [commentData, setCommentData] = useState({
-    username: user.username,
+    username: "",
     comment: "",
   });
+
+  const [isHidden, setIsHidden] = useState(true);
 
   const handleChange = (event) => {
     setCommentData({
@@ -32,19 +37,25 @@ function Dashboard() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(commentData);
-    dispatch(createPost(commentData));
     setCommentData({
       ...commentData,
-      comment: "",
+      username: user.username,
     });
-    document.getElementById("comment-input").value = "";
-  };
+    console.log(commentData);
 
-  const handleClick = () => {
-    dispatch(getPosts());
-
-    dispatch(reset());
+    if (commentData.comment && commentData.username !== "") {
+      dispatch(createPost(commentData));
+      setCommentData({
+        ...commentData,
+        comment: "",
+        username: "",
+      });
+      document.getElementById("comment-input").value = "";
+      window.location.reload();
+    } else {
+      document.getElementById("comment-input").placeholder =
+        "Please enter a comment";
+    }
   };
 
   useEffect(() => {
@@ -64,30 +75,17 @@ function Dashboard() {
     return () => {
       dispatch(reset());
     };
-  }, [isError, user, navigate, dispatch]);
+  }, [isError, user, navigate, dispatch, message]);
 
   if (isLoading) return <Spinner></Spinner>;
   return (
-    <div>
+    <div className="Dashboard">
       {" "}
       <div className="heading">
-        <h1>Welcome {user.username}</h1>
+        <h1>Welcome, {_.capitalize(user.username)}</h1>
       </div>
-      <div>
-        <form onSubmit={handleSubmit} className="post-form">
-          <label className="comments">
-            <input
-              type="text"
-              placeholder="Enter comment"
-              onChange={handleChange}
-              name="comment"
-              id="comment-input"
-            ></input>
-          </label>
-          <button type="submit">Add Comment</button>
-        </form>
-        <MyPosts></MyPosts>
-      </div>
+      <Form handleChange={handleChange} handleSubmit={handleSubmit}></Form>
+      <MyPosts></MyPosts>
     </div>
   );
 }

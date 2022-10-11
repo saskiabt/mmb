@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import "./styles/nav.css";
 import "../../icons/menu-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,6 +16,8 @@ function Nav() {
   const onLogout = () => {
     dispatch(logout());
     dispatch(reset());
+    navigate("/");
+    console.log("navigated!");
   };
   return (
     <div className="Nav">
@@ -30,7 +32,7 @@ function Nav() {
       <div className="nav-right">
         {" "}
         {user ? (
-          <Link to="/login" className="nav-links">
+          <Link to="/" className="nav-links">
             <button type="button" onClick={onLogout}>
               Logout
             </button>

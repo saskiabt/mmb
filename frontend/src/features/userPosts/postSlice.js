@@ -16,7 +16,8 @@ export const createPost = createAsyncThunk(
   async (postData, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
-      console.log(postData);
+      const username = thunkAPI.getState().auth.user.username;
+      console.log(username);
       return await addPost(postData, token);
     } catch (err) {
       const message =

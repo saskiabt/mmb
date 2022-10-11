@@ -7,4 +7,12 @@ export const store = configureStore({
     auth: authReducer,
     post: postReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      immutableCheck: {
+        // Ignore state paths, e.g. state for 'items':
+        ignoredPaths: ["post.data"],
+      },
+      serializableCheck: { ignoredPaths: ["some.nested.path"] },
+    }),
 });

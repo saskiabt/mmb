@@ -38,6 +38,16 @@ function Login() {
     });
   };
 
+  const autoFill = () => {
+    document.querySelector("#login-name").value = "test@gmail.com";
+    document.querySelector("#login-pw").value = "test";
+
+    setFormData({
+      email: "test@gmail.com",
+      password: "test",
+    });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
@@ -63,6 +73,7 @@ function Login() {
               name="email"
               aria-label="email"
               placeholder="Email Address"
+              id="login-name"
               onChange={handleChange}
             ></input>
           </label>
@@ -73,12 +84,18 @@ function Login() {
               aria-label="password"
               placeholder="Password"
               onChange={handleChange}
+              id="login-pw"
             ></input>
           </label>
-          <button type="submit">
-            Login{" "}
-            <FontAwesomeIcon icon={faArrowRightToBracket}></FontAwesomeIcon>
-          </button>
+          <div className="form-button-container">
+            <button type="button" onClick={autoFill}>
+              Autofill
+            </button>
+            <button type="submit">
+              Login{" "}
+              <FontAwesomeIcon icon={faArrowRightToBracket}></FontAwesomeIcon>
+            </button>
+          </div>
         </form>
         <div className="form-bottom">
           <p>No Account? </p>

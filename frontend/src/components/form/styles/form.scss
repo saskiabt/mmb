@@ -1,11 +1,12 @@
-$babyblue: rgb(157, 202, 237);
+// $babyblue: rgb(157, 202, 237);
 
-form {
+.Post-Form {
   display: flex;
   flex-direction: column;
   width: 75vw;
-  gap: 1em;
+  gap: 20px;
   transition: opacity ease-in 0.5s;
+  padding-bottom: 30px;
 
   button {
     transition: ease-in-out 0.4s;
@@ -22,18 +23,20 @@ form {
       opacity: 80%;
     }
   }
-}
 
-input {
-  border-right: 0;
-  border-left: 0;
-  border-top: 0;
-}
+  input {
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    margin-bottom: 20px;
+  }
 
-textarea {
-  resize: none;
-
-  height: 10em;
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 0.2em;
+  }
 }
 
 input,
@@ -48,7 +51,7 @@ textarea {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   transition: ease-in 0.2s;
   background-color: rgb(149 180 224 / 48%);
-  color: white;
+  color: black;
 
   ::placeholder {
     color: white;
@@ -65,11 +68,4 @@ textarea {
     box-shadow: 1px 1px 1px grey;
     border: none;
   }
-}
-
-.button-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-right: 0.2em;
 }
