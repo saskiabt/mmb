@@ -7,13 +7,17 @@ import openLink from "../../helper-functions/openLink";
 function Footer() {
   return (
     <div className="footer">
-      <p>Built by Saskia Binder</p>
+      <button onClick={() => openLink("https://saskiabt.github.io/portfolio/")}>
+        Built by Saskia Binder
+      </button>
       <div className="footer-buttons">
         <button
-          className="portfolio"
-          onClick={() => openLink("https://saskiabt.github.io/portfolio/")}
+          className="source-code"
+          onClick={() => {
+            openLink("https://github.com/saskiabt/mmb");
+          }}
         >
-          Portfolio
+          Source Code
         </button>
         <button
           className="linkedin-icon icon"
