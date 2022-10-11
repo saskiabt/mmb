@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   overflow: scroll;
+  width: 75vw;
 }
 .MyPosts ul {
   display: flex;
