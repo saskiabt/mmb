@@ -6,21 +6,22 @@
   justify-content: center;
   margin-top: auto;
   border: 1px solid blue;
-  padding: 30px;
-  width: 60%;
+  padding: 3vmin 30px;
+  width: 70%;
 }
 .Login .heading h1,
 .Register .heading h1 {
   font-size: 4em;
   padding-bottom: 0.5em;
+  text-align: center;
 }
 .Login form,
 .Register form {
   width: 90%;
 }
-.Login input[type=text],
-.Register input[type=text] {
-  font-size: larger;
+.Login input,
+.Register input {
+  font-size: large;
   margin: 8px 0;
   background-color: white;
   border-bottom: 1px solid blue;
@@ -35,7 +36,7 @@
 }
 .Login .login-button,
 .Register .login-button {
-  font-size: 2em;
+  font-size: 1.75em;
   font-weight: 200;
   background-color: lightblue;
   margin: 4px 0;
@@ -54,9 +55,15 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
+  font-size: 1.15em;
 }
 .Login i,
 .Register i {
   -webkit-text-decoration: italic;
           text-decoration: italic;
+}
+
+.Register .form-bottom {
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=login.css.map */

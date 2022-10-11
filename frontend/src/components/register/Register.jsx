@@ -61,12 +61,12 @@ function Register() {
   if (isLoading) return <Spinner />;
 
   return (
-    <div className="Register login-register">
+    <div className="Register">
       <div className="heading">
         <h1>Create Account</h1>
       </div>
-      <div className="form">
-        <form className="login-form" onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div className="form-inputs">
           <label className="form-control">
             <input
               type="text"
@@ -103,19 +103,20 @@ function Register() {
               onChange={handleChange}
             />
           </label>
-          <div className="form-button-container">
-            <button type="submit" className="nav-links">
-              {" "}
-              Sign Up
-            </button>
-          </div>
-        </form>
-        <div className="form-bottom">
-          <p>Already have an account?</p>
-          <Link to="/login">
-            <FontAwesomeIcon icon={faRightToBracket}></FontAwesomeIcon> Login
-          </Link>
         </div>
+
+        <div className="form-buttons">
+          <button type="submit" className="login-button">
+            {" "}
+            Sign Up
+          </button>
+        </div>
+      </form>
+      <div className="form-bottom">
+        <p>Already have an account?</p>
+        <Link to="/login">
+          <FontAwesomeIcon icon={faRightToBracket}></FontAwesomeIcon> Login
+        </Link>
       </div>
     </div>
   );
