@@ -24,6 +24,25 @@
     margin: 8px 0;
     background-color: white;
     border-bottom: 1px solid blue;
+    padding: 0em 4em;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    transition: ease-in 0.2s;
+    color: black;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    &:focus-visible {
+      outline: 0;
+      border-bottom: 3px solid blue;
+    }
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+      border: none;
+    }
   }
 
   .form-buttons {

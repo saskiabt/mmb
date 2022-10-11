@@ -11,4 +11,70 @@
 }
 .Dashboard .heading {
   padding-bottom: 5%;
+}
+.Dashboard .MyPosts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Dashboard .MyPosts ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 60vw;
+  align-items: flex-start;
+  padding-top: 2em;
+  color: #334a92;
+}
+.Dashboard .MyPosts h3 {
+  color: #233362;
+  font-weight: 500;
+}
+.Dashboard .Create-Post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.Dashboard .Create-Post button {
+  font-size: 1.25em;
+  font-weight: 200;
+  background-color: #324aef;
+  margin: 4px 0;
+  color: white;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: ease-in-out 0.4s;
+}
+.Dashboard .Create-Post button:hover {
+  transform: scale(0.95);
+  color: white;
+  opacity: 80%;
+}
+.Dashboard .Create-Post .form-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+input {
+  font-size: large;
+  margin: 8px 0;
+  background-color: white;
+  border-bottom: 2px solid blue;
+  padding: 0em 4em;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 100%;
+  transition: ease-in 0.2s;
+  color: black;
+  border-right: 0;
+  border-left: 0;
+  border-top: 0;
+}
+input:focus-visible {
+  outline: 0;
+  border-bottom: 3px solid blue;
 }/*# sourceMappingURL=dashboard.css.map */

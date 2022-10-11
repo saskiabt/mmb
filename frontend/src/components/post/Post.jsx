@@ -3,7 +3,7 @@ import "./Post.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-function Post({ post, i, postID, handleDelete }) {
+function Post({ post, i, handleDelete }) {
   return (
     <div className="Post" id={"post" + i}>
       <div className="post-top">
