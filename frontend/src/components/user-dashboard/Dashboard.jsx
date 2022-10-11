@@ -8,8 +8,9 @@ import {
   reset,
 } from "../../features/userPosts/postSlice";
 import Spinner from "../spinner/Spinner";
-import Form from "../form/Form";
 import "../user-dashboard/style/dashboard.css";
+
+import "../heading/heading.css";
 import _ from "lodash";
 
 function Dashboard() {
@@ -68,8 +69,27 @@ function Dashboard() {
       {" "}
       <div className="heading">
         <h1>Welcome, {_.capitalize(user.username)}</h1>
+        {/* <h3>MY POSTS</h3> */}
       </div>
-      <Form handleChange={handleChange} handleSubmit={handleSubmit}></Form>
+      {/* <Form handleChange={handleChange} handleSubmit={handleSubmit}></Form> */}
+      <div className="Create-Post">
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="form-inputs">
+            <label className="comments">
+              <input
+                type="text"
+                placeholder="Enter comment"
+                onChange={handleChange}
+                name="comment"
+                id="comment-input"
+              ></input>
+            </label>
+          </div>
+          <div className="form-buttons">
+            <button type="submit">Add Comment</button>
+          </div>
+        </form>
+      </div>
       {posts.length > 0 ? (
         <MyPosts></MyPosts>
       ) : (
