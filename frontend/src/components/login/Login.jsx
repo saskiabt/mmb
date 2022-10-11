@@ -6,6 +6,7 @@ import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { login, reset } from "../../features/auth/authSlice";
 import { toast, ToastContainer } from "react-toastify";
+import Spinner from "../spinner/Spinner";
 
 function Login() {
   const dispatch = useDispatch();
@@ -40,9 +41,14 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
-    dispatch(login(formData));
+    if (formData.email && formData.password) {
+      dispatch(login(formData));
+    } else {
+      alert("Please add username and password");
+    }
   };
 
+  if (isLoading) return <Spinner></Spinner>;
   return (
     <div className="Login">
       <div className="heading">

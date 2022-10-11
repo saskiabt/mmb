@@ -26,7 +26,7 @@ const createPost = asyncHandler(async (req, res) => {
 
   const newPost = await Post.create({
     user: req.user.id,
-    username: req.user.name,
+    username: req.user.username,
     comment: req.body.comment,
   });
 

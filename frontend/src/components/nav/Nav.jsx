@@ -30,7 +30,7 @@ function Nav() {
       <div className="nav-right">
         {" "}
         {user ? (
-          <Link to="/" className="nav-links">
+          <Link to="/login" className="nav-links">
             <button type="button" onClick={onLogout}>
               Logout
             </button>
