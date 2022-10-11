@@ -25,4 +25,7 @@
   font-family: "Apparat-light", sans-serif;
   font-weight: 400;
   color: #334b92;
+}
+.nav-links button:hover {
+  border-bottom: 0.5px solid #6e88af;
 }/*# sourceMappingURL=nav.css.map */

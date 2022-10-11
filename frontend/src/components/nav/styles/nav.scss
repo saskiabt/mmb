@@ -30,5 +30,9 @@ $medium-blue: #334b92;
     font-family: "Apparat-light", sans-serif;
     font-weight: 400;
     color: $medium-blue;
+
+    &:hover {
+      border-bottom: 0.5px solid #6e88af;
+    }
   }
 }
