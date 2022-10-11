@@ -1,10 +1,14 @@
 .Post-Form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 75vw;
   gap: 20px;
   transition: opacity ease-in 0.5s;
   padding-bottom: 30px;
+}
+.Post-Form .post-form {
+  width: 100%;
 }
 .Post-Form button {
   transition: ease-in-out 0.4s;
@@ -15,7 +19,7 @@
 }
 .Post-Form button:hover {
   color: white;
-  background-color: #635765;
+  background-color: #233468;
   opacity: 80%;
 }
 .Post-Form input {

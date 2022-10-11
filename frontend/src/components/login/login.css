@@ -13,7 +13,7 @@
 }
 .Login .login-form,
 .Register .login-form {
-  width: 60%;
+  width: 80%;
 }
 .Login .form-bottom,
 .Register .form-bottom {
@@ -49,4 +49,8 @@
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
+}
+.form-button-container button:hover {
+  background-color: #6171a5;
+  color: white;
 }/*# sourceMappingURL=login.css.map */

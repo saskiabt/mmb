@@ -63,7 +63,6 @@ function Login() {
     <div className="Login">
       <div className="heading">
         <h1>Login</h1>
-        <p>Please sign in to post comments</p>
       </div>
       <div className="form">
         <form className="login-form" onSubmit={handleSubmit}>

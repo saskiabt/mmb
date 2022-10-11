@@ -25,8 +25,8 @@ function Nav() {
         <Link to="/" className="nav-icon nav-icon-home">
           <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
         </Link>{" "}
-        |
-        <DarkModeButton className="nav-icon nav-icon-dark-mode"></DarkModeButton>
+        {/* |
+        <DarkModeButton className="nav-icon nav-icon-dark-mode"></DarkModeButton> */}
       </div>
 
       <div className="nav-right">

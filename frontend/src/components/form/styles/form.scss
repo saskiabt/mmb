@@ -3,10 +3,15 @@
 .Post-Form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 75vw;
   gap: 20px;
   transition: opacity ease-in 0.5s;
   padding-bottom: 30px;
+
+  .post-form {
+    width: 100%;
+  }
 
   button {
     transition: ease-in-out 0.4s;
@@ -19,7 +24,7 @@
 
     &:hover {
       color: white;
-      background-color: #635765;
+      background-color: #233468;
       opacity: 80%;
     }
   }

@@ -14,8 +14,9 @@ function Form({ handleSubmit, handleChange }) {
             id="comment-input"
           ></input>
         </label>
-        <div className="button-container"></div>
-        <button type="submit">Add Comment</button>
+        <div className="button-container">
+          <button type="submit">Add Comment</button>
+        </div>
       </form>
     </div>
   );

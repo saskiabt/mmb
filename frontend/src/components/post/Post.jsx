@@ -1,12 +1,7 @@
 import React from "react";
 import "./Post.css";
-import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import {
-  formatDate,
-  formatTime,
-} from "../../helper-functions/date-time/format-dates";
 
 function Post({ post, i, postID, handleDelete }) {
   return (

@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Post from "../post/Post";
 import { v4 as uuidv4 } from "uuid";
+import "../comments/Comments.css";
 
 function MyPosts() {
   const { posts } = useSelector((state) => state.post);

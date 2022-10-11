@@ -14,7 +14,7 @@ $medium-blue: #334b92;
   margin-top: auto;
 
   .login-form {
-    width: 60%;
+    width: 80%;
   }
 
   .form-bottom {
@@ -54,4 +54,11 @@ $medium-blue: #334b92;
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
+
+  button {
+    &:hover {
+      background-color: #6171a5;
+      color: white;
+    }
+  }
 }
