@@ -5,6 +5,7 @@ import { getAllPosts } from "../../features/allPosts/AllPostSlice";
 import Post from "../post/Post";
 import { v4 as uuidv4 } from "uuid";
 import "../myPosts/Comments.css";
+import "../landing-page/landingPage.css";
 import AllPosts from "../AllPosts/AllPosts";
 
 function LandingPage() {
