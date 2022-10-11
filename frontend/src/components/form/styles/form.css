@@ -10,6 +10,9 @@
 .Post-Form .post-form {
   width: 100%;
 }
+.Post-Form h3 {
+  padding-bottom: 15px;
+}
 .Post-Form button {
   transition: ease-in-out 0.4s;
   padding: 1vmin 2vmin;

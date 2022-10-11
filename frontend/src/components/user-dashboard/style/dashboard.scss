@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   overflow: scroll;
+  height: 100%;
 
   h1 {
     color: #85a1c8;
@@ -10,7 +11,7 @@
   }
 
   .heading {
-    padding-top: 10%;
+    padding-top: 15%;
     padding-bottom: 5%;
   }
 }
