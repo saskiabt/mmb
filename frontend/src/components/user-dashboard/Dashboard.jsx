@@ -68,6 +68,7 @@ function Dashboard() {
       {" "}
       <div className="heading">
         <h1>Welcome, {_.capitalize(user.username)}</h1>
+        <h3>MY POSTS</h3>
       </div>
       <Form handleChange={handleChange} handleSubmit={handleSubmit}></Form>
       {posts.length > 0 ? (

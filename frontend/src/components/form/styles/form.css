@@ -30,6 +30,10 @@
   border-left: 0;
   border-top: 0;
   margin-bottom: 20px;
+  font-size: large;
+  margin: 8px 0;
+  background-color: white;
+  border-bottom: 1px solid blue;
 }
 .Post-Form .button-container {
   display: flex;
@@ -63,7 +67,8 @@ textarea ::placeholder {
 }
 input:focus-visible,
 textarea:focus-visible {
-  border: none;
+  outline: 0;
+  border-bottom: 3px solid blue;
 }
 input:focus:not(:focus-visible),
 textarea:focus:not(:focus-visible) {

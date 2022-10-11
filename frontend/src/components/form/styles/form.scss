@@ -38,6 +38,10 @@
     border-left: 0;
     border-top: 0;
     margin-bottom: 20px;
+    font-size: large;
+    margin: 8px 0;
+    background-color: white;
+    border-bottom: 1px solid blue;
   }
 
   .button-container {
@@ -68,8 +72,8 @@ textarea {
 
   &:focus-visible {
     // transform: scale(1.01);
-    // outline: 1px solid rgb(194 194 194);
-    border: none;
+    outline: 0;
+    border-bottom: 3px solid blue;
   }
 
   &:focus:not(:focus-visible) {
