@@ -6,7 +6,7 @@ const fetchAllPosts = async () => {
     const response = await fetch("/api/feed");
     const result = await response.json();
     console.log(result);
-    return result;
+    return result.posts;
   } catch (err) {
     console.log(err);
   }
