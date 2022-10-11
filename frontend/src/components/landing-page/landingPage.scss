@@ -1,4 +1,25 @@
-.LandingPage {
+.Landing-Page {
   overflow: scroll;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    padding-bottom: 25px;
+  }
+
+  h3 {
+    padding-bottom: 25px;
+  }
+}
+
+.AllPosts {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 60vw;
+  align-items: flex-start;
+  padding-top: 2em;
+  color: #334a92;
 }

@@ -3,54 +3,67 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
-  font-family: "Apparat-light", sans-serif;
-  text-align: center;
-  gap: 10px;
-  color: #334b92;
   justify-content: center;
   margin-top: auto;
+  border: 1px solid blue;
+  padding: 3vmin 30px;
+  width: 70%;
 }
-.Login .login-form,
-.Register .login-form {
-  width: 80%;
+.Login .heading h1,
+.Register .heading h1 {
+  font-size: 4em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+.Login form,
+.Register form {
+  width: 90%;
+}
+.Login input,
+.Register input {
+  font-size: large;
+  margin: 8px 0;
+  background-color: white;
+  border-bottom: 1px solid blue;
+}
+.Login .form-buttons,
+.Register .form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1em;
+  padding-top: 2em;
+}
+.Login .login-button,
+.Register .login-button {
+  font-size: 1.75em;
+  font-weight: 200;
+  background-color: lightblue;
+  margin: 4px 0;
+  color: darkblue;
+  border-radius: 5px;
+  width: 100%;
+  transition: ease-in-out 0.4s;
+}
+.Login .login-button:hover,
+.Register .login-button:hover {
+  transform: scale(0.95);
+  color: white;
 }
 .Login .form-bottom,
 .Register .form-bottom {
   display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 1.15em;
+}
+.Login i,
+.Register i {
+  -webkit-text-decoration: italic;
+          text-decoration: italic;
+}
+
+.Register .form-bottom {
   flex-direction: column;
   align-items: center;
-  padding-top: 2em;
-  gap: 10px;
-  font-size: larger;
-}
-.Login button,
-.Register button {
-  font-size: large;
-}
-
-.heading h1 {
-  padding-bottom: 30px;
-  font-family: "Apperat-light", sans-serif;
-  font-weight: 700;
-}
-.heading p {
-  font-size: 1em;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
-}
-.form-button-container button:hover {
-  background-color: #6171a5;
-  color: white;
 }/*# sourceMappingURL=login.css.map */

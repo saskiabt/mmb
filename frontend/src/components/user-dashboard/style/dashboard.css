@@ -6,9 +6,11 @@
 }
 .Dashboard h1 {
   color: #85a1c8;
-  font-size: 3em;
+  font-size: 4em;
 }
 .Dashboard .heading {
-  padding-top: 15%;
   padding-bottom: 5%;
+}
+.Dashboard .MyPosts {
+  overflow: scroll;
 }/*# sourceMappingURL=dashboard.css.map */

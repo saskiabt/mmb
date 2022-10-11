@@ -1,0 +1,25 @@
+$h3-turquoise: #2b98c1;
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5vmin;
+
+  h1 {
+    font-family: "victorianna-italic", sans-serif;
+    font-weight: 600;
+    color: blue;
+    font-size: 8vmin;
+  }
+
+  h3 {
+    font-style: italic;
+    color: $h3-turquoise;
+    font-family: "Apparat-light", sans-serif;
+
+    // font-family: "circe-slab-a", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3vmin;
+  }
+}

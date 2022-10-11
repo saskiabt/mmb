@@ -5,9 +5,9 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function Post({ post, i, postID, handleDelete }) {
   return (
-    <div className="post" id={"post" + i}>
+    <div className="Post" id={"post" + i}>
       <div className="post-top">
-        <h2 className="username">{post.username}</h2>
+        <h2 className="card-username">{post.username}</h2>
         {/* <div className="delete-container">
           <button
             id="delete"
@@ -18,9 +18,8 @@ function Post({ post, i, postID, handleDelete }) {
           </button>
         </div> */}
       </div>
-
-      <div className="post-body">
-        <p className="comment">{post.comment}</p>
+      <div className="post-bottom">
+        <p className="card-comment">{post.comment}</p>
         <div className="date">
           <p>{new Date(post.createdAt).toLocaleDateString("en-US")}</p>
           <p>{new Date(post.createdAt).toLocaleTimeString("en-US")}</p>

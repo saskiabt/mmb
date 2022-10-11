@@ -17,30 +17,4 @@
 .MyPosts h3 {
   color: #233362;
   font-weight: 500;
-}
-
-.allPosts ul {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  width: 60vw;
-  align-items: flex-start;
-  padding-top: 1em;
-  color: #334a92;
-}
-
-.heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10%;
-}
-.heading h1 {
-  font-family: "Apperat-light", sans-serif;
-  font-weight: 700;
-  color: #85a1c8;
-  font-size: 3em;
-}
-.heading h3 {
-  font-style: italic;
 }/*# sourceMappingURL=Comments.css.map */

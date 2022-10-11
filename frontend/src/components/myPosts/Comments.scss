@@ -19,34 +19,3 @@
     // border-bottom: 1px solid #233362;
   }
 }
-
-.allPosts {
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    width: 60vw;
-    align-items: flex-start;
-    padding-top: 1em;
-    color: #334a92;
-  }
-}
-
-.heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10%;
-  // padding-bottom: 5%;
-  h1 {
-    // padding-bottom: 30px;
-    font-family: "Apperat-light", sans-serif;
-    font-weight: 700;
-    color: #85a1c8;
-    font-size: 3em;
-  }
-
-  h3 {
-    font-style: italic;
-  }
-}

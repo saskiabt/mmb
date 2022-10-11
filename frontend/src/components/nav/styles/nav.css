@@ -6,27 +6,57 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-top: 25px;
   z-index: 100;
-  font-size: 30px;
+  font-size: 32px;
   color: #334b92;
+<<<<<<< HEAD
   background-color: white;
+=======
+  margin-bottom: 15px;
+>>>>>>> styled-component
 }
 .Nav .nav-icon {
-  font-size: 30px;
   background: none;
-  color: #334b92;
+  color: #324aef;
 }
-
-.nav-links button {
+.Nav .nav-left {
+  width: auto;
+  padding-left: 3%;
+  display: flex;
+  flex-direction: row;
+}
+.Nav .nav-right {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding-right: 2.5%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+}
+.Nav .nav-btn {
   font-size: 0.8em;
   background: none;
   font-family: "Apparat-light", sans-serif;
   font-weight: 400;
   color: #334b92;
+  border-radius: 10px;
+  padding: 0.5vmin 1vmin;
 }
-.nav-links button:hover {
-  border-bottom: 0.5px solid #6e88af;
+.Nav .nav-btn:hover {
+  border-bottom: 1px solid #324aef;
+  border-radius: 0;
+}
+.Nav #login-btn,
+.Nav #logout-btn {
+  background-color: #324aef;
+  color: white;
+}
+.Nav #login-btn:hover,
+.Nav #logout-btn:hover {
+  border-radius: 10px;
+  background-color: #1a2884;
 }/*# sourceMappingURL=nav.css.map */
