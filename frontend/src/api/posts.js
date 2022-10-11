@@ -20,8 +20,9 @@ const fetchPosts = async (token) => {
   };
   try {
     const response = await axios.get(API_URL, config);
-    // console.log(response.data);
-    return response.data;
+    console.log(response.data);
+    const allPosts = await response.data;
+    return await allPosts;
   } catch (err) {
     console.log(err);
   }

@@ -9,7 +9,7 @@ function MyPosts() {
 
   return (
     <div className="MyPosts">
-      <h3>My Posts:</h3>
+      <h3>My Posts</h3>
       <ul>
         {posts &&
           posts.map((post) => {
