@@ -12,6 +12,7 @@ function LandingPage() {
   const { allPosts, isLoading, isError, message } = useSelector(
     (state) => state.allPosts
   );
+  const { user } = useSelector((state) => state.auth);
 
   useEffect(() => {
     if (isError) {
@@ -24,7 +25,9 @@ function LandingPage() {
   return (
     <div className="LandingPage MyPosts">
       <div className="heading">
-        <h1>Feed</h1>
+        <h1>Message Board</h1>
+        {!user && <h3>Login or Sign Up to Post</h3>}
+        {user && <h3>All Posts</h3>}
       </div>
       {allPosts.length > 0 ? (
         <AllPosts></AllPosts>
