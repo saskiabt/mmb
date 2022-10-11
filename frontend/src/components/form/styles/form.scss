@@ -63,14 +63,14 @@ textarea {
   }
 
   &:focus-visible {
-    transform: scale(1.01);
-    outline: 1px solid rgb(194 194 194);
+    // transform: scale(1.01);
+    // outline: 1px solid rgb(194 194 194);
     border: none;
   }
 
   &:focus:not(:focus-visible) {
     outline: none;
-    box-shadow: 1px 1px 1px grey;
+    // box-shadow: 1px 1px 1px grey;
     border: none;
   }
 }

@@ -21,35 +21,20 @@ function Dashboard() {
     (state) => state.post
   );
 
-  const [commentData, setCommentData] = useState({
-    username: "",
-    comment: "",
-  });
+  const [comment, setComment] = useState("");
 
   const [isHidden, setIsHidden] = useState(true);
 
   const handleChange = (event) => {
-    setCommentData({
-      ...commentData,
-      comment: event.target.value,
-    });
+    setComment(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setCommentData({
-      ...commentData,
-      username: user.username,
-    });
-    console.log(commentData);
 
-    if (commentData.comment && commentData.username !== "") {
-      dispatch(createPost(commentData));
-      setCommentData({
-        ...commentData,
-        comment: "",
-        username: "",
-      });
+    if (comment) {
+      dispatch(createPost(comment));
+      setComment("");
       document.getElementById("comment-input").value = "";
       window.location.reload();
     } else {
@@ -85,7 +70,11 @@ function Dashboard() {
         <h1>Welcome, {_.capitalize(user.username)}</h1>
       </div>
       <Form handleChange={handleChange} handleSubmit={handleSubmit}></Form>
-      <MyPosts></MyPosts>
+      {posts.length > 0 ? (
+        <MyPosts></MyPosts>
+      ) : (
+        <h3>You have not posted anything.</h3>
+      )}
     </div>
   );
 }

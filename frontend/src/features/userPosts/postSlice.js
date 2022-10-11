@@ -13,12 +13,12 @@ const initialState = {
 // create new post
 export const createPost = createAsyncThunk(
   "posts/create",
-  async (postData, thunkAPI) => {
+  async (comment, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
       const username = thunkAPI.getState().auth.user.username;
       console.log(username);
-      return await addPost(postData, token);
+      return await addPost(comment, username, token);
     } catch (err) {
       const message =
         (err.response && err.response.data && err.response.data.message) ||

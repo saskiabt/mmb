@@ -20,24 +20,24 @@ const fetchPosts = async (token) => {
   };
   try {
     const response = await axios.get(API_URL, config);
-    console.log(response.data);
+    // console.log(response.data);
     return response.data;
   } catch (err) {
     console.log(err);
   }
 };
 
-const addPost = async (postData, token) => {
+const addPost = async (comment, username, token) => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   };
   try {
-    console.log(postData);
+    console.log(comment);
     const response = await axios.post(
       API_URL,
-      { username: postData.username, comment: postData.comment },
+      { username: username, comment: comment },
       config
     );
     console.log(response.data);

@@ -60,13 +60,10 @@ textarea ::placeholder {
 }
 input:focus-visible,
 textarea:focus-visible {
-  transform: scale(1.01);
-  outline: 1px solid rgb(194, 194, 194);
   border: none;
 }
 input:focus:not(:focus-visible),
 textarea:focus:not(:focus-visible) {
   outline: none;
-  box-shadow: 1px 1px 1px grey;
   border: none;
 }/*# sourceMappingURL=form.css.map */
