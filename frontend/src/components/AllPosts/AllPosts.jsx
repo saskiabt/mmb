@@ -6,9 +6,7 @@ import "../myPosts/Comments.css";
 import "../landing-page/landingPage.css";
 
 function AllPosts() {
-  const { allPosts, isLoading, isError, message } = useSelector(
-    (state) => state.allPosts
-  );
+  const { allPosts } = useSelector((state) => state.allPosts);
   return (
     <div className="AllPosts">
       {allPosts &&
