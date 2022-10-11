@@ -27,41 +27,40 @@ function Nav() {
         </Link>{" "}
         {/* |
         <DarkModeButton className="nav-icon nav-icon-dark-mode"></DarkModeButton> */}
-      </div>
-
-      <div className="nav-right">
-        {" "}
-        {user ? (
-          <div>
-            <Link to="/dashboard" className="nav-links">
-              <button type="button" className="dashboard-button">
-                My Posts
-              </button>
-            </Link>
-            {" / "}
-            <Link to="/" className="nav-links">
-              <button type="button" onClick={onLogout}>
-                Logout
-              </button>
-            </Link>
-          </div>
-        ) : (
-          <div>
-            {" "}
-            <Link to="/register" className="nav-links">
-              <button type="button" className="register-button">
-                Sign Up
-              </button>
-            </Link>
-            {" / "}
-            <Link to="/login" className="nav-links">
-              <button type="button" className="login-button">
-                Login
-              </button>
-            </Link>
-          </div>
-        )}
-      </div>
+      </div>{" "}
+      {user ? (
+        <div className="nav-right">
+          <Link to="/dashboard" className="nav-links">
+            <button type="button" className="nav-btn">
+              My Posts
+            </button>
+          </Link>
+          <Link to="/" className="nav-links">
+            <button
+              type="button"
+              onClick={onLogout}
+              className="nav-btn"
+              id="logout-btn"
+            >
+              Logout
+            </button>
+          </Link>
+        </div>
+      ) : (
+        <div className="nav-right">
+          {" "}
+          <Link to="/register" className="nav-links">
+            <button type="button" className="nav-btn">
+              Sign Up
+            </button>
+          </Link>
+          <Link to="/login" className="nav-links">
+            <button type="button" className="nav-btn" id="login-btn">
+              Login
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

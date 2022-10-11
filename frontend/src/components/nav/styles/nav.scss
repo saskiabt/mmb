@@ -1,5 +1,5 @@
 // $dark-purple-background: #201922;
-$light-yellow-background: #eae9e2;
+$bright-blue: #324aef;
 $medium-blue: #334b92;
 
 .Nav {
@@ -9,30 +9,55 @@ $medium-blue: #334b92;
   width: 100vw;
   position: sticky;
   top: 0px;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-top: 25px;
   z-index: 100;
-  font-size: 30px;
+  font-size: 32px;
   color: $medium-blue;
 
   .nav-icon {
-    font-size: 30px;
     background: none;
-    color: #334b92;
+    color: $bright-blue;
   }
-}
 
-.nav-links {
-  button {
+  .nav-left {
+    width: auto;
+    padding-left: 3%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-right {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding-right: 2.5%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .nav-btn {
     font-size: 0.8em;
     background: none;
     font-family: "Apparat-light", sans-serif;
     font-weight: 400;
     color: $medium-blue;
+    border-radius: 10px;
+    padding: 0.5vmin 1vmin;
 
     &:hover {
-      border-bottom: 0.5px solid #6e88af;
+      border-bottom: 1px solid $bright-blue;
+      border-radius: 0;
+    }
+  }
+
+  #login-btn,
+  #logout-btn {
+    background-color: $bright-blue;
+    color: white;
+    &:hover {
+      border-radius: 10px;
+      background-color: #1a2884;
     }
   }
 }
