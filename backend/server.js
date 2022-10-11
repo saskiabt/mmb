@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 
 connect().catch((err) => console.log(err));
 
-// app.use("/api/posts", require("./routes/postRoutes"));
+app.use("/api/feed", require("./routes/postRoutes"));
 app.use("/api/posts", require("./routes/userPostRoutes"));
 
 app.use("/api/users", require("./routes/userRoutes"));
