@@ -64,8 +64,8 @@ function Login() {
       <div className="heading">
         <h1>Login</h1>
       </div>
-      <div className="form">
-        <form className="login-form" onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div className="form-inputs">
           <label className="username">
             <input
               type="text"
@@ -86,20 +86,22 @@ function Login() {
               id="login-pw"
             ></input>
           </label>
-          <div className="form-button-container">
-            <button type="button" onClick={autoFill}>
-              Autofill
-            </button>
-            <button type="submit">
-              Login{" "}
-              <FontAwesomeIcon icon={faArrowRightToBracket}></FontAwesomeIcon>
-            </button>
-          </div>
-        </form>
-        <div className="form-bottom">
-          <p>No Account? </p>
-          <Link to="/register">Sign Up</Link>
         </div>
+        <div className="form-buttons">
+          <button type="button" onClick={autoFill} className="login-button">
+            Autofill
+          </button>
+          <button type="submit" className="login-button">
+            Login{" "}
+            <FontAwesomeIcon icon={faArrowRightToBracket}></FontAwesomeIcon>
+          </button>
+        </div>
+      </form>
+      <div className="form-bottom">
+        <p>No Account? </p>
+        <Link to="/register">
+          <i>Sign Up</i>
+        </Link>
       </div>
     </div>
   );

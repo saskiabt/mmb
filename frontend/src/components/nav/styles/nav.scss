@@ -1,6 +1,7 @@
 // $dark-purple-background: #201922;
 $bright-blue: #324aef;
 $medium-blue: #334b92;
+$cirrus-cumulus: "Cirrus-Cumulus", sans-serif;
 
 .Nav {
   display: flex;
@@ -13,7 +14,7 @@ $medium-blue: #334b92;
   z-index: 100;
   font-size: 32px;
   color: $medium-blue;
-
+  margin-bottom: 15px;
   .nav-icon {
     background: none;
     color: $bright-blue;
@@ -39,6 +40,7 @@ $medium-blue: #334b92;
   .nav-btn {
     font-size: 0.8em;
     background: none;
+
     font-family: "Apparat-light", sans-serif;
     font-weight: 400;
     color: $medium-blue;

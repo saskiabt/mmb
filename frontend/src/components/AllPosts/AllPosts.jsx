@@ -9,13 +9,11 @@ function AllPosts() {
     (state) => state.allPosts
   );
   return (
-    <div className="allPosts">
-      <ul>
-        {allPosts &&
-          allPosts.map((post) => {
-            return <Post key={uuidv4()} post={post} postID={post._id}></Post>;
-          })}
-      </ul>
+    <div className="AllPosts">
+      {allPosts &&
+        allPosts.map((post) => {
+          return <Post key={uuidv4()} post={post} postID={post._id}></Post>;
+        })}
     </div>
   );
 }

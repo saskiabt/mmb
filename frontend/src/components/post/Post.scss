@@ -1,79 +1,25 @@
 $light-blue-post-color: rgb(149 180 224);
-.post {
-  display: flex;
-  flex-direction: column;
+$h3-turquoise: #2b98c1;
+
+.Post {
   width: 100%;
-  border-radius: 2em;
-  padding: 1.8em;
-  background-color: rgb(68 59 81);
-  background-color: $light-blue-post-color;
-  transition: ease-in-out 0.5s;
-  gap: 1em;
-  color: white;
-  // box-shadow: 0px 0px 5px 0px rgb(48 83 132);
+  height: fit-content;
+  border: 1px solid rgb(145, 229, 0);
+  border-radius: 10px;
+  padding: 2.5%;
 
-  .post-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+  .card-username {
+    text-transform: uppercase;
+    color: blue;
+    font-weight: 800;
+    font-family: "Apparat-light", sans-serif;
+
+    // font-family: "victorianna", sans-serif;
+
+    font-style: normal;
   }
 
-  .post-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .card-comment {
+    color: rgb(28, 0, 0);
   }
-
-  &:hover {
-    transform: scale(1.075);
-  }
-
-  .username {
-    align-self: flex-start;
-    font-size: 1.3em;
-    font-family: "Terminal-Grotesque", sans-serif;
-    color: #355889;
-    // font-family: apparat, sans-serif;
-    // font-weight: 600;
-    // font-style: normal;
-  }
-
-  .date {
-    font-size: 0.8em;
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    align-items: flex-end;
-  }
-  .comment {
-    font-size: 1.5em;
-    font-weight: 100;
-    font-family: apparat-light, sans-serif;
-  }
-
-  .delete-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-}
-
-#delete {
-  background-color: $light-blue-post-color;
-  color: white;
-  font-size: larger;
-  transition: ease-in-out 0.3s;
-  opacity: 50%;
-
-  &:hover {
-    opacity: 90%;
-    cursor: pointer;
-  }
-}
-
-.post-body {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
 }
