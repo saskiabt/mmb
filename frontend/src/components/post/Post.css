@@ -20,6 +20,7 @@
 }
 .Post .card-comment {
   color: lightgray;
+  font-size: 1.2em;
 }
 .Post .post-bottom {
   display: flex;
