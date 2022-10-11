@@ -11,7 +11,8 @@
     "start": "node backend/server.js",
     "serve": "nodemon backend/server.js",
     "frontend": "cd frontend && npm start",
-    "dev": "concurrently \"npm run serve\" \"npm run frontend\""
+    "dev": "concurrently \"npm run serve\" \"npm run frontend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Saskia Binder",
   "license": "ISC",
