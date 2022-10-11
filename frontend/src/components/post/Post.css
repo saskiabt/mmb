@@ -9,16 +9,18 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: darkblue;
 }
 .Post .card-username {
   text-transform: capitalize;
-  color: blue;
+  color: white;
   font-weight: 800;
   font-family: "Apparat-light", sans-serif;
   font-style: normal;
 }
 .Post .card-comment {
-  color: rgb(28, 0, 0);
+  color: lightgray;
+  font-size: 1.2em;
 }
 .Post .post-bottom {
   display: flex;
@@ -27,4 +29,5 @@
 }
 .Post .date {
   font-size: 0.8em;
+  color: lightgrey;
 }/*# sourceMappingURL=Post.css.map */
