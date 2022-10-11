@@ -32,11 +32,19 @@ function Nav() {
       <div className="nav-right">
         {" "}
         {user ? (
-          <Link to="/" className="nav-links">
-            <button type="button" onClick={onLogout}>
-              Logout
-            </button>
-          </Link>
+          <div>
+            <Link to="/dashboard" className="nav-links">
+              <button type="button" className="dashboard-button">
+                My Posts
+              </button>
+            </Link>
+            {" / "}
+            <Link to="/" className="nav-links">
+              <button type="button" onClick={onLogout}>
+                Logout
+              </button>
+            </Link>
+          </div>
         ) : (
           <div>
             {" "}

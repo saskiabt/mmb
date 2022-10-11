@@ -5,6 +5,7 @@ import { getAllPosts } from "../../features/allPosts/AllPostSlice";
 import Post from "../post/Post";
 import { v4 as uuidv4 } from "uuid";
 import "../myPosts/Comments.css";
+import AllPosts from "../AllPosts/AllPosts";
 
 function LandingPage() {
   const dispatch = useDispatch();
@@ -22,13 +23,16 @@ function LandingPage() {
 
   return (
     <div className="LandingPage MyPosts">
-      <div className="allPosts"></div>
-      <ul>
-        {allPosts &&
-          allPosts.map((post) => {
-            return <Post key={uuidv4()} post={post} postID={post._id}></Post>;
-          })}
-      </ul>
+      <div className="heading">
+        <h1>Feed</h1>
+      </div>
+      {allPosts.length > 0 ? (
+        <AllPosts></AllPosts>
+      ) : (
+        <div>
+          <p>Please login to add posts.</p>
+        </div>
+      )}
     </div>
   );
 }
