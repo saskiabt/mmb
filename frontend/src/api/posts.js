@@ -1,9 +1,9 @@
 import axios from "axios";
 const API_URL = "/api/posts/";
 
-const fetchPost = async () => {
+const fetchAllPosts = async () => {
   try {
-    const response = await fetch("/api/posts");
+    const response = await fetch("/api/feed");
     const result = await response.json();
     console.log(result);
     return result;
@@ -12,12 +12,17 @@ const fetchPost = async () => {
   }
 };
 
-const fetchUserPosts = async (id) => {
+const fetchPosts = async (token) => {
+  console.log(token);
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
   try {
-    const response = await fetch("/api/userPosts/?" + id);
-    const result = await response.json();
-    console.log(result);
-    return result;
+    const response = await axios.get(API_URL, config);
+    console.log(response.data);
+    return response.data;
   } catch (err) {
     console.log(err);
   }
@@ -60,4 +65,4 @@ const deletePost = async (id) => {
   }
 };
 
-export { fetchPost, addPost, deletePost, fetchUserPosts };
+export { fetchAllPosts, addPost, deletePost, fetchPosts };

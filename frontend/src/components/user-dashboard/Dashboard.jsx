@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { createPost, fetchPosts } from "../../features/userPosts/postSlice";
-import { addPost } from "../../api/posts";
+import MyPosts from "../myPosts/myPosts";
+import {
+  createPost,
+  getPosts,
+  reset,
+} from "../../features/userPosts/postSlice";
+import Spinner from "../spinner/Spinner";
 
 function Dashboard() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const { user } = useSelector((state) => state.auth);
-  const { posts } = useSelector((state) => state.post);
+  const { posts, isLoading, isError, message } = useSelector(
+    (state) => state.post
+  );
 
   const [commentData, setCommentData] = useState({
     username: user.username,
@@ -34,6 +41,12 @@ function Dashboard() {
     document.getElementById("comment-input").value = "";
   };
 
+  const handleClick = () => {
+    dispatch(getPosts());
+
+    dispatch(reset());
+  };
+
   useEffect(() => {
     const goToLogin = () => {
       navigate("/login");
@@ -41,8 +54,19 @@ function Dashboard() {
     if (!user) {
       goToLogin();
     }
-  }, [navigate, dispatch, user]);
 
+    if (isError) {
+      console.log(message);
+    }
+
+    dispatch(getPosts());
+
+    return () => {
+      dispatch(reset());
+    };
+  }, [isError, user, navigate, dispatch]);
+
+  if (isLoading) return <Spinner></Spinner>;
   return (
     <div>
       {" "}
@@ -62,6 +86,7 @@ function Dashboard() {
           </label>
           <button type="submit">Add Comment</button>
         </form>
+        <MyPosts></MyPosts>
       </div>
     </div>
   );

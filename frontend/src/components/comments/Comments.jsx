@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchPost, deletePost } from "../../api/posts";
+import { fetchAllPosts, deletePost } from "../../api/posts";
 import Post from "../post/Post";
 import "./Comments.css";
 
@@ -8,14 +8,14 @@ function Comments() {
 
   const handleDelete = async (id) => {
     await deletePost(id);
-    const newPosts = await fetchPost();
+    const newPosts = await fetchAllPosts();
     console.log(newPosts.posts);
     setPosts(newPosts.posts);
   };
 
   useEffect(() => {
     const callApi = async () => {
-      const result = await fetchPost();
+      const result = await fetchAllPosts();
       setPosts(result.posts);
     };
 

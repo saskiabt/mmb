@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { addPost } from "../../api/posts";
+import { addPost, fetchAllPosts, fetchPosts } from "../../api/posts";
 
 const initialState = {
   // if there's a user in local storage, use that, otherwise set to null
@@ -29,6 +29,40 @@ export const createPost = createAsyncThunk(
   }
 );
 
+export const getAllPosts = createAsyncThunk(
+  "posts/getAll",
+  async (thunkAPI) => {
+    try {
+      return await fetchAllPosts();
+    } catch (err) {
+      const message =
+        (err.response && err.response.data && err.response.data.message) ||
+        err.message ||
+        err.toString();
+      if (err) console.log(err);
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+export const getPosts = createAsyncThunk(
+  "posts/myPosts",
+  async (_, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user.token;
+      console.log(token);
+      return await fetchPosts(token);
+    } catch (err) {
+      const message =
+        (err.response && err.response.data && err.response.data.message) ||
+        err.message ||
+        err.toString();
+      console.log(err);
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
 export const postSlice = createSlice({
   name: "post",
   initialState,
@@ -48,6 +82,19 @@ export const postSlice = createSlice({
         state.posts.push(action.payload);
       })
       .addCase(createPost.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+      })
+      .addCase(getPosts.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getPosts.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.posts = action.payload;
+      })
+      .addCase(getPosts.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
