@@ -50,18 +50,17 @@ $heading-h3-grey-green: #576253;
     button {
       font-size: 1.25em;
       font-weight: 200;
-      background-color: $post-comment-dark-green;
+      background-color: $nav-button-dark-green;
       margin: 4px 0;
       color: white;
       border-radius: 5px;
       width: fit-content;
-      transition: ease-in-out 0.4s;
+      transition: ease-in 0.2s;
       padding: 5px;
 
       &:hover {
-        transform: scale(0.95);
-        color: white;
         opacity: 80%;
+        border: 1px solid black;
       }
     }
 
