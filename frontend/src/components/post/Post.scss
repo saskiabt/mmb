@@ -15,6 +15,11 @@ $heading-medium-green: #6b915f;
   flex-direction: column;
   gap: 10px;
   background-color: $post-light-green;
+  transition: ease-in-out 0.6s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   .card-username {
     text-transform: capitalize;

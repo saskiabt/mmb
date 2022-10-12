@@ -9,6 +9,10 @@
   flex-direction: column;
   gap: 10px;
   background-color: rgba(139, 195, 74, 0.5882352941);
+  transition: ease-in-out 0.6s;
+}
+.Post:hover {
+  transform: scale(1.1);
 }
 .Post .card-username {
   text-transform: capitalize;

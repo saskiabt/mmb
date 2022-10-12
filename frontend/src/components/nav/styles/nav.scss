@@ -1,8 +1,8 @@
-// $dark-purple-background: #201922;
-$bright-blue: #324aef;
-$medium-blue: #334b92;
 $cirrus-cumulus: "Cirrus-Cumulus", sans-serif;
 $nav-button-dark-green: #1b5e20;
+$heading-h3-grey-green: #576253;
+$post-light-green: #8bc34a96;
+$heading-medium-green: #6b915f;
 
 .Nav {
   display: flex;
@@ -18,6 +18,11 @@ $nav-button-dark-green: #1b5e20;
   .nav-icon {
     background: none;
     color: $nav-button-dark-green;
+    transition: ease-in 0.5s;
+
+    &:hover {
+      opacity: 80%;
+    }
   }
 
   .nav-left {
@@ -48,7 +53,7 @@ $nav-button-dark-green: #1b5e20;
     padding: 0.5vmin 1vmin;
 
     &:hover {
-      border-bottom: 1px solid $bright-blue;
+      border-bottom: 1px solid $nav-button-dark-green;
       border-radius: 0;
     }
   }
@@ -59,7 +64,8 @@ $nav-button-dark-green: #1b5e20;
     color: white;
     &:hover {
       border-radius: 10px;
-      background-color: #1a2884;
+      background-color: $post-light-green;
+      color: $nav-button-dark-green;
     }
   }
 }
