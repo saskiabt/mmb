@@ -10,11 +10,8 @@
   z-index: 100;
   font-size: 32px;
   color: #334b92;
-<<<<<<< HEAD
   background-color: white;
-=======
   margin-bottom: 15px;
->>>>>>> styled-component
 }
 .Nav .nav-icon {
   background: none;
