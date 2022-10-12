@@ -97,7 +97,7 @@ $heading-h3-grey-green: #576253;
 
   .pw-toggle {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     width: 20%;
     margin: 8px 0;
 
@@ -110,7 +110,6 @@ $heading-h3-grey-green: #576253;
     }
 
     .pw-checkbox {
-      width: 100%;
       height: 100%;
       justify-content: center;
     }
