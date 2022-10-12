@@ -89,5 +89,9 @@ input:focus-visible {
   font-size: 1.7em;
   padding-top: 3.5em;
   font-style: italic;
-  color: #576253;
+  color: #1b5e20;
+  font-family: "Apparat-light", sans-serif;
+}
+.no-posts h3 {
+  font-weight: 300;
 }/*# sourceMappingURL=dashboard.css.map */
