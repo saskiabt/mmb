@@ -18,20 +18,16 @@ $heading-medium-green: #6b915f;
   .nav-icon {
     background: none;
     color: $nav-button-dark-green;
-    transition: ease-in 0.5s;
+    transition: ease-in 0.1s;
 
     &:hover {
-      opacity: 80%;
+      opacity: 70%;
+    }
+
+    &:active {
+      color: $heading-medium-green;
     }
   }
-
-  // .nav-left {
-  //   width: 60%;
-  // }
-
-  // .nav-right {
-  //   width: 40%;
-  // }
 
   .nav-left {
     width: auto;

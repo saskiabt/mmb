@@ -14,10 +14,13 @@
 .Nav .nav-icon {
   background: none;
   color: #1b5e20;
-  transition: ease-in 0.5s;
+  transition: ease-in 0.1s;
 }
 .Nav .nav-icon:hover {
-  opacity: 80%;
+  opacity: 70%;
+}
+.Nav .nav-icon:active {
+  color: #6b915f;
 }
 .Nav .nav-left {
   width: auto;
