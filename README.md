@@ -9,3 +9,6 @@ Backend routing using express and Node.js.
 Backend authentication using JSON Web Tokens and Bcrypt. Frontend authentication and global state management using redux and redux-toolkit.
 
 Dashboard that shows current user's posts and displays form to enter new post.
+
+Font credits:
+Credit for Victorianna to Sébastien Hayez and Jérémy Landes of Velvetyne Type Foundry.
