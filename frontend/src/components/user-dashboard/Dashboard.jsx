@@ -71,7 +71,6 @@ function Dashboard() {
         <h1>Welcome, {_.capitalize(user.username)}</h1>
         {/* <h3>MY POSTS</h3> */}
       </div>
-      {/* <Form handleChange={handleChange} handleSubmit={handleSubmit}></Form> */}
       <div className="Create-Post">
         <form onSubmit={handleSubmit} className="login-form">
           <div className="form-inputs">

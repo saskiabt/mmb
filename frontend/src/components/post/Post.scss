@@ -16,7 +16,7 @@ $heading-medium-green: #6b915f;
   gap: 10px;
   background-color: $post-light-green;
   transition: ease-in-out 0.6s;
-  box-shadow: 3px 4px 5px 0.5px rgb(113 130 118 / 51%);
+  box-shadow: 3px 4px 5px 0.5px rgb(26 94 32 / 39%);
 
   &:hover {
     transform: scale(1.1);
@@ -35,6 +35,11 @@ $heading-medium-green: #6b915f;
     font-size: 1.2em;
   }
 
+  .post-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .post-bottom {
     display: flex;
     flex-direction: column;
@@ -44,5 +49,19 @@ $heading-medium-green: #6b915f;
   .date {
     font-size: 0.8em;
     color: $heading-medium-green;
+  }
+
+  .delete {
+    background: none;
+    color: $heading-medium-green;
+    font-size: 1em;
+
+    &:hover {
+      color: $nav-button-dark-green;
+    }
+
+    &:active {
+      color: $heading-medium-green;
+    }
   }
 }

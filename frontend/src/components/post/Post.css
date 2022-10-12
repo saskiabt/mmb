@@ -10,7 +10,7 @@
   gap: 10px;
   background-color: rgba(139, 195, 74, 0.5882352941);
   transition: ease-in-out 0.6s;
-  box-shadow: 3px 4px 5px 0.5px rgba(113, 130, 118, 0.51);
+  box-shadow: 3px 4px 5px 0.5px rgba(26, 94, 32, 0.39);
 }
 .Post:hover {
   transform: scale(1.1);
@@ -26,6 +26,11 @@
   color: #15410e;
   font-size: 1.2em;
 }
+.Post .post-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .Post .post-bottom {
   display: flex;
   flex-direction: column;
@@ -33,5 +38,16 @@
 }
 .Post .date {
   font-size: 0.8em;
+  color: #6b915f;
+}
+.Post .delete {
+  background: none;
+  color: #6b915f;
+  font-size: 1em;
+}
+.Post .delete:hover {
+  color: #1b5e20;
+}
+.Post .delete:active {
   color: #6b915f;
 }/*# sourceMappingURL=Post.css.map */

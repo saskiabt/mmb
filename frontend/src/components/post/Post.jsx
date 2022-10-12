@@ -1,22 +1,25 @@
 import React from "react";
 import "./Post.css";
+import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-function Post({ post, i, handleDelete }) {
+function Post({ post, i, postID }) {
+  const dispatch = useDispatch;
+  const { user } = useSelector((state) => state.auth);
+
+  const handleDelete = (id) => {};
+
   return (
     <div className="Post" id={"post" + i}>
       <div className="post-top">
         <h2 className="card-username">{post.username}</h2>
-        {/* <div className="delete-container">
-          <button
-            id="delete"
-            type="button"
-            onClick={() => handleDelete(postID)}
-          >
+        {/* <h2>{postID}</h2> */}
+        {user && post.username === user.username ? (
+          <button className="delete" type="button">
             <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
           </button>
-        </div> */}
+        ) : null}
       </div>
       <div className="post-bottom">
         <p className="card-comment">{post.comment}</p>
