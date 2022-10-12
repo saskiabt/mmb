@@ -1,5 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { addPost, fetchAllPosts, fetchPosts } from "../../api/posts";
+import {
+  addPost,
+  deletePost,
+  fetchAllPosts,
+  fetchPosts,
+} from "../../api/posts";
 
 const initialState = {
   // if there's a user in local storage, use that, otherwise set to null
@@ -9,6 +14,24 @@ const initialState = {
   isSuccess: false,
   message: "",
 };
+
+export const deleteUserPost = createAsyncThunk(
+  "posts/delete",
+  async (id, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user.token;
+      console.log(id, token);
+      return await deletePost(id, token);
+    } catch (err) {
+      const message =
+        (err.response && err.response.data && err.response.data.message) ||
+        err.message ||
+        err.toString();
+      if (err) console.log(err);
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
 
 // create new post
 export const createPost = createAsyncThunk(
@@ -95,6 +118,19 @@ export const postSlice = createSlice({
         state.posts = action.payload;
       })
       .addCase(getPosts.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+      })
+      .addCase(deleteUserPost.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(deleteUserPost.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.posts.filter((post) => post._id !== action.payload.id);
+      })
+      .addCase(deleteUserPost.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;

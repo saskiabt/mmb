@@ -48,18 +48,27 @@ const addPost = async (comment, username, token) => {
   }
 };
 
-const deletePost = async (id) => {
-  try {
-    const response = await fetch(`/api/posts/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: null,
-    });
+const deletePost = async (id, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  //   try {
+  //     const response = await fetch(`/api/posts/${id}`, {
+  //       method: "DELETE",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: null,
+  //     });
 
-    const data = await response.json();
-    console.log(data);
+  //     const data = await response.json();
+  // }
+  try {
+    const response = await axios.delete(API_URL + id, config);
+    console.log(response.data);
+    return response.data;
   } catch (err) {
     if (err) console.log(err);
   }

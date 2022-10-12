@@ -3,12 +3,18 @@ import "./Post.css";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { deleteUserPost } from "../../features/userPosts/postSlice";
 
-function Post({ post, i, postID }) {
-  const dispatch = useDispatch;
+function Post({ post, i }) {
+  const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
 
-  const handleDelete = (id) => {};
+  const handleDelete = () => {
+    console.log(post._id);
+    dispatch(deleteUserPost(post._id));
+    window.location.reload();
+    console.log("delete initialized");
+  };
 
   return (
     <div className="Post" id={"post" + i}>
@@ -16,7 +22,7 @@ function Post({ post, i, postID }) {
         <h2 className="card-username">{post.username}</h2>
         {/* <h2>{postID}</h2> */}
         {user && post.username === user.username ? (
-          <button className="delete" type="button">
+          <button className="delete" type="button" onClick={handleDelete}>
             <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
           </button>
         ) : null}
