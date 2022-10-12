@@ -10,7 +10,7 @@
   gap: 10px;
   background-color: rgba(139, 195, 74, 0.5882352941);
   transition: ease-in-out 0.6s;
-  box-shadow: 3px 4px 5px 0.5px rgba(26, 94, 32, 0.39);
+  box-shadow: -2px 2px 4px 0.5px rgba(26, 94, 32, 0.39);
 }
 .Post:hover {
   transform: scale(1.1);
