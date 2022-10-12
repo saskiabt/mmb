@@ -11,7 +11,7 @@
   font-size: 4em;
 }
 .Dashboard .heading {
-  padding-bottom: 5%;
+  padding-bottom: 2.5%;
 }
 .Dashboard .MyPosts {
   display: flex;
@@ -39,19 +39,20 @@
 .Dashboard .Create-Post button {
   font-size: 1.25em;
   font-weight: 200;
-  background-color: #1b5e20;
+  background-color: white;
+  color: #1b5e20;
+  border: 1px solid #1b5e20;
   margin: 4px 0;
-  color: white;
   border-radius: 5px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  transition: ease-in 0.2s;
+  transition: ease-in-out 0.2s;
   padding: 5px;
 }
 .Dashboard .Create-Post button:hover {
-  opacity: 80%;
-  border: 1px solid black;
+  background-color: #1b5e20;
+  color: white;
 }
 .Dashboard .Create-Post .form-buttons {
   display: flex;

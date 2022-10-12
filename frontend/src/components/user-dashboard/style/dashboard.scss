@@ -19,7 +19,7 @@ $heading-h3-grey-green: #576253;
 
   .heading {
     // padding-top: 15%;
-    padding-bottom: 5%;
+    padding-bottom: 2.5%;
   }
 
   .MyPosts {
@@ -50,17 +50,18 @@ $heading-h3-grey-green: #576253;
     button {
       font-size: 1.25em;
       font-weight: 200;
-      background-color: $nav-button-dark-green;
+      background-color: white;
+      color: $nav-button-dark-green;
+      border: 1px solid $nav-button-dark-green;
       margin: 4px 0;
-      color: white;
       border-radius: 5px;
       width: fit-content;
-      transition: ease-in 0.2s;
+      transition: ease-in-out 0.2s;
       padding: 5px;
 
       &:hover {
-        opacity: 80%;
-        border: 1px solid black;
+        background-color: $nav-button-dark-green;
+        color: white;
       }
     }
 
