@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Form, Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../login/login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import { register, reset } from "../../features/auth/authSlice";
 import Spinner from "../spinner/Spinner";
+import PwToggle from "../Pw-Toggle/PwToggle";
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,22 @@ function Register() {
     password: "",
     confirmPassword: "",
   });
+
+  const [isPassword, setIsPassword] = useState("password");
+
+  const togglePwVisibility = () => {
+    isPassword === "password"
+      ? setIsPassword("text")
+      : setIsPassword("password");
+  };
+
+  const [isPwConfirm, setIsPwConfirm] = useState("password");
+
+  const togglePwConfirmVisibility = () => {
+    isPwConfirm === "password"
+      ? setIsPwConfirm("text")
+      : setIsPwConfirm("password");
+  };
 
   const { username, email, password, confirmPassword } = formData;
 
@@ -85,26 +102,40 @@ function Register() {
               onChange={handleChange}
             />
           </label>
-          <label className="form-control">
-            <input
-              type="text"
-              name="password"
-              aria-label="password"
-              placeholder="Password"
-              onChange={handleChange}
-            />
-          </label>
-          <label className="form-control">
-            <input
-              type="text"
-              name="confirmPassword"
-              aria-label="confirmPassword"
-              placeholder="Confirm Password"
-              onChange={handleChange}
-            />
-          </label>
+          <div className="pw">
+            <div className="group">
+              <label className="form-control">
+                <input
+                  type={isPassword}
+                  name="password"
+                  aria-label="password"
+                  placeholder="Password"
+                  onChange={handleChange}
+                />
+              </label>
+              <PwToggle
+                isPassword={isPassword}
+                togglePwVisibility={togglePwVisibility}
+              ></PwToggle>
+            </div>
+            <div className="group">
+              {" "}
+              <label className="form-control">
+                <input
+                  type={isPwConfirm}
+                  name="confirmPassword"
+                  aria-label="confirmPassword"
+                  placeholder="Confirm Password"
+                  onChange={handleChange}
+                />
+              </label>
+              <PwToggle
+                isPassword={isPwConfirm}
+                togglePwVisibility={togglePwConfirmVisibility}
+              ></PwToggle>
+            </div>
+          </div>
         </div>
-
         <div className="form-buttons">
           <button type="submit" className="login-button">
             {" "}

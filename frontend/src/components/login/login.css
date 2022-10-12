@@ -8,6 +8,7 @@
   border: 1px solid rgba(139, 195, 74, 0.5882352941);
   padding: 3vmin 30px;
   width: 70%;
+  max-width: 700px;
 }
 .Login .heading h1,
 .Register .heading h1 {
@@ -46,6 +47,17 @@
   outline: none;
   border: none;
 }
+.Login input:-webkit-autofill,
+.Login input:-webkit-autofill:hover,
+.Login input:-webkit-autofill:focus,
+.Register input:-webkit-autofill,
+.Register input:-webkit-autofill:hover,
+.Register input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #15410e;
+  -webkit-box-shadow: 0px 0px 200px 7px rgba(188, 220, 152, 0.26) inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
 .Login .form-buttons,
 .Register .form-buttons {
   display: flex;
@@ -83,8 +95,54 @@
   -webkit-text-decoration: italic;
           text-decoration: italic;
 }
+.Login .pw-toggle,
+.Register .pw-toggle {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin: 8px 0;
+}
+.Login .pw-toggle input,
+.Register .pw-toggle input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.Login .pw-toggle .pw-checkbox,
+.Register .pw-toggle .pw-checkbox {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.Login .checkmark,
+.Register .checkmark {
+  width: 100%;
+  height: 100%;
+  background: none;
+  font-size: 25px;
+  color: #1b5e20;
+}
 
 .Register .form-bottom {
   flex-direction: column;
   align-items: center;
+}
+
+.group {
+  display: flex;
+  border-bottom: 1.5px solid #15410e;
+  justify-content: space-between;
+}
+.group input {
+  border-bottom: 0px;
+}
+.group input:focus-visible {
+  outline: 0;
+  border-bottom: 0;
+}
+.group input:focus:not(:focus-visible) {
+  outline: none;
+  border: none;
 }/*# sourceMappingURL=login.css.map */
