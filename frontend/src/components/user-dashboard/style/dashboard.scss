@@ -1,9 +1,16 @@
+$nav-button-dark-green: #1b5e20;
+$heading-medium-green: #6b915f;
+$post-light-green: #8bc34a96;
+$post-comment-dark-green: #15410e;
+$heading-h3-grey-green: #576253;
+
 .Dashboard {
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: scroll;
   height: 100%;
+  width: 100%;
 
   h1 {
     color: #85a1c8;
@@ -38,17 +45,18 @@
   .Create-Post {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
 
     button {
       font-size: 1.25em;
       font-weight: 200;
-      background-color: #324aef;
+      background-color: $post-comment-dark-green;
       margin: 4px 0;
       color: white;
       border-radius: 5px;
       width: fit-content;
       transition: ease-in-out 0.4s;
+      padding: 5px;
 
       &:hover {
         transform: scale(0.95);
@@ -69,12 +77,12 @@ input {
   font-size: large;
   margin: 8px 0;
   background-color: white;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid $nav-button-dark-green;
   padding: 0em 4em;
+  width: 100%;
   padding-left: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
-  width: 100%;
   transition: ease-in 0.2s;
   color: black;
   border-right: 0;
@@ -82,6 +90,6 @@ input {
   border-top: 0;
   &:focus-visible {
     outline: 0;
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid $nav-button-dark-green;
   }
 }

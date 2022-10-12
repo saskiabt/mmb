@@ -4,6 +4,7 @@
   align-items: center;
   overflow: scroll;
   height: 100%;
+  width: 100%;
 }
 .Dashboard h1 {
   color: #85a1c8;
@@ -33,12 +34,12 @@
 .Dashboard .Create-Post {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 60%;
 }
 .Dashboard .Create-Post button {
   font-size: 1.25em;
   font-weight: 200;
-  background-color: #324aef;
+  background-color: #15410e;
   margin: 4px 0;
   color: white;
   border-radius: 5px;
@@ -46,6 +47,7 @@
   width: -moz-fit-content;
   width: fit-content;
   transition: ease-in-out 0.4s;
+  padding: 5px;
 }
 .Dashboard .Create-Post button:hover {
   transform: scale(0.95);
@@ -62,12 +64,12 @@ input {
   font-size: large;
   margin: 8px 0;
   background-color: white;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #1b5e20;
   padding: 0em 4em;
+  width: 100%;
   padding-left: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
-  width: 100%;
   transition: ease-in 0.2s;
   color: black;
   border-right: 0;
@@ -76,5 +78,5 @@ input {
 }
 input:focus-visible {
   outline: 0;
-  border-bottom: 3px solid blue;
+  border-bottom: 3px solid #1b5e20;
 }/*# sourceMappingURL=dashboard.css.map */
