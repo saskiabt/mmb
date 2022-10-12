@@ -92,7 +92,10 @@ function Dashboard() {
       {posts.length > 0 ? (
         <MyPosts></MyPosts>
       ) : (
-        <h3>You have not posted anything.</h3>
+        <div className="no-posts">
+          {" "}
+          <h3>You have not posted anything.</h3>
+        </div>
       )}
     </div>
   );

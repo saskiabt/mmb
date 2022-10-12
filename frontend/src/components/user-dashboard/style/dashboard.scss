@@ -94,3 +94,13 @@ input {
     border-bottom: 3px solid $nav-button-dark-green;
   }
 }
+
+.no-posts {
+  display: flex;
+  height: 100%;
+  align-items: flex-start;
+  font-size: 1.7em;
+  padding-top: 3.5em;
+  font-style: italic;
+  color: $heading-h3-grey-green;
+}

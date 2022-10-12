@@ -80,4 +80,14 @@ input {
 input:focus-visible {
   outline: 0;
   border-bottom: 3px solid #1b5e20;
+}
+
+.no-posts {
+  display: flex;
+  height: 100%;
+  align-items: flex-start;
+  font-size: 1.7em;
+  padding-top: 3.5em;
+  font-style: italic;
+  color: #576253;
 }/*# sourceMappingURL=dashboard.css.map */
