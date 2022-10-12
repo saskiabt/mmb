@@ -52,14 +52,22 @@
   border-bottom: 1px solid #1b5e20;
   border-radius: 0;
 }
-.Nav #login-btn,
 .Nav #logout-btn {
   background-color: #1b5e20;
   color: white;
 }
-.Nav #login-btn:hover,
 .Nav #logout-btn:hover {
   border-radius: 10px;
   background-color: rgba(139, 195, 74, 0.5882352941);
   color: #1b5e20;
+}
+.Nav #login-btn {
+  border-radius: 10px;
+  background-color: rgba(139, 195, 74, 0.5882352941);
+  color: #1b5e20;
+  border-bottom: 1px solid #1b5e20;
+}
+.Nav #login-btn:hover {
+  background-color: #1b5e20;
+  color: white;
 }/*# sourceMappingURL=nav.css.map */

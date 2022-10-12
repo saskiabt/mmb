@@ -1,0 +1,42 @@
+$dark-green-background-color: #050706;
+$dark-mode-nav-button-lightgreen: #bce691;
+$card-username-darkmode-lightgreen: #d6ffae;
+$card-h3-darkmode-medgreen: #576253;
+$card-date-med-green: #6b915f;
+$card-comment-dark-mode: #89a181;
+$card-background-color-darkmode: rgb(34 46 35);
+
+.dark-mode {
+  .Post {
+    .date {
+      color: $card-date-med-green;
+    }
+  }
+
+  .heading {
+    h1 {
+      color: $dark-mode-nav-button-lightgreen;
+    }
+    h3 {
+      color: #576253;
+    }
+  }
+
+  .Nav {
+    .nav-icon {
+      color: $dark-mode-nav-button-lightgreen;
+    }
+  }
+
+  .Nav #login-btn {
+    background-color: $dark-mode-nav-button-lightgreen;
+    color: $dark-green-background-color;
+  }
+  .Post .card-comment {
+    color: $card-comment-dark-mode;
+  }
+
+  .Post {
+    background-color: $card-background-color-darkmode;
+  }
+}

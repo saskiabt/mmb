@@ -1,0 +1,22 @@
+.dark-mode .Post .date {
+  color: #6b915f;
+}
+.dark-mode .heading h1 {
+  color: #bce691;
+}
+.dark-mode .heading h3 {
+  color: #576253;
+}
+.dark-mode .Nav .nav-icon {
+  color: #bce691;
+}
+.dark-mode .Nav #login-btn {
+  background-color: #bce691;
+  color: #050706;
+}
+.dark-mode .Post .card-comment {
+  color: #89a181;
+}
+.dark-mode .Post {
+  background-color: rgb(34, 46, 35);
+}/*# sourceMappingURL=darkMode.css.map */

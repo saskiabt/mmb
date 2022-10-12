@@ -7,6 +7,7 @@ import { faBars, faX, faHome } from "@fortawesome/free-solid-svg-icons";
 import DarkModeButton from "../dark-mode-button/DarkModeButton";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../../features/auth/authSlice";
+import "../../styles/darkMode.css";
 function Nav() {
   const dispatch = useDispatch();
   const navigate = useNavigate();

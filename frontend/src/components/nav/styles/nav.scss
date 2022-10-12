@@ -62,7 +62,6 @@ $heading-medium-green: #6b915f;
     }
   }
 
-  #login-btn,
   #logout-btn {
     background-color: $nav-button-dark-green;
     color: white;
@@ -70,6 +69,18 @@ $heading-medium-green: #6b915f;
       border-radius: 10px;
       background-color: $post-light-green;
       color: $nav-button-dark-green;
+    }
+  }
+
+  #login-btn {
+    border-radius: 10px;
+    background-color: $post-light-green;
+    color: $nav-button-dark-green;
+    border-bottom: 1px solid $nav-button-dark-green;
+    // border: 1px solid $nav-button-dark-greens;
+    &:hover {
+      background-color: $nav-button-dark-green;
+      color: white;
     }
   }
 }
