@@ -88,7 +88,7 @@ function Login() {
           <div className="group">
             <label className="password">
               <input
-                type="text"
+                type={isPassword}
                 name="password"
                 aria-label="password"
                 placeholder="Password"
