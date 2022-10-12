@@ -1,4 +1,8 @@
-$light-yellow-background: #eae9e2;
+$nav-button-dark-green: #1b5e20;
+$heading-medium-green: #6b915f;
+$post-light-green: #8bc34a96;
+$post-comment-dark-green: #15410e;
+$heading-h3-grey-green: #576253;
 
 .footer {
   position: sticky;
@@ -6,10 +10,6 @@ $light-yellow-background: #eae9e2;
   padding-bottom: 1em;
   padding-top: 0.8em;
   font-size: 1em;
-  color: blue;
-
-  // color: #4e70a0;
-  // background-color: $light-yellow-background;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -23,10 +23,10 @@ $light-yellow-background: #eae9e2;
     padding: 5px;
     background: none;
     font-size: 1em;
-    color: blue;
+    color: $post-comment-dark-green;
 
     &:hover {
-      color: #85a0c8;
+      border-bottom: 1px solid $post-comment-dark-green;
     }
   }
 }

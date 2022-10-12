@@ -9,13 +9,15 @@
   padding-top: 25px;
   z-index: 100;
   font-size: 32px;
-  color: #334b92;
-  background-color: white;
   margin-bottom: 15px;
 }
 .Nav .nav-icon {
   background: none;
-  color: #324aef;
+  color: #1b5e20;
+  transition: ease-in 0.5s;
+}
+.Nav .nav-icon:hover {
+  opacity: 80%;
 }
 .Nav .nav-left {
   width: auto;
@@ -39,21 +41,22 @@
   background: none;
   font-family: "Apparat-light", sans-serif;
   font-weight: 400;
-  color: #334b92;
+  color: #1b5e20;
   border-radius: 10px;
   padding: 0.5vmin 1vmin;
 }
 .Nav .nav-btn:hover {
-  border-bottom: 1px solid #324aef;
+  border-bottom: 1px solid #1b5e20;
   border-radius: 0;
 }
 .Nav #login-btn,
 .Nav #logout-btn {
-  background-color: #324aef;
+  background-color: #1b5e20;
   color: white;
 }
 .Nav #login-btn:hover,
 .Nav #logout-btn:hover {
   border-radius: 10px;
-  background-color: #1a2884;
+  background-color: rgba(139, 195, 74, 0.5882352941);
+  color: #1b5e20;
 }/*# sourceMappingURL=nav.css.map */

@@ -1,7 +1,8 @@
-// $dark-purple-background: #201922;
-$bright-blue: #324aef;
-$medium-blue: #334b92;
 $cirrus-cumulus: "Cirrus-Cumulus", sans-serif;
+$nav-button-dark-green: #1b5e20;
+$heading-h3-grey-green: #576253;
+$post-light-green: #8bc34a96;
+$heading-medium-green: #6b915f;
 
 .Nav {
   display: flex;
@@ -13,13 +14,15 @@ $cirrus-cumulus: "Cirrus-Cumulus", sans-serif;
   padding-top: 25px;
   z-index: 100;
   font-size: 32px;
-  color: $medium-blue;
-  background-color: white;
-
   margin-bottom: 15px;
   .nav-icon {
     background: none;
-    color: $bright-blue;
+    color: $nav-button-dark-green;
+    transition: ease-in 0.5s;
+
+    &:hover {
+      opacity: 80%;
+    }
   }
 
   // .nav-left {
@@ -53,23 +56,24 @@ $cirrus-cumulus: "Cirrus-Cumulus", sans-serif;
 
     font-family: "Apparat-light", sans-serif;
     font-weight: 400;
-    color: $medium-blue;
+    color: $nav-button-dark-green;
     border-radius: 10px;
     padding: 0.5vmin 1vmin;
 
     &:hover {
-      border-bottom: 1px solid $bright-blue;
+      border-bottom: 1px solid $nav-button-dark-green;
       border-radius: 0;
     }
   }
 
   #login-btn,
   #logout-btn {
-    background-color: $bright-blue;
+    background-color: $nav-button-dark-green;
     color: white;
     &:hover {
       border-radius: 10px;
-      background-color: #1a2884;
+      background-color: $post-light-green;
+      color: $nav-button-dark-green;
     }
   }
 }

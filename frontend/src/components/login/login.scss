@@ -1,3 +1,9 @@
+$nav-button-dark-green: #1b5e20;
+$heading-medium-green: #6b915f;
+$post-light-green: #8bc34a96;
+$post-comment-dark-green: #15410e;
+$heading-h3-grey-green: #576253;
+
 .Login,
 .Register {
   display: flex;
@@ -5,7 +11,7 @@
   align-items: center;
   justify-content: center;
   margin-top: auto;
-  border: 1px solid blue;
+  border: 1px solid $post-light-green;
   padding: 3vmin 30px;
   width: 70%;
 
@@ -23,7 +29,7 @@
     font-size: large;
     margin: 8px 0;
     background-color: white;
-    border-bottom: 1px solid blue;
+    border-bottom: 1.5px solid $nav-button-dark-green;
     padding: 0em 4em;
     padding-left: 1em;
     padding-top: 1em;
@@ -36,7 +42,7 @@
     border-top: 0;
     &:focus-visible {
       outline: 0;
-      border-bottom: 3px solid blue;
+      border-bottom: 3px solid $nav-button-dark-green;
     }
 
     &:focus:not(:focus-visible) {
@@ -55,15 +61,16 @@
   .login-button {
     font-size: 1.75em;
     font-weight: 200;
-    background-color: lightblue;
+    background-color: $post-light-green;
     margin: 4px 0;
-    color: darkblue;
+    color: $post-comment-dark-green;
     border-radius: 5px;
     width: 100%;
-    transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.3s;
 
     &:hover {
       transform: scale(0.95);
+      background-color: $nav-button-dark-green;
       color: white;
     }
   }

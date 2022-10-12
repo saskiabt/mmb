@@ -3,23 +3,26 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  border: 1px solid rgb(163, 173, 219);
   border-radius: 10px;
   padding: 2.5%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: darkblue;
+  background-color: rgba(139, 195, 74, 0.5882352941);
+  transition: ease-in-out 0.6s;
+}
+.Post:hover {
+  transform: scale(1.1);
 }
 .Post .card-username {
   text-transform: capitalize;
-  color: white;
+  color: #1b5e20;
   font-weight: 800;
   font-family: "Apparat-light", sans-serif;
   font-style: normal;
 }
 .Post .card-comment {
-  color: lightgray;
+  color: #15410e;
   font-size: 1.2em;
 }
 .Post .post-bottom {
@@ -29,5 +32,5 @@
 }
 .Post .date {
   font-size: 0.8em;
-  color: lightgrey;
+  color: #6b915f;
 }/*# sourceMappingURL=Post.css.map */

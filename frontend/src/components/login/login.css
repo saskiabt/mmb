@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   margin-top: auto;
-  border: 1px solid blue;
+  border: 1px solid rgba(139, 195, 74, 0.5882352941);
   padding: 3vmin 30px;
   width: 70%;
 }
@@ -24,7 +24,7 @@
   font-size: large;
   margin: 8px 0;
   background-color: white;
-  border-bottom: 1px solid blue;
+  border-bottom: 1.5px solid #1b5e20;
   padding: 0em 4em;
   padding-left: 1em;
   padding-top: 1em;
@@ -39,7 +39,7 @@
 .Login input:focus-visible,
 .Register input:focus-visible {
   outline: 0;
-  border-bottom: 3px solid blue;
+  border-bottom: 3px solid #1b5e20;
 }
 .Login input:focus:not(:focus-visible),
 .Register input:focus:not(:focus-visible) {
@@ -58,16 +58,17 @@
 .Register .login-button {
   font-size: 1.75em;
   font-weight: 200;
-  background-color: lightblue;
+  background-color: rgba(139, 195, 74, 0.5882352941);
   margin: 4px 0;
-  color: darkblue;
+  color: #15410e;
   border-radius: 5px;
   width: 100%;
-  transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.3s;
 }
 .Login .login-button:hover,
 .Register .login-button:hover {
   transform: scale(0.95);
+  background-color: #1b5e20;
   color: white;
 }
 .Login .form-bottom,
