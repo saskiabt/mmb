@@ -1,4 +1,8 @@
 $h3-turquoise: #2b98c1;
+$heading-medium-green: #6b915f;
+$heading-h3-grey-green: #576253;
+$nav-button-dark-green: #1b5e20;
+
 .heading {
   display: flex;
   flex-direction: column;
@@ -6,19 +10,17 @@ $h3-turquoise: #2b98c1;
   padding-top: 5vmin;
 
   h1 {
-    // font-family: "victorianna-italic", sans-serif;
-    font-family: apparat-light, sans-serif;
+    font-family: "victorianna-italic", sans-serif;
+    // font-family: apparat-light, sans-serif;
     font-weight: 600;
-    color: blue;
+    color: $nav-button-dark-green;
     font-size: 8vmin;
   }
 
   h3 {
     font-style: italic;
-    color: $h3-turquoise;
+    color: $heading-h3-grey-green;
     font-family: "Apparat-light", sans-serif;
-
-    // font-family: "circe-slab-a", serif;
     font-weight: 600;
     font-style: normal;
     font-size: 3vmin;

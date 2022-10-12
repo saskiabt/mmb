@@ -2,6 +2,7 @@
 $bright-blue: #324aef;
 $medium-blue: #334b92;
 $cirrus-cumulus: "Cirrus-Cumulus", sans-serif;
+$nav-button-dark-green: #1b5e20;
 
 .Nav {
   display: flex;
@@ -13,11 +14,10 @@ $cirrus-cumulus: "Cirrus-Cumulus", sans-serif;
   padding-top: 25px;
   z-index: 100;
   font-size: 32px;
-  color: $medium-blue;
   margin-bottom: 15px;
   .nav-icon {
     background: none;
-    color: $bright-blue;
+    color: $nav-button-dark-green;
   }
 
   .nav-left {
@@ -43,7 +43,7 @@ $cirrus-cumulus: "Cirrus-Cumulus", sans-serif;
 
     font-family: "Apparat-light", sans-serif;
     font-weight: 400;
-    color: $medium-blue;
+    color: $nav-button-dark-green;
     border-radius: 10px;
     padding: 0.5vmin 1vmin;
 
@@ -55,7 +55,7 @@ $cirrus-cumulus: "Cirrus-Cumulus", sans-serif;
 
   #login-btn,
   #logout-btn {
-    background-color: $bright-blue;
+    background-color: $nav-button-dark-green;
     color: white;
     &:hover {
       border-radius: 10px;

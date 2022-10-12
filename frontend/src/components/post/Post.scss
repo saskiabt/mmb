@@ -1,27 +1,31 @@
 $light-blue-post-color: rgb(149 180 224);
 $h3-turquoise: #2b98c1;
+$post-light-green: #8bc34a96;
+$post-comment-dark-green: #15410e;
+$heading-h3-grey-green: #576253;
+$nav-button-dark-green: #1b5e20;
+$heading-medium-green: #6b915f;
 
 .Post {
   width: 100%;
   height: fit-content;
-  border: 1px solid rgb(163 173 219);
   border-radius: 10px;
   padding: 2.5%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: darkblue;
+  background-color: $post-light-green;
 
   .card-username {
     text-transform: capitalize;
-    color: white;
+    color: $nav-button-dark-green;
     font-weight: 800;
     font-family: "Apparat-light", sans-serif;
     font-style: normal;
   }
 
   .card-comment {
-    color: lightgray;
+    color: $post-comment-dark-green;
     font-size: 1.2em;
   }
 
@@ -33,6 +37,6 @@ $h3-turquoise: #2b98c1;
 
   .date {
     font-size: 0.8em;
-    color: lightgrey;
+    color: $heading-medium-green;
   }
 }
