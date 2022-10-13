@@ -93,6 +93,7 @@
   .Nav .nav-right {
     width: 100%;
     padding-right: 0;
+    gap: 5%;
   }
   .Nav .nav-right button {
     font-weight: 700;

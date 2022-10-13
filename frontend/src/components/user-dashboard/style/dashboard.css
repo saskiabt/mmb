@@ -6,13 +6,6 @@
   height: 100%;
   width: 100%;
 }
-.Dashboard h1 {
-  color: #85a1c8;
-  font-size: 4em;
-}
-.Dashboard .heading {
-  padding-bottom: 2.5%;
-}
 .Dashboard .MyPosts {
   display: flex;
   flex-direction: column;
@@ -26,11 +19,6 @@
   width: 60vw;
   align-items: flex-start;
   padding-top: 2em;
-  color: #334a92;
-}
-.Dashboard .MyPosts h3 {
-  color: #233362;
-  font-weight: 500;
 }
 .Dashboard .Create-Post {
   display: flex;
@@ -94,4 +82,17 @@ input:focus-visible {
 }
 .no-posts h3 {
   font-weight: 300;
+  text-align: center;
+}
+
+@media only screen and (max-width: 450px) {
+  .no-posts {
+    width: 90vw;
+  }
+  .Dashboard .Create-Post {
+    width: 80%;
+  }
+  .Dashboard .MyPosts ul {
+    width: 85vw;
+  }
 }/*# sourceMappingURL=dashboard.css.map */

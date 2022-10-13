@@ -34,8 +34,9 @@
   .heading h1 {
     font-size: 13.5vmin;
     padding-bottom: 0.5em;
+    font-weight: 900;
   }
   .heading h3 {
-    font-size: 6vmin;
+    font-size: 4.5vmin;
   }
 }/*# sourceMappingURL=heading.css.map */

@@ -12,16 +12,6 @@ $heading-h3-grey-green: #576253;
   height: 100%;
   width: 100%;
 
-  h1 {
-    color: #85a1c8;
-    font-size: 4em;
-  }
-
-  .heading {
-    // padding-top: 15%;
-    padding-bottom: 2.5%;
-  }
-
   .MyPosts {
     display: flex;
     flex-direction: column;
@@ -34,12 +24,6 @@ $heading-h3-grey-green: #576253;
       width: 60vw;
       align-items: flex-start;
       padding-top: 2em;
-      color: #334a92;
-    }
-    h3 {
-      color: #233362;
-      font-weight: 500;
-      // border-bottom: 1px solid #233362;
     }
   }
 
@@ -108,5 +92,22 @@ input {
 
   h3 {
     font-weight: 300;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .no-posts {
+    width: 90vw;
+  }
+
+  .Dashboard {
+    .Create-Post {
+      width: 80%;
+    }
+
+    .MyPosts ul {
+      width: 85vw;
+    }
   }
 }
