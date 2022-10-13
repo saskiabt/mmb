@@ -8,124 +8,61 @@ $mobile-nav-background-lightgreen: #cdf0c2;
 .Nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   position: sticky;
   top: 0px;
-  padding-top: 25px;
   z-index: 100;
-  font-size: 32px;
-  margin-bottom: 15px;
-  .nav-icon {
+  background-color: rgba(255, 255, 255, 0.597);
+  padding: 15px 15px 10px 15px;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    font-size: 36px;
+    font-family: "Ostrich-Sans-Black", sans-serif;
+    font-weight: 600;
+    height: 100%;
     background: none;
+    padding-top: 10px;
     color: $nav-button-dark-green;
-    transition: ease-in 0.1s;
-
-    &:hover {
-      opacity: 70%;
-    }
-
-    &:active {
-      color: $heading-medium-green;
-    }
-  }
-
-  .nav-left {
-    width: auto;
-    padding-left: 3%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 32px;
-  }
-
-  .nav-right {
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    padding-right: 2%;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 3%;
-    width: 100%;
-  }
-
-  .nav-btn {
-    font-size: 32px;
-    background: none;
-    width: fit-content;
-    font-weight: 400;
-    color: $nav-button-dark-green;
-    border-radius: 10px;
-    padding: 0.5vmin 1vmin;
 
     &:hover {
       border-bottom: 1px solid $nav-button-dark-green;
-      border-radius: 0;
-    }
-  }
-
-  #logout-btn {
-    background-color: $nav-button-dark-green;
-    color: white;
-    &:hover {
-      border-radius: 10px;
-      background-color: $post-light-green;
-      color: $nav-button-dark-green;
-    }
-  }
-
-  #login-btn {
-    border-radius: 10px;
-    background-color: $post-light-green;
-    color: $nav-button-dark-green;
-    border-bottom: 1px solid $nav-button-dark-green;
-    // border: 1px solid $nav-button-dark-greens;
-    &:hover {
-      background-color: $nav-button-dark-green;
-      color: white;
     }
   }
 }
 
-.nav-mobile {
-  display: none;
+.nav-left {
+  display: flex;
+  justify-content: flex-start;
+  width: 20%;
+  height: 100%;
 }
 
-@media only screen and (max-width: 450px) {
+.nav-right {
+  display: flex;
+  flex-grow: 3;
+  height: 100%;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+#login-btn {
+  background-color: $post-light-green;
+  border-radius: 10px;
+}
+
+#home-btn {
+  transition: ease-in-out 0.2s;
+  &:hover {
+    border: 0px;
+    transform: scale(0.9);
+    opacity: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
   .Nav {
-    background-color: rgb(188 220 152);
-    font-family: apparat, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 10vmin;
-    padding-top: 20px;
-
-    .nav-right {
-      width: 100%;
-      padding-right: 0;
-      gap: 5%;
-      button {
-        font-weight: 400;
-        font-family: "Ostrich-Sans-Black", sans-serif;
-        padding-left: 5px;
-        padding: 5px 10px;
-      }
-    }
-    #login-btn {
-      border-radius: 10px;
-      background-color: rgb(26 94 32 / 38%);
-      color: #ffffff;
-      border-bottom: 1px solid #1b5e20;
-    }
-
-    #logout-btn {
-      border: 1px solid #1a5e20;
-      color: #1a5e20;
-      background-color: $post-light-green;
-    }
+    box-shadow: 0px 0px 2px 0px #1a5e208c;
   }
 }

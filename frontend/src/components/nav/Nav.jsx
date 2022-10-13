@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./styles/nav.css";
 import "../../icons/menu-icon.png";
@@ -24,14 +24,17 @@ function Nav() {
   return (
     <div className="Nav">
       <div className="nav-left">
-        <NavLink to="/" className="nav-icon nav-icon-home">
-          <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+        <NavLink to="/" className="nav-icon nav-btn">
+          <button type="button" className="nav-icon nav-btn" id="home-btn">
+            <FontAwesomeIcon icon={faHome} />
+          </button>
         </NavLink>
       </div>
+
       {user ? (
         <div className="nav-right">
-          <NavLink to="/dashboard" className="nav-icon">
-            <button type="button" className="nav-btn">
+          <NavLink to="/dashboard" className="nav-links">
+            <button type="button" className="nav-icon nav-btn" id="profile-btn">
               <FontAwesomeIcon icon={faUser} />
             </button>
           </NavLink>
@@ -50,7 +53,7 @@ function Nav() {
         <div className="nav-right">
           {" "}
           <NavLink to="/register" className="nav-links">
-            <button type="button" className="nav-btn">
+            <button type="button" className="nav-btn" id="signup-btn">
               Sign Up
             </button>
           </NavLink>

@@ -1,118 +1,60 @@
 .Nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  padding-top: 25px;
   z-index: 100;
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-.Nav .nav-icon {
-  background: none;
-  color: #1b5e20;
-  transition: ease-in 0.1s;
-}
-.Nav .nav-icon:hover {
-  opacity: 70%;
-}
-.Nav .nav-icon:active {
-  color: #6b915f;
-}
-.Nav .nav-left {
-  width: auto;
-  padding-left: 3%;
-  display: flex;
-  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.597);
+  padding: 15px 15px 10px 15px;
   align-items: center;
-  font-size: 32px;
+  justify-content: space-between;
 }
-.Nav .nav-right {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding-right: 2%;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 3%;
-  width: 100%;
-}
-.Nav .nav-btn {
-  font-size: 32px;
+.Nav button {
+  font-size: 36px;
+  font-family: "Ostrich-Sans-Black", sans-serif;
+  font-weight: 600;
+  height: 100%;
   background: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: 400;
-  color: #1b5e20;
-  border-radius: 10px;
-  padding: 0.5vmin 1vmin;
-}
-.Nav .nav-btn:hover {
-  border-bottom: 1px solid #1b5e20;
-  border-radius: 0;
-}
-.Nav #logout-btn {
-  background-color: #1b5e20;
-  color: white;
-}
-.Nav #logout-btn:hover {
-  border-radius: 10px;
-  background-color: rgba(139, 195, 74, 0.5882352941);
+  padding-top: 10px;
   color: #1b5e20;
 }
-.Nav #login-btn {
-  border-radius: 10px;
-  background-color: rgba(139, 195, 74, 0.5882352941);
-  color: #1b5e20;
+.Nav button:hover {
   border-bottom: 1px solid #1b5e20;
 }
-.Nav #login-btn:hover {
-  background-color: #1b5e20;
-  color: white;
+
+.nav-left {
+  display: flex;
+  justify-content: flex-start;
+  width: 20%;
+  height: 100%;
 }
 
-.nav-mobile {
-  display: none;
+.nav-right {
+  display: flex;
+  flex-grow: 3;
+  height: 100%;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
-@media only screen and (max-width: 450px) {
+#login-btn {
+  background-color: rgba(139, 195, 74, 0.5882352941);
+  border-radius: 10px;
+}
+
+#home-btn {
+  transition: ease-in-out 0.2s;
+}
+#home-btn:hover {
+  border: 0px;
+  transform: scale(0.9);
+  opacity: 80%;
+}
+
+@media only screen and (max-width: 500px) {
   .Nav {
-    background-color: rgb(188, 220, 152);
-    font-family: apparat, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 10vmin;
-    padding-top: 20px;
-  }
-  .Nav .nav-right {
-    width: 100%;
-    padding-right: 0;
-    gap: 5%;
-  }
-  .Nav .nav-right button {
-    font-weight: 400;
-    font-family: "Ostrich-Sans-Black", sans-serif;
-    padding-left: 5px;
-    padding: 5px 10px;
-  }
-  .Nav #login-btn {
-    border-radius: 10px;
-    background-color: rgba(26, 94, 32, 0.38);
-    color: #ffffff;
-    border-bottom: 1px solid #1b5e20;
-  }
-  .Nav #logout-btn {
-    border: 1px solid #1a5e20;
-    color: #1a5e20;
-    background-color: rgba(139, 195, 74, 0.5882352941);
+    box-shadow: 0px 0px 2px 0px rgba(26, 94, 32, 0.5490196078);
   }
 }/*# sourceMappingURL=nav.css.map */
