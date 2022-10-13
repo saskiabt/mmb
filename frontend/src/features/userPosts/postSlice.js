@@ -4,6 +4,7 @@ import {
   deletePost,
   fetchAllPosts,
   fetchPosts,
+  likePost,
 } from "../../api/posts";
 
 const initialState = {
@@ -85,6 +86,21 @@ export const getPosts = createAsyncThunk(
     }
   }
 );
+
+export const like = createAsyncThunk("posts/like", async (id, thunkAPI) => {
+  try {
+    const token = thunkAPI.getState().auth.user.token;
+    console.log(id);
+    return await likePost(id, token);
+  } catch (err) {
+    const message =
+      (err.response && err.response.data && err.response.data.message) ||
+      err.message ||
+      err.toString();
+    if (err) console.log(err);
+    return thunkAPI.rejectWithValue(message);
+  }
+});
 
 export const postSlice = createSlice({
   name: "post",

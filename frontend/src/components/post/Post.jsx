@@ -2,8 +2,8 @@ import React from "react";
 import "./Post.css";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { deleteUserPost } from "../../features/userPosts/postSlice";
+import { faTrash, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { deleteUserPost, like } from "../../features/userPosts/postSlice";
 
 function Post({ post, i }) {
   const dispatch = useDispatch();
@@ -14,6 +14,10 @@ function Post({ post, i }) {
     dispatch(deleteUserPost(post._id));
     window.location.reload();
     console.log("delete initialized");
+  };
+
+  const addLike = () => {
+    dispatch(like(post._id));
   };
 
   return (
@@ -29,9 +33,14 @@ function Post({ post, i }) {
       </div>
       <div className="post-bottom">
         <p className="card-comment">{post.comment}</p>
-        <div className="date">
-          <p>{new Date(post.createdAt).toLocaleDateString("en-US")}</p>
-          <p>{new Date(post.createdAt).toLocaleTimeString("en-US")}</p>
+        <div>
+          <div className="date">
+            <p>{new Date(post.createdAt).toLocaleDateString("en-US")}</p>
+            <p>{new Date(post.createdAt).toLocaleTimeString("en-US")}</p>
+          </div>
+          <button className="like-btn" onClick={like}>
+            <FontAwesomeIcon icon={faHeart} />
+          </button>
         </div>
       </div>
     </div>

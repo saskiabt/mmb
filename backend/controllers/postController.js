@@ -28,6 +28,8 @@ const createPost = asyncHandler(async (req, res) => {
     user: req.user.id,
     username: req.user.username,
     comment: req.body.comment,
+    likedBy: req.body.likedBy,
+    likeCount: req.body.likeCount,
   });
 
   console.log({ newPost });
@@ -102,10 +104,40 @@ const deletePost = asyncHandler(async (req, res) => {
   }
 });
 
+const addLike = asyncHandler(async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+    if (!user) {
+      res.status(401);
+      throw new Error("User not found");
+    }
+
+    const post = await Post.findById(req.params.id);
+    if (post.likedBy.includes(user.id)) {
+      res.status(401);
+      throw new Error("Error: User has already liked this post");
+    }
+
+    const updatedPost = await Post.findByIdAndUpdate(
+      req.params.id,
+      { $push: { likedBy: req.user.id } },
+      {
+        new: true,
+      }
+    );
+
+    res.status(200).json({ message: `+1 like on post ${updatedPost}` });
+  } catch (err) {
+    if (err) console.log(`Error in deletePost: ${err}`);
+    process.exit();
+  }
+});
+
 module.exports = {
   getPost,
   createPost,
   updatePost,
   deletePost,
   getUserPosts,
+  addLike,
 };

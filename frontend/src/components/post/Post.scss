@@ -1,5 +1,3 @@
-$light-blue-post-color: rgb(149 180 224);
-$h3-turquoise: #2b98c1;
 $post-light-green: #8bc34a96;
 $post-comment-dark-green: #15410e;
 $heading-h3-grey-green: #576253;
@@ -44,6 +42,12 @@ $heading-medium-green: #6b915f;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   .date {
@@ -64,4 +68,9 @@ $heading-medium-green: #6b915f;
       color: $heading-medium-green;
     }
   }
+}
+
+.like-btn {
+  background: none;
+  font-size: 0.9em;
 }

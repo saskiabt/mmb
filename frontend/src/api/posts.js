@@ -38,7 +38,7 @@ const addPost = async (comment, username, token) => {
     console.log(comment);
     const response = await axios.post(
       API_URL,
-      { username: username, comment: comment },
+      { username: username, comment: comment, likeCount: 0, likedBy: [] },
       config
     );
     console.log(response.data);
@@ -63,4 +63,24 @@ const deletePost = async (id, token) => {
   }
 };
 
-export { fetchAllPosts, addPost, deletePost, fetchPosts };
+const likePost = async (id, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  try {
+    console.log(id, token);
+    const response = await axios.put(
+      `${API_URL + id}/like`,
+      { id: id },
+      config
+    );
+    console.log(response.data);
+    return response.data;
+  } catch (err) {
+    if (err) console.log(err);
+  }
+};
+
+export { fetchAllPosts, addPost, deletePost, fetchPosts, likePost };

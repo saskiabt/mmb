@@ -23,6 +23,14 @@ const postSchema = new mongoose.Schema(
       default: () => Date.now(),
     },
     comment: String,
+    likeCount: {
+      type: Number,
+      default: 0,
+    },
+    likedBy: {
+      type: Array,
+      default: [],
+    },
   },
   {
     timestamps: true,
