@@ -54,7 +54,7 @@ $mobile-nav-background-lightgreen: #cdf0c2;
     font-size: 32px;
     background: none;
     width: fit-content;
-    font-family: "Apparat-light", sans-serif;
+    // font-family: "Apparat-light", sans-serif;
     font-weight: 400;
     color: $nav-button-dark-green;
     border-radius: 10px;
@@ -96,6 +96,9 @@ $mobile-nav-background-lightgreen: #cdf0c2;
 @media only screen and (max-width: 450px) {
   .Nav {
     background-color: $post-light-green;
+    font-family: apparat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     padding-bottom: 25px;
     padding-left: 15px;
     padding-right: 15px;

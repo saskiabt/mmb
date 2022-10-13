@@ -48,7 +48,6 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: "Apparat-light", sans-serif;
   font-weight: 400;
   color: #1b5e20;
   border-radius: 10px;
@@ -85,6 +84,9 @@
 @media only screen and (max-width: 450px) {
   .Nav {
     background-color: rgba(139, 195, 74, 0.5882352941);
+    font-family: apparat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     padding-bottom: 25px;
     padding-left: 15px;
     padding-right: 15px;
