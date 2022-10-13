@@ -3,7 +3,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./styles/nav.css";
 import "../../icons/menu-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faBars, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../../features/auth/authSlice";
 import "../../styles/darkMode.css";
@@ -21,20 +22,12 @@ function Nav() {
   };
 
   return (
-    // <div className="nav-container">
-    /* <div className="nav-mobile">
-        <button type="button" className="nav-btn" id="nav-toggle">
-          <FontAwesomeIcon icon={faBars} />
-        </button>
-      </div> */
     <div className="Nav">
       <div className="nav-left">
         <NavLink to="/" className="nav-icon nav-icon-home">
           <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
-        </NavLink>{" "}
-        {/* |
-        <DarkModeButton className="nav-icon nav-icon-dark-mode"></DarkModeButton> */}
-      </div>{" "}
+        </NavLink>
+      </div>
       {user ? (
         <div className="nav-right">
           <NavLink to="/dashboard" className="nav-icon">

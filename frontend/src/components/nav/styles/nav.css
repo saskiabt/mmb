@@ -27,6 +27,8 @@
   padding-left: 3%;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  font-size: 32px;
 }
 .Nav .nav-right {
   width: -webkit-fit-content;
@@ -34,14 +36,18 @@
   width: fit-content;
   display: flex;
   flex-direction: row;
-  padding-right: 2.5%;
+  padding-right: 2%;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 10px;
+  gap: 3%;
+  width: 100%;
 }
 .Nav .nav-btn {
-  font-size: 0.8em;
+  font-size: 32px;
   background: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-family: "Apparat-light", sans-serif;
   font-weight: 400;
   color: #1b5e20;
@@ -85,7 +91,6 @@
     font-size: 10vmin;
   }
   .Nav .nav-right {
-    gap: 6%;
     width: 100%;
     padding-right: 0;
   }
@@ -97,5 +102,10 @@
     background-color: rgba(26, 94, 32, 0.38);
     color: #ffffff;
     border-bottom: 1px solid #1b5e20;
+  }
+  .Nav #logout-btn {
+    border: 1px solid #1a5e20;
+    color: #1a5e20;
+    background-color: rgba(139, 195, 74, 0.5882352941);
   }
 }/*# sourceMappingURL=nav.css.map */

@@ -8,7 +8,7 @@
   font-family: "victorianna-italic", sans-serif;
   font-weight: 600;
   color: #1b5e20;
-  font-size: 8vmin;
+  font-size: 9vmin;
   text-align: center;
 }
 .heading h3 {
@@ -18,4 +18,24 @@
   font-weight: 600;
   font-style: normal;
   font-size: 3vmin;
+}
+
+@media only screen and (max-width: 700px) {
+  .heading h1 {
+    font-size: 11vmin;
+    padding-top: 8vmin;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .heading {
+    width: 100%;
+    padding-top: 7.5%;
+  }
+  .heading h1 {
+    font-size: 13.5vmin;
+    padding-bottom: 0.5em;
+  }
+  .heading h3 {
+    font-size: 6vmin;
+  }
 }/*# sourceMappingURL=heading.css.map */

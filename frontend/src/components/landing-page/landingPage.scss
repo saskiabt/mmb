@@ -25,3 +25,9 @@
   color: #334a92;
   padding-bottom: 1.5em;
 }
+
+@media only screen and (max-width: 450px) {
+  .AllPosts {
+    width: 85vw;
+  }
+}
