@@ -32,6 +32,9 @@ $nav-button-dark-green: #1b5e20;
   .heading h1 {
     font-size: 11vmin;
     padding-top: 8vmin;
+    font-family: modish, sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
 }
 
@@ -43,7 +46,6 @@ $nav-button-dark-green: #1b5e20;
     h1 {
       font-size: 13.5vmin;
       padding-bottom: 0.5em;
-      font-weight: 900;
     }
 
     h3 {
