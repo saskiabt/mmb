@@ -35,7 +35,7 @@ function Nav() {
         <div className="nav-right">
           <NavLink to="/dashboard" className="nav-links">
             <button type="button" className="nav-icon nav-btn" id="profile-btn">
-              <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon icon={faUser} /> {user.username}
             </button>
           </NavLink>
           <NavLink to="/" className="nav-links">
