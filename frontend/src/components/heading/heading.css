@@ -24,9 +24,6 @@
   .heading h1 {
     font-size: 11vmin;
     padding-top: 8vmin;
-    font-family: modish, sans-serif;
-    font-weight: 600;
-    font-style: normal;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -39,6 +36,9 @@
     padding-bottom: 0.5em;
     padding-right: 15px;
     padding-left: 15px;
+    font-family: modish, sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
   .heading h3 {
     font-size: 4.5vmin;
