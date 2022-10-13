@@ -70,4 +70,8 @@
 .Nav #login-btn:hover {
   background-color: #1b5e20;
   color: white;
+}
+
+.nav-mobile {
+  display: none;
 }/*# sourceMappingURL=nav.css.map */
