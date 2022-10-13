@@ -12,7 +12,7 @@ $mobile-nav-background-lightgreen: #cdf0c2;
   width: 100vw;
   position: sticky;
   top: 0px;
-  padding-top: 25px;
+  padding-top: 3%;
   z-index: 100;
   font-size: 32px;
   margin-bottom: 15px;
@@ -94,7 +94,7 @@ $mobile-nav-background-lightgreen: #cdf0c2;
 
 @media only screen and (max-width: 450px) {
   .Nav {
-    background-color: $post-light-green;
+    background-color: rgb(188 220 152);
     font-family: apparat, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -102,6 +102,7 @@ $mobile-nav-background-lightgreen: #cdf0c2;
     padding-left: 15px;
     padding-right: 15px;
     font-size: 10vmin;
+    padding-top: 30px;
 
     .nav-right {
       width: 100%;
@@ -109,6 +110,9 @@ $mobile-nav-background-lightgreen: #cdf0c2;
       gap: 5%;
       button {
         font-weight: 400;
+        font-family: "Ostrich-Sans-Black", sans-serif;
+        padding-left: 5px;
+        padding: 5px 10px;
       }
     }
     #login-btn {

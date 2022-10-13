@@ -6,7 +6,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  padding-top: 25px;
+  padding-top: 3%;
   z-index: 100;
   font-size: 32px;
   margin-bottom: 15px;
@@ -83,7 +83,7 @@
 
 @media only screen and (max-width: 450px) {
   .Nav {
-    background-color: rgba(139, 195, 74, 0.5882352941);
+    background-color: rgb(188, 220, 152);
     font-family: apparat, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -91,6 +91,7 @@
     padding-left: 15px;
     padding-right: 15px;
     font-size: 10vmin;
+    padding-top: 30px;
   }
   .Nav .nav-right {
     width: 100%;
@@ -99,6 +100,9 @@
   }
   .Nav .nav-right button {
     font-weight: 400;
+    font-family: "Ostrich-Sans-Black", sans-serif;
+    padding-left: 5px;
+    padding: 5px 10px;
   }
   .Nav #login-btn {
     border-radius: 10px;

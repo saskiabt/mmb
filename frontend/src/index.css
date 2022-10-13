@@ -14,6 +14,22 @@
   font-family: "victorianna-italic";
   src: url("./fonts/victorianna/vtf_victorianna_thin_talic-webfont.ttf") format("truetype"), url("./fonts/victorianna/vtf_victorianna_thin-webfont.woff") format("woff");
 }
+@font-face {
+  font-family: "Ostrich-Sans-Regular";
+  src: url("./fonts/OstrichSans/regular/ostrich-sans-regular.ttf") format("truetype"), url("./fonts/OstrichSans/regular/ostrich-sans-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Ostrich-Sans-Bold";
+  src: url("./fonts/OstrichSans/bold/ostrich-sans-bold.ttf") format("truetype"), url("./fonts/OstrichSans/bold/ostrich-sans-bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Ostrich-Sans-Rounded";
+  src: url("./fonts/OstrichSans/rounded/ostrich-sans-rounded.ttf") format("truetype"), url("./fonts/OstrichSans/rounded/ostrich-sans-rounded.woff") format("woff");
+}
+@font-face {
+  font-family: "Ostrich-Sans-Black";
+  src: url("./fonts/OstrichSans/black/ostrich-sans-black.ttf") format("truetype"), url("./fonts/OstrichSans/black/ostrich-sans-black.woff") format("woff");
+}
 body {
   margin: 0;
   font-family: "Apparat-light", Helvetica, sans-serif;
