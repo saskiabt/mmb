@@ -30,62 +30,60 @@ function Nav() {
     console.log(navDisplay);
   };
   return (
-    // <div className="nav-container">
-    //   <div className="nav-mobile">
-    //     <button
-    //       type="button"
-    //       className="nav-btn"
-    //       id="nav-toggle"
-    //       onClick={toggleNav}
-    //     >
-    //       <FontAwesomeIcon icon={faBars} />
-    //     </button>
-    //   </div>
-    //   <div className="nav-visibility" style={navDisplay}>
-    <div className="Nav">
-      <div className="nav-left">
-        <Link to="/" className="nav-icon nav-icon-home">
-          <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
-        </Link>{" "}
-        {/* |
+    <div className="nav-container">
+      <div className="nav-mobile">
+        <button
+          type="button"
+          className="nav-btn"
+          id="nav-toggle"
+          onClick={toggleNav}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      </div>
+      <div className="Nav">
+        <div className="nav-left">
+          <Link to="/" className="nav-icon nav-icon-home">
+            <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+          </Link>{" "}
+          {/* |
         <DarkModeButton className="nav-icon nav-icon-dark-mode"></DarkModeButton> */}
-      </div>{" "}
-      {user ? (
-        <div className="nav-right">
-          <Link to="/dashboard" className="nav-links">
-            <button type="button" className="nav-btn">
-              My Posts
-            </button>
-          </Link>
-          <Link to="/" className="nav-links">
-            <button
-              type="button"
-              onClick={onLogout}
-              className="nav-btn"
-              id="logout-btn"
-            >
-              Logout
-            </button>
-          </Link>
-        </div>
-      ) : (
-        <div className="nav-right">
-          {" "}
-          <Link to="/register" className="nav-links">
-            <button type="button" className="nav-btn">
-              Sign Up
-            </button>
-          </Link>
-          <Link to="/login" className="nav-links">
-            <button type="button" className="nav-btn" id="login-btn">
-              Login
-            </button>
-          </Link>
-        </div>
-      )}
+        </div>{" "}
+        {user ? (
+          <div className="nav-right">
+            <Link to="/dashboard" className="nav-links">
+              <button type="button" className="nav-btn">
+                My Posts
+              </button>
+            </Link>
+            <Link to="/" className="nav-links">
+              <button
+                type="button"
+                onClick={onLogout}
+                className="nav-btn"
+                id="logout-btn"
+              >
+                Logout
+              </button>
+            </Link>
+          </div>
+        ) : (
+          <div className="nav-right">
+            {" "}
+            <Link to="/register" className="nav-links">
+              <button type="button" className="nav-btn">
+                Sign Up
+              </button>
+            </Link>
+            <Link to="/login" className="nav-links">
+              <button type="button" className="nav-btn" id="login-btn">
+                Login
+              </button>
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
-    //   </div>
-    // </div>
   );
 }
 
