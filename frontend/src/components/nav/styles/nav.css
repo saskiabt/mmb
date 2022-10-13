@@ -54,11 +54,15 @@
   opacity: 80%;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
   .Nav {
     box-shadow: 0px 0px 2px 0px rgba(26, 94, 32, 0.5490196078);
     padding-left: 2.5vmin;
     padding-right: 2.5vmin;
+  }
+  .Nav button {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .nav-right {
     gap: 2vmin;
