@@ -47,7 +47,8 @@ $mobile-nav-background-lightgreen: #cdf0c2;
   gap: 20px;
 }
 
-#login-btn {
+#login-btn,
+#logout-btn {
   background-color: $post-light-green;
   border-radius: 10px;
 }
@@ -64,5 +65,11 @@ $mobile-nav-background-lightgreen: #cdf0c2;
 @media only screen and (max-width: 500px) {
   .Nav {
     box-shadow: 0px 0px 2px 0px #1a5e208c;
+    padding-left: 2.5vmin;
+    padding-right: 2.5vmin;
+  }
+
+  .nav-right {
+    gap: 2vmin;
   }
 }

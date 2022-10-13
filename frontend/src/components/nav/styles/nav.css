@@ -39,7 +39,8 @@
   gap: 20px;
 }
 
-#login-btn {
+#login-btn,
+#logout-btn {
   background-color: rgba(139, 195, 74, 0.5882352941);
   border-radius: 10px;
 }
@@ -56,5 +57,10 @@
 @media only screen and (max-width: 500px) {
   .Nav {
     box-shadow: 0px 0px 2px 0px rgba(26, 94, 32, 0.5490196078);
+    padding-left: 2.5vmin;
+    padding-right: 2.5vmin;
+  }
+  .nav-right {
+    gap: 2vmin;
   }
 }/*# sourceMappingURL=nav.css.map */
