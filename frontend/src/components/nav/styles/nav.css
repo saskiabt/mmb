@@ -72,61 +72,30 @@
   color: white;
 }
 
+.nav-mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 450px) {
-  .nav-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  .nav-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 100;
-  }
-  .nav-mobile button {
-    width: 100%;
-    height: 10vh;
-    font-size: 2.75em;
-    color: #1b5e20;
-    background-color: #cdf0c2;
-  }
   .Nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 85vh;
-    font-size: 3em;
-    gap: 7vh;
-    background-color: white;
-    position: fixed;
-    top: 10vh;
-    z-index: 90;
+    background-color: rgba(139, 195, 74, 0.5882352941);
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 10vmin;
   }
-  .Nav .nav-right,
-.Nav .nav-left {
+  .Nav .nav-right {
+    gap: 6%;
     width: 100%;
-    justify-content: flex;
-    flex-direction: column;
-    align-items: center;
     padding-right: 0;
-    padding-left: 0;
-    gap: 7vh;
   }
-  .Nav #logout-btn {
-    background-color: white;
-    color: #1b5e20;
+  .Nav .nav-right button {
+    font-weight: 700;
   }
-  .Nav .nav-icon-home {
-    font-size: 1em;
-    color: rgba(139, 195, 74, 0.5882352941);
-  }
-  .nav-layout {
-    display: flex;
+  .Nav #login-btn {
+    border-radius: 10px;
+    background-color: rgba(26, 94, 32, 0.38);
+    color: #ffffff;
+    border-bottom: 1px solid #1b5e20;
   }
 }/*# sourceMappingURL=nav.css.map */

@@ -54,17 +54,6 @@ const deletePost = async (id, token) => {
       Authorization: `Bearer ${token}`,
     },
   };
-  //   try {
-  //     const response = await fetch(`/api/posts/${id}`, {
-  //       method: "DELETE",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: null,
-  //     });
-
-  //     const data = await response.json();
-  // }
   try {
     const response = await axios.delete(API_URL + id, config);
     console.log(response.data);
