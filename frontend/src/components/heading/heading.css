@@ -32,12 +32,12 @@
     padding-top: 5%;
   }
   .heading h1 {
-    font-size: 13.5vmin;
+    font-size: 14vmin;
     padding-bottom: 0.5em;
     padding-right: 15px;
     padding-left: 15px;
     font-family: modish, sans-serif;
-    font-weight: 600;
+    font-weight: 300;
     font-style: normal;
   }
   .heading h3 {
