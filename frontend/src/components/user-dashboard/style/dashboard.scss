@@ -105,6 +105,12 @@ input {
   .Dashboard {
     .Create-Post {
       width: 85%;
+
+      button {
+        font-family: "apparat", sans-serif;
+        font-size: 1.1em;
+        font-weight: 600;
+      }
     }
 
     .MyPosts ul {

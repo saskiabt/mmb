@@ -93,6 +93,11 @@ input:focus-visible {
   .Dashboard .Create-Post {
     width: 85%;
   }
+  .Dashboard .Create-Post button {
+    font-family: "apparat", sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
   .Dashboard .MyPosts ul {
     width: 85vw;
   }
