@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Post.css";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,12 +20,27 @@ function Post({ post, i }) {
     dispatch(like(post._id));
   };
 
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
   return (
-    <div className="Post" id={"post" + i}>
+    <div
+      className="Post"
+      id={"post" + i}
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+    >
       <div className="post-top">
         <h2 className="card-username">{post.username}</h2>
         {/* <h2>{postID}</h2> */}
-        {user && post.username === user.username ? (
+        {isHovering && user && post.username === user.username ? (
           <button className="delete" type="button" onClick={handleDelete}>
             <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
           </button>
@@ -39,7 +54,7 @@ function Post({ post, i }) {
             <p>{new Date(post.createdAt).toLocaleTimeString("en-US")}</p>
           </div>
           <button className="like-btn" onClick={like}>
-            <FontAwesomeIcon icon={faHeart} />
+            <FontAwesomeIcon icon={faHeart} /> {post.likeCount}
           </button>
         </div>
       </div>

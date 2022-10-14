@@ -34,8 +34,8 @@ $heading-h3-grey-green: #576253;
     width: 60%;
 
     button {
-      font-size: 1.25em;
-      font-weight: 200;
+      font-size: 1.5em;
+      font-weight: 700;
       background-color: white;
       color: $nav-button-dark-green;
       border: 1px solid $nav-button-dark-green;
@@ -43,7 +43,8 @@ $heading-h3-grey-green: #576253;
       border-radius: 5px;
       width: fit-content;
       transition: ease-in-out 0.2s;
-      padding: 5px;
+      padding: 5px 10px;
+      font-family: "Apparat-Light", sans-serif;
 
       &:hover {
         background-color: $nav-button-dark-green;

@@ -27,8 +27,8 @@
   width: 60%;
 }
 .Dashboard .Create-Post button {
-  font-size: 1.25em;
-  font-weight: 200;
+  font-size: 1.5em;
+  font-weight: 700;
   background-color: white;
   color: #1b5e20;
   border: 1px solid #1b5e20;
@@ -38,7 +38,8 @@
   width: -moz-fit-content;
   width: fit-content;
   transition: ease-in-out 0.2s;
-  padding: 5px;
+  padding: 5px 10px;
+  font-family: "Apparat-Light", sans-serif;
 }
 .Dashboard .Create-Post button:hover {
   background-color: #1b5e20;
