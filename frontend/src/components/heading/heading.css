@@ -36,11 +36,11 @@
   }
   .heading h1 {
     text-align: center;
-    font-size: 16vmin;
+    font-size: 14vmin;
     padding-bottom: 0.5em;
     padding-right: 15px;
     padding-left: 15px;
-    font-family: "Ostrich-Sans-Rounded", sans-serif;
+    font-family: "Ostrich-Sans-Black", sans-serif;
     font-weight: 900;
     font-style: normal;
   }
