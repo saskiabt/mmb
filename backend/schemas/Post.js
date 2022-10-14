@@ -26,10 +26,12 @@ const postSchema = new mongoose.Schema(
     likeCount: {
       type: Number,
       default: 0,
+      required: true,
     },
     likedBy: {
       type: Array,
       default: [],
+      required: true,
     },
   },
   {

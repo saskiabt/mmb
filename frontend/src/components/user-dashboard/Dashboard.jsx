@@ -69,7 +69,7 @@ function Dashboard() {
       {" "}
       <div className="heading">
         <h1>Welcome, {_.capitalize(user.username)}</h1>
-        {/* <h3>MY POSTS</h3> */}
+        <h3>MY POSTS</h3>
       </div>
       <div className="Create-Post">
         <form onSubmit={handleSubmit} className="login-form">
@@ -90,7 +90,10 @@ function Dashboard() {
         </form>
       </div>
       {posts.length > 0 ? (
-        <MyPosts></MyPosts>
+        <div>
+          {" "}
+          <MyPosts></MyPosts>
+        </div>
       ) : (
         <div className="no-posts">
           {" "}

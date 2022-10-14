@@ -6,6 +6,7 @@ import "../landing-page/landingPage.css";
 
 function AllPosts() {
   const { allPosts } = useSelector((state) => state.allPosts);
+
   return (
     <div className="AllPosts">
       {allPosts &&

@@ -77,7 +77,8 @@ const likePost = async (id, token) => {
       config
     );
     console.log(response.data);
-    return response.data;
+    const newData = await axios.get(API_URL, config);
+    return newData.data;
   } catch (err) {
     if (err) console.log(err);
   }

@@ -60,8 +60,8 @@
     padding-left: 2.5vmin;
     padding-right: 2.5vmin;
   }
-  button {
-    font-size: 0.8em;
+  .Nav button {
+    font-size: 24px;
   }
   .nav-right {
     gap: 1vmin;

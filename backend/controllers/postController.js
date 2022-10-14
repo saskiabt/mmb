@@ -113,20 +113,22 @@ const addLike = asyncHandler(async (req, res) => {
     }
 
     const post = await Post.findById(req.params.id);
-    if (post.likedBy.includes(user.id)) {
-      res.status(401);
+    console.log(post);
+    console.log(post.likedBy.includes(req.user.id));
+    if (post.likedBy.includes(req.user.id) === true) {
+      res.status(400);
       throw new Error("Error: User has already liked this post");
     }
 
-    const updatedPost = await Post.findByIdAndUpdate(
-      req.params.id,
-      { $push: { likedBy: req.user.id } },
-      {
-        new: true,
-      }
-    );
+    // const updatedPost = await Post.findByIdAndUpdate(
+    //   req.params.id,
+    //   { $push: { likedBy: req.user.id } },
+    //   {
+    //     new: true,
+    //   }
+    // );
 
-    res.status(200).json({ message: `+1 like on post ${updatedPost}` });
+    // res.status(200).json({ message: `+1 like on post ${updatedPost}` });
   } catch (err) {
     if (err) console.log(`Error in deletePost: ${err}`);
     process.exit();

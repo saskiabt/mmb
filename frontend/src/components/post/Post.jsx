@@ -53,8 +53,8 @@ function Post({ post, i }) {
             <p>{new Date(post.createdAt).toLocaleDateString("en-US")}</p>
             <p>{new Date(post.createdAt).toLocaleTimeString("en-US")}</p>
           </div>
-          <button className="like-btn" onClick={like}>
-            <FontAwesomeIcon icon={faHeart} /> {post.likeCount}
+          <button className="like-btn" onClick={addLike}>
+            <FontAwesomeIcon icon={faHeart} /> {post.likedBy.length}
           </button>
         </div>
       </div>
