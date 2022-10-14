@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { deleteUserPost, like } from "../../features/userPosts/postSlice";
+import LikeButton from "./LikeButton";
 
 function Post({ post, i }) {
   const dispatch = useDispatch();
@@ -16,10 +17,6 @@ function Post({ post, i }) {
     console.log("delete initialized");
   };
 
-  const addLike = () => {
-    dispatch(like(post._id));
-  };
-
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseOver = () => {
@@ -29,6 +26,10 @@ function Post({ post, i }) {
   const handleMouseOut = () => {
     setIsHovering(false);
   };
+
+  // const addLike = () => {
+  //   dispatch(like(post._id));
+  // };
 
   return (
     <div
@@ -53,9 +54,10 @@ function Post({ post, i }) {
             <p>{new Date(post.createdAt).toLocaleDateString("en-US")}</p>
             <p>{new Date(post.createdAt).toLocaleTimeString("en-US")}</p>
           </div>
-          <button className="like-btn" onClick={addLike}>
+          {/* <button className="like-btn" onClick={addLike}>
             <FontAwesomeIcon icon={faHeart} /> {post.likedBy.length}
-          </button>
+          </button> */}
+          <LikeButton post={post}></LikeButton>
         </div>
       </div>
     </div>

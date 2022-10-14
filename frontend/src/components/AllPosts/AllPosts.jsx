@@ -10,9 +10,12 @@ function AllPosts() {
   return (
     <div className="AllPosts">
       {allPosts &&
-        allPosts.map((post, i) => {
-          return <Post key={uuidv4()} post={post}></Post>;
-        })}
+        allPosts
+          .slice(0)
+          .reverse()
+          .map((post, i) => {
+            return <Post key={uuidv4()} post={post}></Post>;
+          })}
     </div>
   );
 }

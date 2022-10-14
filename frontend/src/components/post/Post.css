@@ -44,6 +44,7 @@
 .Post .date {
   font-size: 0.8em;
   color: #6b915f;
+  gap: 1em;
 }
 .Post .delete {
   background: none;
@@ -60,4 +61,8 @@
 .like-btn {
   background: none;
   font-size: 0.9em;
+}
+
+.liked {
+  color: red;
 }/*# sourceMappingURL=Post.css.map */

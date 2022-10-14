@@ -10,9 +10,12 @@ function MyPosts() {
       {" "}
       <ul>
         {posts &&
-          posts.map((post) => {
-            return <Post key={post._id} post={post} postID={post._id}></Post>;
-          })}
+          posts
+            .slice(0)
+            .reverse()
+            .map((post) => {
+              return <Post key={post._id} post={post} postID={post._id}></Post>;
+            })}
       </ul>
     </div>
   );
