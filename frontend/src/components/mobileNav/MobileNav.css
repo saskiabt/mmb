@@ -1,0 +1,38 @@
+.MobileNav {
+  display: none;
+}
+
+@media only screen and (max-width: 450px) {
+  .MobileNav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+  }
+  .MobileNav .mobile-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .MobileNav button {
+    background-color: inherit;
+    font-size: 1.2em;
+    color: #1b5e20;
+  }
+  .MobileNav .mobile-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #1b5e20;
+    transition: ease-in 0.2s;
+  }
+  .MobileNav .mobile-dropdown button {
+    width: 100%;
+    height: 5vh;
+    border-top: 1px solid #1b5e20;
+    background-color: white;
+    color: #1b5e20;
+    font-family: "junction-regular", sans-serif;
+  }
+}/*# sourceMappingURL=MobileNav.css.map */

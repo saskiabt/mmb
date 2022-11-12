@@ -12,9 +12,9 @@
   justify-content: space-between;
 }
 .Nav button {
-  font-size: 36px;
+  font-size: 30px;
   font-family: "Ostrich-Sans-Black", sans-serif;
-  font-weight: 600;
+  font-weight: 200;
   height: 100%;
   background: none;
   padding-top: 10px;
@@ -56,6 +56,7 @@
 
 @media only screen and (max-width: 450px) {
   .Nav {
+    display: none;
     box-shadow: 0px 0px 2px 0px rgba(26, 94, 32, 0.5490196078);
     padding-left: 2.5vmin;
     padding-right: 2.5vmin;

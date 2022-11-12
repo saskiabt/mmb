@@ -30,6 +30,10 @@
   font-family: "Ostrich-Sans-Black";
   src: url("./fonts/OstrichSans/black/ostrich-sans-black.ttf") format("truetype"), url("./fonts/OstrichSans/black/ostrich-sans-black.woff") format("woff");
 }
+@font-face {
+  font-family: "junction-regular";
+  src: url("./fonts/junction/junction-regular.ttf") format("truetype"), url("./fonts/junction/junction-regular.woff") format("woff");
+}
 body {
   margin: 0;
   font-family: "Apparat-light", Helvetica, sans-serif;

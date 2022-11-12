@@ -24,8 +24,6 @@ function Dashboard() {
 
   const [comment, setComment] = useState("");
 
-  // const [isHidden, setIsHidden] = useState(true);
-
   const handleChange = (event) => {
     setComment(event.target.value);
   };

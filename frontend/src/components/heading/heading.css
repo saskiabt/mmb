@@ -16,7 +16,7 @@
 .heading h3 {
   font-style: italic;
   color: #576253;
-  font-family: "Apparat-light", sans-serif;
+  font-family: "junction-regular", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 3vmin;
@@ -30,17 +30,16 @@
 }
 @media only screen and (max-width: 450px) {
   .heading {
-    width: 100%;
-    padding-top: 5%;
-    gap: 0em;
+    display: flex;
+    gap: 0px;
   }
   .heading h1 {
     text-align: center;
     font-size: 14vmin;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.25em;
     padding-right: 15px;
     padding-left: 15px;
-    font-family: "Ostrich-Sans-Black", sans-serif;
+    font-family: "junction-regular", sans-serif;
     font-weight: 600;
     font-style: normal;
   }

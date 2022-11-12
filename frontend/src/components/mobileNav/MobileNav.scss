@@ -1,0 +1,45 @@
+$heading-medium-green: #6b915f;
+$nav-button-dark-green: #1b5e20;
+
+.MobileNav {
+  display: none;
+}
+
+@media only screen and (max-width: 450px) {
+  .MobileNav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+
+    .mobile-horizontal {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    button {
+      background-color: inherit;
+      font-size: 1.2em;
+      color: $nav-button-dark-green;
+    }
+
+    .mobile-dropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      border-bottom: 1px solid $nav-button-dark-green;
+      transition: ease-in 0.2s;
+
+      button {
+        width: 100%;
+        height: 5vh;
+        border-top: 1px solid $nav-button-dark-green;
+        background-color: white;
+        color: $nav-button-dark-green;
+        font-family: "junction-regular", sans-serif;
+      }
+    }
+  }
+}
