@@ -14,10 +14,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: 1px solid #1b5e20;
   }
   .MobileNav button {
     background-color: inherit;
-    font-size: 1.8em;
+    font-size: 1.7em;
     color: #1b5e20;
   }
   .MobileNav .mobile-dropdown {
@@ -35,5 +36,8 @@
     background-color: white;
     color: #1b5e20;
     font-family: "junction-regular", sans-serif;
+  }
+  #mobile-login {
+    border-top: 0px;
   }
 }/*# sourceMappingURL=MobileNav.css.map */

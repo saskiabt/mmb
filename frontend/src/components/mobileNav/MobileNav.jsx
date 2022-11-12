@@ -24,7 +24,11 @@ function MobileNav({ isExpanded, setIsExpanded }) {
 
       {isExpanded && (
         <div className="mobile-dropdown">
-          <button type="button" onClick={() => navigate("/login")}>
+          <button
+            type="button"
+            id="mobile-login"
+            onClick={() => navigate("/login")}
+          >
             Login
           </button>
           <button type="button" onClick={() => navigate("/register")}>
