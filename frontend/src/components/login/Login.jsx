@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Form, Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
-import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { login, reset } from "../../features/auth/authSlice";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import Spinner from "../spinner/Spinner";
 import PwToggle from "../Pw-Toggle/PwToggle";
 

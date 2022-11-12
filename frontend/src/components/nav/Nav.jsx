@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./styles/nav.css";
 import "../../icons/menu-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faRss } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../../features/auth/authSlice";
@@ -26,7 +26,7 @@ function Nav() {
       <div className="nav-left">
         <NavLink to="/" className="nav-icon nav-btn">
           <button type="button" className="nav-icon nav-btn" id="home-btn">
-            <FontAwesomeIcon icon={faHome} />
+            <FontAwesomeIcon icon={faRss} />
           </button>
         </NavLink>
       </div>
