@@ -14,13 +14,17 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid #1b5e20;
-    padding: 10px 0;
+    padding: 10px 5px;
   }
   .MobileNav button {
     background-color: inherit;
     font-size: 1.7em;
     color: #1b5e20;
     padding: 0;
+  }
+  .MobileNav #mobile-user-btn {
+    display: flex;
+    gap: 3px;
   }
   .MobileNav .mobile-dropdown {
     display: flex;

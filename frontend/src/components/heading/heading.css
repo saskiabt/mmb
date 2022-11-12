@@ -45,5 +45,6 @@
   }
   .heading h3 {
     font-size: 4.5vmin;
+    font-stretch: condensed;
   }
 }/*# sourceMappingURL=heading.css.map */

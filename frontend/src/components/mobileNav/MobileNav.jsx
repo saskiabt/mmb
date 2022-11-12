@@ -29,7 +29,7 @@ function MobileNav({ isExpanded, setIsExpanded }) {
         <button type="button" onClick={() => navigate("/")}>
           <FontAwesomeIcon icon={faRss} />
         </button>
-        <button type="button" onClick={toggleDropDown}>
+        <button type="button" onClick={toggleDropDown} id="mobile-user-btn">
           <FontAwesomeIcon icon={faUser} />
           {!user ? <FontAwesomeIcon icon={faCaretSquareDown} /> : null}
         </button>
