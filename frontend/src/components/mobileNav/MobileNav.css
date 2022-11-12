@@ -8,7 +8,6 @@
     flex-direction: column;
     width: 100%;
     background-color: white;
-    padding: 5px 0px;
   }
   .MobileNav .mobile-horizontal {
     display: flex;
