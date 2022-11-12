@@ -72,11 +72,16 @@ $heading-h3-grey-green: #576253;
   src: url("./fonts/junction/junction-regular.ttf") format("truetype"),
     url("./fonts/junction/junction-regular.woff") format("woff");
 }
+
+@font-face {
+  font-family: "junction-light";
+  src: url("./fonts/junction/junction-light.ttf") format("truetype"),
+    url("./fonts/junction/junction-light.woff") format("woff");
+}
+
 body {
   margin: 0;
-  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  //   sans-serif;
+
   font-family: "Apparat-light", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

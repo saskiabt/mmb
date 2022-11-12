@@ -34,6 +34,10 @@
   font-family: "junction-regular";
   src: url("./fonts/junction/junction-regular.ttf") format("truetype"), url("./fonts/junction/junction-regular.woff") format("woff");
 }
+@font-face {
+  font-family: "junction-light";
+  src: url("./fonts/junction/junction-light.ttf") format("truetype"), url("./fonts/junction/junction-light.woff") format("woff");
+}
 body {
   margin: 0;
   font-family: "Apparat-light", Helvetica, sans-serif;
