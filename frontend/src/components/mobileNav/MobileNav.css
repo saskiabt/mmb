@@ -8,6 +8,7 @@
     flex-direction: column;
     width: 100%;
     background-color: white;
+    padding: 5px;
   }
   .MobileNav .mobile-horizontal {
     display: flex;
@@ -16,7 +17,7 @@
   }
   .MobileNav button {
     background-color: inherit;
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #1b5e20;
   }
   .MobileNav .mobile-dropdown {
