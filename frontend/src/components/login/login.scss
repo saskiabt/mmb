@@ -158,7 +158,12 @@ $heading-h3-grey-green: #576253;
   .Register {
     margin-top: 7.5%;
     padding: 2.5vmin 30px;
+    .heading {
+      font-size: 0.8em;
+    }
+  }
 
+  .Login {
     .heading {
       font-size: 0.8em;
     }
