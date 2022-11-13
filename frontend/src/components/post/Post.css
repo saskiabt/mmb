@@ -51,4 +51,10 @@
 }
 .Post .delete:active {
   color: white;
+}
+
+@media only screen and (max-width: 450px) {
+  .Post {
+    border: 1px double rgb(35, 31, 71);
+  }
 }/*# sourceMappingURL=Post.css.map */

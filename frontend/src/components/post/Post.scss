@@ -1,7 +1,6 @@
 $nav-button-dark-purple: #2b1e48;
 $post-comment: #cecfbb;
 $post-icon-lightblue: #6c80a9;
-$username-almost-white: #e2ebf3;
 
 .Post {
   width: 100%;
@@ -61,5 +60,11 @@ $username-almost-white: #e2ebf3;
     &:active {
       color: white;
     }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Post {
+    border: 1px double rgb(35 31 71);
   }
 }

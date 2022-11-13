@@ -33,6 +33,7 @@
     width: 100%;
     border-bottom: 1px solid #2b1e48;
     transition: ease-in 0.2s;
+    font-weight: 200;
   }
   .MobileNav .mobile-dropdown button {
     width: 100%;
