@@ -1,14 +1,11 @@
-// $babyblue: rgb(157, 202, 237);
-// $light-purple: #e2d5e6;
-// $dark-purple-background: #201922;
-// $light-yellow-background: #eae9e2;
-// $footer-color-lightblue: rgb(213 217 229 / 90%);
-
-$nav-button-dark-green: #1b5e20;
-$heading-medium-green: #6b915f;
-$post-light-green: #8bc34a96;
-$post-comment-dark-green: #15410e;
-$heading-h3-grey-green: #576253;
+$post-blue: #192492e8;
+$nav-button-dark-purple: #2b1e48;
+$post-comment: #cecfbb;
+$post-icon-lightblue: #6c80a9;
+$button-lightblue: rgb(74 104 195 / 59%);
+$heading-h3-grey: #535e62;
+$username-almost-white: #e2ebf3;
+$general-grey-purple: rgba(27, 31, 72, 0.9098039216);
 
 @font-face {
   font-family: "Cirrus-Cumulus";
@@ -86,7 +83,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
-  color: $post-comment-dark-green;
+  color: $general-grey-purple;
 }
 
 html,

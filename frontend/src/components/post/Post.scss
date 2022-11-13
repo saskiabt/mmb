@@ -1,10 +1,7 @@
-$light-blue-post-color: rgb(149 180 224);
-$h3-turquoise: #2b98c1;
-$post-light-green: #8bc34a96;
-$post-comment-dark-green: #15410e;
-$heading-h3-grey-green: #576253;
-$nav-button-dark-green: #1b5e20;
-$heading-medium-green: #6b915f;
+$nav-button-dark-purple: #2b1e48;
+$post-comment: #cecfbb;
+$post-icon-lightblue: #6c80a9;
+$username-almost-white: #e2ebf3;
 
 .Post {
   width: 100%;
@@ -14,9 +11,10 @@ $heading-medium-green: #6b915f;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: $post-light-green;
+  background-color: lavender;
   transition: ease-in-out 0.6s;
-  box-shadow: -2px 2px 4px 0.5px rgb(26 94 32 / 39%);
+  box-shadow: -2px 2px 4px 0.5px rgb(22 24 104 / 39%);
+  border: 2px double rgb(35 31 71);
 
   &:hover {
     transform: scale(1.1);
@@ -24,14 +22,14 @@ $heading-medium-green: #6b915f;
 
   .card-username {
     text-transform: capitalize;
-    color: $nav-button-dark-green;
+    color: $nav-button-dark-purple;
     font-weight: 800;
     font-family: "Apparat-light", sans-serif;
     font-style: normal;
   }
 
   .card-comment {
-    color: $post-comment-dark-green;
+    color: #4e4367;
     font-size: 1.2em;
   }
 
@@ -48,20 +46,20 @@ $heading-medium-green: #6b915f;
 
   .date {
     font-size: 0.8em;
-    color: $heading-medium-green;
+    color: #898b70;
   }
 
   .delete {
     background: none;
-    color: $heading-medium-green;
+    color: $post-icon-lightblue;
     font-size: 1em;
 
     &:hover {
-      color: $nav-button-dark-green;
+      color: $post-comment;
     }
 
     &:active {
-      color: $heading-medium-green;
+      color: white;
     }
   }
 }

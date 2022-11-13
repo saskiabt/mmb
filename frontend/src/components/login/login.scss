@@ -1,8 +1,6 @@
-$nav-button-dark-green: #1b5e20;
-$heading-medium-green: #6b915f;
-$post-light-green: #8bc34a96;
-$post-comment-dark-green: #15410e;
-$heading-h3-grey-green: #576253;
+$post-blue: #192492e8;
+$username-almost-white: #e2ebf3;
+$nav-button-dark-purple: #2b1e48;
 
 .Login,
 .Register {
@@ -12,12 +10,12 @@ $heading-h3-grey-green: #576253;
   align-items: center;
   justify-content: center;
   margin-top: auto;
-  border: 1px solid $post-light-green;
+  border: 1px solid $post-blue;
   padding: 3vmin 30px;
   width: 70%;
   max-width: 700px;
 
-  .heading h1 {
+  .heading {
     font-size: 4em;
     padding-bottom: 0.5em;
     text-align: center;
@@ -31,7 +29,7 @@ $heading-h3-grey-green: #576253;
     font-size: large;
     margin: 8px 0;
     background-color: white;
-    border-bottom: 1.5px solid $nav-button-dark-green;
+    border-bottom: 1.5px solid $nav-button-dark-purple;
     padding: 0em 4em;
     padding-left: 1em;
     padding-top: 1em;
@@ -44,7 +42,7 @@ $heading-h3-grey-green: #576253;
     border-top: 0;
     &:focus-visible {
       outline: 0;
-      border-bottom: 3px solid $nav-button-dark-green;
+      border-bottom: 3px solid $nav-button-dark-purple;
     }
 
     &:focus:not(:focus-visible) {
@@ -56,9 +54,9 @@ $heading-h3-grey-green: #576253;
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus {
-    -webkit-text-fill-color: $post-comment-dark-green;
-    box-shadow: 0px 0px 200px 7px rgb(188 220 152 / 26%) inset;
-    -webkit-box-shadow: 0px 0px 200px 7px rgb(188 220 152 / 26%) inset;
+    -webkit-text-fill-color: $nav-button-dark-purple;
+    box-shadow: 0px 0px 200px 7pxrgb (123 138 222 / 39%) inset;
+    -webkit-box-shadow: 0px 0px 200px 7px rgb(123 138 222 / 39%) inset;
     transition: background-color 5000s ease-in-out 0s;
   }
 
@@ -72,17 +70,17 @@ $heading-h3-grey-green: #576253;
   .login-button {
     font-size: 1.75em;
     font-weight: 200;
-    background-color: $post-light-green;
+    background-color: rgb(50 31 95);
     font-family: "Apparat-light", sans-serif;
     margin: 4px 0;
-    color: $post-comment-dark-green;
+    color: white;
     border-radius: 5px;
     width: 100%;
     transition: ease-in-out 0.3s;
 
     &:hover {
       transform: scale(0.95);
-      background-color: $nav-button-dark-green;
+      background-color: $nav-button-dark-purple;
       color: white;
     }
   }
@@ -123,7 +121,7 @@ $heading-h3-grey-green: #576253;
     height: 100%;
     background: none;
     font-size: 25px;
-    color: $nav-button-dark-green;
+    color: $nav-button-dark-purple;
   }
 }
 
@@ -136,7 +134,7 @@ $heading-h3-grey-green: #576253;
 
 .group {
   display: flex;
-  border-bottom: 1.5px solid $post-comment-dark-green;
+  border-bottom: 1.5px solid $nav-button-dark-purple;
   justify-content: space-between;
 
   input {
@@ -158,14 +156,25 @@ $heading-h3-grey-green: #576253;
   .Register {
     margin-top: 7.5%;
     padding: 2.5vmin 30px;
-    .heading {
-      font-size: 0.8em;
-    }
   }
 
-  .Login {
-    .heading {
-      font-size: 0.8em;
+  .Login,
+  .Register {
+    .form-bottom {
+      font-size: 1em;
+    }
+
+    input {
+      font-size: 0.9em;
+      padding-right: 0;
+    }
+
+    .heading > h1 {
+      font-size: 0.65em;
+    }
+
+    .login-button {
+      font-size: 1.3em;
     }
   }
 }

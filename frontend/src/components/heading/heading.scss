@@ -1,7 +1,5 @@
-$h3-turquoise: #2b98c1;
-$heading-medium-green: #6b915f;
-$heading-h3-grey-green: #576253;
-$nav-button-dark-green: #1b5e20;
+$nav-button-dark-purple: #2b1e48;
+$heading-h3-grey: #535e62;
 
 .heading {
   display: flex;
@@ -12,7 +10,7 @@ $nav-button-dark-green: #1b5e20;
   h1 {
     font-family: "victorianna-italic", sans-serif;
     font-weight: 600;
-    color: $nav-button-dark-green;
+    color: $nav-button-dark-purple;
     font-size: 9vmin;
     text-align: center;
     padding-top: 35px;
@@ -21,7 +19,7 @@ $nav-button-dark-green: #1b5e20;
 
   h3 {
     font-style: italic;
-    color: $heading-h3-grey-green;
+    color: $heading-h3-grey;
     font-family: "junction-regular", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -49,6 +47,7 @@ $nav-button-dark-green: #1b5e20;
       font-family: "junction-light", sans-serif;
       font-weight: 600;
       font-style: normal;
+      font-stretch: condensed;
     }
 
     h3 {

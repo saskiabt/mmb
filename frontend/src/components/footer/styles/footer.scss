@@ -1,8 +1,4 @@
-$nav-button-dark-green: #1b5e20;
-$heading-medium-green: #6b915f;
-$post-light-green: #8bc34a96;
-$post-comment-dark-green: #15410e;
-$heading-h3-grey-green: #576253;
+$post-blue: #1b1f48e8;
 
 .footer {
   position: sticky;
@@ -23,10 +19,10 @@ $heading-h3-grey-green: #576253;
     padding: 5px;
     background: none;
     font-size: 1em;
-    color: $post-comment-dark-green;
+    color: $post-blue;
 
     &:hover {
-      border-bottom: 1px solid $post-comment-dark-green;
+      border-bottom: 1px solid $post-blue;
     }
   }
 }

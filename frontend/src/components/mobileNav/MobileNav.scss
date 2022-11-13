@@ -1,5 +1,4 @@
-$heading-medium-green: #6b915f;
-$nav-button-dark-green: #1b5e20;
+$nav-button-dark-purple: #2b1e48;
 
 .MobileNav {
   display: none;
@@ -16,14 +15,14 @@ $nav-button-dark-green: #1b5e20;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      border-bottom: 1px solid $nav-button-dark-green;
+      border-bottom: 1px solid $nav-button-dark-purple;
       padding: 10px 5px;
     }
 
     button {
       background-color: inherit;
       font-size: 1.7em;
-      color: $nav-button-dark-green;
+      color: $nav-button-dark-purple;
       padding: 0;
     }
 
@@ -37,15 +36,15 @@ $nav-button-dark-green: #1b5e20;
       flex-direction: column;
       align-items: center;
       width: 100%;
-      border-bottom: 1px solid $nav-button-dark-green;
+      border-bottom: 1px solid $nav-button-dark-purple;
       transition: ease-in 0.2s;
 
       button {
         width: 100%;
         // height: 5vh;
-        border-top: 1px solid $nav-button-dark-green;
+        border-top: 1px solid $nav-button-dark-purple;
         background-color: white;
-        color: $nav-button-dark-green;
+        color: $nav-button-dark-purple;
         font-family: "junction-regular", sans-serif;
         padding: 10px 0;
       }

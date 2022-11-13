@@ -18,10 +18,10 @@
   height: 100%;
   background: none;
   padding-top: 10px;
-  color: #1b5e20;
+  color: #2b1e48;
 }
 .Nav button:hover {
-  border-bottom: 1px solid #1b5e20;
+  border-bottom: 1px solid #2b1e48;
 }
 
 .nav-left {
@@ -41,8 +41,9 @@
 
 #login-btn,
 #logout-btn {
-  background-color: rgba(139, 195, 74, 0.5882352941);
+  background-color: #2b1e48;
   border-radius: 10px;
+  color: white;
 }
 
 #home-btn {
@@ -57,17 +58,5 @@
 @media only screen and (max-width: 450px) {
   .Nav {
     display: none;
-    box-shadow: 0px 0px 2px 0px rgba(26, 94, 32, 0.5490196078);
-    padding-left: 2.5vmin;
-    padding-right: 2.5vmin;
-  }
-  .Nav button {
-    font-size: 8vw;
-  }
-  button {
-    font-size: 0.8em;
-  }
-  .nav-right {
-    gap: 1vmin;
   }
 }/*# sourceMappingURL=nav.css.map */

@@ -7,7 +7,7 @@
 .heading h1 {
   font-family: "victorianna-italic", sans-serif;
   font-weight: 600;
-  color: #1b5e20;
+  color: #2b1e48;
   font-size: 9vmin;
   text-align: center;
   padding-top: 35px;
@@ -15,7 +15,7 @@
 }
 .heading h3 {
   font-style: italic;
-  color: #576253;
+  color: #535e62;
   font-family: "junction-regular", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -42,6 +42,7 @@
     font-family: "junction-light", sans-serif;
     font-weight: 600;
     font-style: normal;
+    font-stretch: condensed;
   }
   .heading h3 {
     font-size: 4.5vmin;

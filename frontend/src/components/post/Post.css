@@ -8,22 +8,23 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: rgba(139, 195, 74, 0.5882352941);
+  background-color: lavender;
   transition: ease-in-out 0.6s;
-  box-shadow: -2px 2px 4px 0.5px rgba(26, 94, 32, 0.39);
+  box-shadow: -2px 2px 4px 0.5px rgba(22, 24, 104, 0.39);
+  border: 2px double rgb(35, 31, 71);
 }
 .Post:hover {
   transform: scale(1.1);
 }
 .Post .card-username {
   text-transform: capitalize;
-  color: #1b5e20;
+  color: #2b1e48;
   font-weight: 800;
   font-family: "Apparat-light", sans-serif;
   font-style: normal;
 }
 .Post .card-comment {
-  color: #15410e;
+  color: #4e4367;
   font-size: 1.2em;
 }
 .Post .post-top {
@@ -38,16 +39,16 @@
 }
 .Post .date {
   font-size: 0.8em;
-  color: #6b915f;
+  color: #898b70;
 }
 .Post .delete {
   background: none;
-  color: #6b915f;
+  color: #6c80a9;
   font-size: 1em;
 }
 .Post .delete:hover {
-  color: #1b5e20;
+  color: #cecfbb;
 }
 .Post .delete:active {
-  color: #6b915f;
+  color: white;
 }/*# sourceMappingURL=Post.css.map */

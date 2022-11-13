@@ -1,9 +1,10 @@
 $cirrus-cumulus: "Cirrus-Cumulus", sans-serif;
 $nav-button-dark-green: #1b5e20;
 $heading-h3-grey-green: #576253;
-$post-light-green: #8bc34a96;
 $heading-medium-green: #6b915f;
 $mobile-nav-background-lightgreen: #cdf0c2;
+$post-blue: #192492e8;
+$nav-button-dark-purple: #2b1e48;
 
 .Nav {
   display: flex;
@@ -24,10 +25,10 @@ $mobile-nav-background-lightgreen: #cdf0c2;
     height: 100%;
     background: none;
     padding-top: 10px;
-    color: $nav-button-dark-green;
+    color: $nav-button-dark-purple;
 
     &:hover {
-      border-bottom: 1px solid $nav-button-dark-green;
+      border-bottom: 1px solid $nav-button-dark-purple;
     }
   }
 }
@@ -49,8 +50,9 @@ $mobile-nav-background-lightgreen: #cdf0c2;
 
 #login-btn,
 #logout-btn {
-  background-color: $post-light-green;
+  background-color: $nav-button-dark-purple;
   border-radius: 10px;
+  color: white;
 }
 
 #home-btn {
@@ -65,20 +67,5 @@ $mobile-nav-background-lightgreen: #cdf0c2;
 @media only screen and (max-width: 450px) {
   .Nav {
     display: none;
-    box-shadow: 0px 0px 2px 0px #1a5e208c;
-    padding-left: 2.5vmin;
-    padding-right: 2.5vmin;
-
-    button {
-      font-size: 8vw;
-    }
-  }
-
-  button {
-    font-size: 0.8em;
-  }
-
-  .nav-right {
-    gap: 1vmin;
   }
 }

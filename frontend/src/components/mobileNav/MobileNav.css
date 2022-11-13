@@ -13,13 +13,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid #1b5e20;
+    border-bottom: 1px solid #2b1e48;
     padding: 10px 5px;
   }
   .MobileNav button {
     background-color: inherit;
     font-size: 1.7em;
-    color: #1b5e20;
+    color: #2b1e48;
     padding: 0;
   }
   .MobileNav #mobile-user-btn {
@@ -31,14 +31,14 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid #1b5e20;
+    border-bottom: 1px solid #2b1e48;
     transition: ease-in 0.2s;
   }
   .MobileNav .mobile-dropdown button {
     width: 100%;
-    border-top: 1px solid #1b5e20;
+    border-top: 1px solid #2b1e48;
     background-color: white;
-    color: #1b5e20;
+    color: #2b1e48;
     font-family: "junction-regular", sans-serif;
     padding: 10px 0;
   }

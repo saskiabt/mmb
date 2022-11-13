@@ -27,11 +27,11 @@
   width: 60%;
 }
 .Dashboard .Create-Post button {
-  font-size: 1.25em;
+  font-size: 1.15em;
   font-weight: 200;
   background-color: white;
-  color: #1b5e20;
-  border: 1px solid #1b5e20;
+  color: #2b1f47;
+  border: 1px solid rgba(43, 31, 71, 0.5019607843);
   margin: 4px 0;
   border-radius: 5px;
   width: -webkit-fit-content;
@@ -41,7 +41,7 @@
   padding: 5px;
 }
 .Dashboard .Create-Post button:hover {
-  background-color: #1b5e20;
+  background-color: #2b1e48;
   color: white;
 }
 .Dashboard .Create-Post .form-buttons {
@@ -54,7 +54,7 @@ input {
   font-size: large;
   margin: 8px 0;
   background-color: white;
-  border-bottom: 2px solid #1b5e20;
+  border-bottom: 2px solid #2b1e48;
   padding: 0em 4em;
   width: 100%;
   padding-left: 1em;
@@ -68,7 +68,7 @@ input {
 }
 input:focus-visible {
   outline: 0;
-  border-bottom: 3px solid #1b5e20;
+  border-bottom: 3px solid #2b1e48;
 }
 
 .no-posts {
@@ -78,7 +78,7 @@ input:focus-visible {
   font-size: 1.7em;
   padding-top: 3.5em;
   font-style: italic;
-  color: #1b5e20;
+  color: #2b1e48;
   font-family: "Apparat-light", sans-serif;
 }
 .no-posts h3 {

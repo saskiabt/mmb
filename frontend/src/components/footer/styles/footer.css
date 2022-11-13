@@ -18,8 +18,8 @@
   padding: 5px;
   background: none;
   font-size: 1em;
-  color: #15410e;
+  color: rgba(27, 31, 72, 0.9098039216);
 }
 .footer button:hover {
-  border-bottom: 1px solid #15410e;
+  border-bottom: 1px solid rgba(27, 31, 72, 0.9098039216);
 }/*# sourceMappingURL=footer.css.map */

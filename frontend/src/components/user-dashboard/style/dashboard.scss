@@ -1,8 +1,4 @@
-$nav-button-dark-green: #1b5e20;
-$heading-medium-green: #6b915f;
-$post-light-green: #8bc34a96;
-$post-comment-dark-green: #15410e;
-$heading-h3-grey-green: #576253;
+$nav-button-dark-purple: #2b1e48;
 
 .Dashboard {
   display: flex;
@@ -34,11 +30,11 @@ $heading-h3-grey-green: #576253;
     width: 60%;
 
     button {
-      font-size: 1.25em;
+      font-size: 1.15em;
       font-weight: 200;
       background-color: white;
-      color: $nav-button-dark-green;
-      border: 1px solid $nav-button-dark-green;
+      color: #2b1f47;
+      border: 1px solid #2b1f4780;
       margin: 4px 0;
       border-radius: 5px;
       width: fit-content;
@@ -46,7 +42,7 @@ $heading-h3-grey-green: #576253;
       padding: 5px;
 
       &:hover {
-        background-color: $nav-button-dark-green;
+        background-color: #2b1e48;
         color: white;
       }
     }
@@ -63,7 +59,7 @@ input {
   font-size: large;
   margin: 8px 0;
   background-color: white;
-  border-bottom: 2px solid $nav-button-dark-green;
+  border-bottom: 2px solid $nav-button-dark-purple;
   padding: 0em 4em;
   width: 100%;
   padding-left: 1em;
@@ -76,7 +72,7 @@ input {
   border-top: 0;
   &:focus-visible {
     outline: 0;
-    border-bottom: 3px solid $nav-button-dark-green;
+    border-bottom: 3px solid $nav-button-dark-purple;
   }
 }
 
@@ -87,7 +83,7 @@ input {
   font-size: 1.7em;
   padding-top: 3.5em;
   font-style: italic;
-  color: $nav-button-dark-green;
+  color: $nav-button-dark-purple;
 
   font-family: "Apparat-light", sans-serif;
 
