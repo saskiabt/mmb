@@ -10,6 +10,7 @@ $nav-button-dark-purple: #2b1e48;
     flex-direction: column;
     width: 100%;
     background-color: white;
+    font-weight: 200;
 
     .mobile-horizontal {
       display: flex;
@@ -24,6 +25,7 @@ $nav-button-dark-purple: #2b1e48;
       font-size: 1.7em;
       color: $nav-button-dark-purple;
       padding: 0;
+      font-weight: 200;
     }
 
     #mobile-user-btn {
