@@ -1,4 +1,3 @@
-$post-blue: #192492e8;
 $nav-button-dark-purple: #2b1e48;
 $post-comment: #cecfbb;
 $post-icon-lightblue: #6c80a9;
@@ -74,6 +73,14 @@ $general-grey-purple: rgba(27, 31, 72, 0.9098039216);
   font-family: "junction-light";
   src: url("./fonts/junction/junction-light.ttf") format("truetype"),
     url("./fonts/junction/junction-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "league-script";
+  src: url("./fonts/leagueScript/LeagueScriptNumberOne-webfont.ttf")
+      format("truetype"),
+    url("./fonts/leagueScript/LeagueScriptNumberOne-webfont.woff")
+      format("woff");
 }
 
 body {

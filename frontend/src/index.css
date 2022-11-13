@@ -38,6 +38,10 @@
   font-family: "junction-light";
   src: url("./fonts/junction/junction-light.ttf") format("truetype"), url("./fonts/junction/junction-light.woff") format("woff");
 }
+@font-face {
+  font-family: "league-script";
+  src: url("./fonts/leagueScript/LeagueScriptNumberOne-webfont.ttf") format("truetype"), url("./fonts/leagueScript/LeagueScriptNumberOne-webfont.woff") format("woff");
+}
 body {
   margin: 0;
   font-family: "Apparat-light", Helvetica, sans-serif;
